@@ -1,0 +1,29 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  // @include tablet-max {
+  //   padding-left: 34px;
+  //   padding-right: 34px;
+  // }
+
+  @include mobile-max {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.js-container {
+  overflow: hidden;
+}
+
+.burger-menu-opened {
+  @include tablet-max {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+}

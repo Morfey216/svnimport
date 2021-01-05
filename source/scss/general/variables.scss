@@ -1,0 +1,49 @@
+// region screen sizes
+$screen-sm: 579px;
+$screen-md: 767px;
+$screen-l: 1023px;
+$screen-lg: 1199px;
+// $screen-xl: 1399px;
+$screen-xl: 1440px;
+
+$screen-xxl: 1799px;
+// endregion
+
+// region colors
+$dark-gray: #181715; // Основной цвет текста / заголовков.
+$gray: #666666; // Цвет фона некоторых блоков / топ-футера.
+$header-gray: #969696; // Цвет фона некоторых блоков / топ-футера.
+$medium-gray: #4c4c4c; // Цвет фона некоторых блоков / низ футера.
+$light-gray: #787878; // Цвет фона некоторых блоков / низ футера.
+$decor-gray: #f8f8f8; // Цвет фона некоторых блоков / декорации
+$very-light-gray: #8f8f8f; // Цвет светлого текста
+$icon-gray: #c2c2c2; // Цвет фона иконок
+$popap-gray: #ededed; // Цвет фона "выпадашек"
+$border-gray: #d7d7d7; // Цвет границ
+
+
+$dark-blue: #1bb0ca; //цвет фона, иконок, текста
+$blue: #58c5d9; //цвет фона, иконок, текста
+$blue-active: #99f0ff; //цвет фона, иконок, текста
+$light-blue: #e7edf3; //цвет светлого фона
+
+$title-color: #394b50;
+$text-color: #7b7b7b;
+
+$white: #ffffff; // Цвет текста на цветном фоне.
+$black: #000000;
+$black-title: #0b0000; //Цвет заголовка
+
+
+// $bg-gradient-gray: linear-gradient(0deg, rgba(216, 216, 216, 0.2) -5.21%, rgba(216, 216, 216, 0) 88.31%);
+// endregion
+
+// region fonts
+$cadillac: "Cadillac Sans A", "Arial", sans-serif;
+$cadillac-b: "Cadillac Sans A Book", "Arial", sans-serif;
+// endregion
+
+// region retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+// endregion
