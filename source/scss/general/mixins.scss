@@ -1,0 +1,59 @@
+@mixin cadillac($size, $height, $weight) {
+  font-family: $cadillac;
+  font-size: $size + px;
+  line-height: $height + px;
+  font-weight: $weight;
+}
+
+@mixin cadillac-b($size, $height) {
+  font-family: $cadillac-b;
+  font-size: $size + px;
+  line-height: $height + px;
+  font-weight: normal;
+}
+
+@mixin list-reset {
+  padding: 0;
+  list-style: none;
+}
+
+@mixin no-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin desktopmid-max {
+  @media (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin desktopxl-max {
+  @media (max-width: $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin tablet-max {
+  @media (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin tablet-medium-max {
+  @media (max-width: $screen-l) {
+    @content;
+  }
+}
+
+@mixin mobile-max {
+  @media (max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin mobile-medium-max {
+  @media (max-width: $screen-sm) {
+    @content;
+  }
+}
