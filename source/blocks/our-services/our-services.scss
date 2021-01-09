@@ -1,0 +1,137 @@
+.our-services {
+  padding: 60px 0;
+  text-align: center;
+
+  @include tablet-medium-max {
+    padding: 55px 0;
+  }
+}
+
+.our-services__title {
+  margin-bottom: 40px;
+
+  @include mobile-max {
+    margin-bottom: 28px;
+  }
+}
+
+.our-services__list {
+  @include list-reset;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  text-align: left;
+
+  @include tablet-max {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.our-services__item {
+  @include tablet-max {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  @include mobile-max {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
+
+.our-services__thumbnail-container {
+  width: 335px;
+  height: 220px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include tablet-max {
+    margin-right: 20px;
+  }
+
+  @include mobile-max {
+    width: 300px;
+    height: 198px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+.our-services__service-wrapper {
+  width: 350px;
+
+  @include mobile-max {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.our-services__service-title {
+  @include roboto(20, 24, 700);
+  padding-bottom: 20px;
+  color: $gray;
+
+  @include mobile-max {
+    padding-bottom: 14px;
+    font-size: 18px;
+  }
+}
+
+.our-services__details-list {
+  @include list-reset;
+}
+
+.our-services__detail-point {
+  @include roboto(16, 20, 400);
+  padding-left: 26px;
+  padding-bottom: 14px;
+  color: $gray;
+  position: relative;
+
+  @include mobile-max {
+    font-size: 14px;
+  }
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid $medium-gray;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 4px;
+    border-left: 1px solid $medium-gray;
+    border-bottom: 1px solid $medium-gray;
+    transform: rotate(-45deg);
+
+    position: absolute;
+    left: 4px;
+    top: 7px;
+  }
+}
+
+.our-services__all-services-link {
+  @include roboto(16, 20, 400);
+  color: $medium-gray;
+  outline: none;
+  border-bottom: 2px solid $medium-gray;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    border-color: transparent;
+  }
+}
