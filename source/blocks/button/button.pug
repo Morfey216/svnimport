@@ -1,0 +1,9 @@
+include ../svg/svg
+
+mixin button(text, mod, icon)
+  button(class='button' + (mod ? ' button--' + mod : ''))&attributes(attributes)
+    if (icon && !icon.isRight)
+      +svg(icon.name)(class = 'button__icon-' + icon.name, width = icon.width, height = icon.height)
+    span!= text
+    if (icon && icon.isRight)
+      +svg(icon.name)(class = 'button__icon-' + icon.name, width = icon.width, height = icon.height)

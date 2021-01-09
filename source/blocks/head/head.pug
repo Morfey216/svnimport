@@ -1,0 +1,28 @@
+-
+  const fontsPreload = [
+    'cadillac-sans-a-light.woff2',
+    'cadillac-sans-a-book.woff2',
+    'cadillac-sans-a-semibold.woff2',
+    'roboto/roboto-v20-latin_cyrillic-300.woff2',
+    'roboto/roboto-v20-latin_cyrillic-regular.woff2',
+    'roboto/roboto-v20-latin_cyrillic-500.woff2',
+  ]
+
+mixin head(title)
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+    meta(name="yandex-verification", content="8935978a25a72299")
+    title= title
+    link(rel="preload" href="css/style.css" as="style")
+    link(rel="stylesheet", href="css/style.css" media="screen")
+    //- link(rel="apple-touch-icon" sizes="180x180" href="/img/ico/apple-touch-icon.png")
+    //- link(rel="icon" type="image/png" sizes="32x32" href="/img/ico/favicon-32x32.png")
+    //- link(rel="icon" type="image/png" sizes="16x16" href="/img/ico/favicon-16x16.png")
+    //- link(rel="manifest" href="/img/ico/site.webmanifest")
+    //- link(rel="mask-icon" href="/img/ico/safari-pinned-tab.svg" color="#5bbad5")
+    //- meta(name="msapplication-TileColor", content="#da532c")
+    //- meta(name="theme-color", content="#ffffff")
+    each font in fontsPreload
+      link(rel="preload" href="fonts/" + font as="font" crossorigin="anonymous")

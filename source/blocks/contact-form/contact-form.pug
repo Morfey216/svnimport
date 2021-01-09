@@ -1,0 +1,16 @@
+include ../title/title
+include ../form-input/form-input
+include ../form-textarea/form-textarea
+include ../button/button
+
+section.contact-form#contact-form
+  +title('Форма быстрой связи').contact-form__title
+  p.contact-form__subtitle Задайте ваш вопрос или кратко опишите ситуацию и мы свяжемся с вами
+  div.container
+    form.contact-form__contact-form.js-ccf(method="post" enctype="multipart/form-data")
+      +form-input({label: 'Ваше имя', error: 'Введите имя',})(type="text" name="name" required).contact-form__form-input.js-ccf-name#ccf-name
+      +form-input({label: 'Ваша почта', error: 'Введите E-mail',})(type="email" name="email" required).contact-form__form-input.js-ccf-email#ccf-email
+      +form-input({label: 'Ваш телефон', error: 'Неверный номер',})(type="tel" name="phone" required).contact-form__form-input.js-ccf-phone#ccf-phone
+      +form-textarea({label: 'Опишите ситуацию', error: 'Кратко опишите ситуацию',})(name="description", rows="5" required).contact-form__form-textarea.js-ccf-description#ccf-description
+      +button('Отправить')(type="submit").contact-form__form-submit-button.js-ccf-submit
+      div.contact-form__upload-message

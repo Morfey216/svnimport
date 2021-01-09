@@ -955,5 +955,79 @@
     window.IntersectionObserverEntry = IntersectionObserverEntry;
   })();
 
+  var formInput = (function () {
+    var inputs = document.querySelectorAll('.js-form-input');
+    if (inputs.length === 0) return;
+    inputs.forEach(function (input) {
+      input.addEventListener('focus', function () {
+        input.closest('.form-input').classList.remove('error');
+      });
+    });
+  });
+
+  var formTextarea = (function () {
+    var textareas = document.querySelectorAll('.js-form-textarea');
+    if (textareas.length === 0) return;
+    textareas.forEach(function (textarea) {
+      textarea.addEventListener('focus', function () {
+        textarea.closest('.form-textarea').classList.remove('error');
+      });
+    });
+  });
+
+  var contactForm = (function () {
+    var form = document.querySelector('.js-ccf');
+    if (!form) return;
+    var inputs = form.querySelectorAll('input');
+    var desc = form.querySelector('textarea');
+    var upload = form.querySelector('.contact-form__upload-message');
+
+    function clearData() {
+      inputs.forEach(function (it) {
+        // eslint-disable-next-line no-param-reassign
+        it.value = '';
+      });
+      desc.value = '';
+      $('.js-ccf-submit').prop('disabled', false);
+    }
+
+    function createMessage(mess) {
+      upload.textContent = mess;
+      setTimeout(function () {
+        upload.textContent = '';
+      }, 3000);
+    }
+
+    form.addEventListener('submit', function (evt) {
+      var http = new XMLHttpRequest();
+      evt.preventDefault();
+      http.open('POST', 'mail/mail.php', true);
+
+      http.onreadystatechange = function () {
+        if (http.readyState === 4 && http.status === 200) {
+          clearData();
+          createMessage(http.responseText);
+        }
+      };
+
+      http.onerror = function () {
+        clearData(); // eslint-disable-next-line no-alert
+
+        alert('Ошибка, попробуйте еще раз');
+      };
+
+      $('.js-ccf-submit').prop('disabled', true);
+      http.send(new FormData(form));
+    }, false);
+  });
+
+  /* eslint-disable */
+
+  formInput();
+  formTextarea(); // header();
+  // advantages();
+
+  contactForm();
+
 }());
 //# sourceMappingURL=main.js.map

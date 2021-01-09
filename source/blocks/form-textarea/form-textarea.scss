@@ -1,0 +1,125 @@
+.form-textarea {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #ffffff;
+  border-radius: 2px;
+
+  @media (max-width: $screen-lg) {
+    padding-top: 18px;
+    padding-bottom: 16px;
+    padding-left: 14px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-left: 20px;
+  }
+}
+
+.form-textarea textarea {
+  @include cadillac-b(17, 26);
+  width: 100%;
+  border: none;
+  padding: 0;
+  outline: none;
+  resize: none;
+  color: $very-light-gray;
+
+  &:hover {
+    color: $light-gray;
+  }
+
+  &:active,
+  &:focus {
+    color: $gray;
+
+    &::placeholder {
+      color: $header-gray;
+    }
+  }
+}
+
+.form-textarea__label {
+  @include cadillac-b(17, 26);
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: calc(100% - 48px);
+  transition: transform 0.3s, opacity 0.3s;
+  color: $icon-gray;
+  pointer-events: none;
+
+
+  @media (max-width: $screen-lg) {
+    left: 14px;
+    width: calc(100% - 38px);
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 14px;
+    left: 20px;
+    width: calc(100% - 44px);
+  }
+}
+
+.form-textarea:hover .form-textarea__label {
+  color: $light-gray;
+}
+
+
+.form-textarea__error {
+  position: absolute;
+  bottom: -18px;
+  left: 24px;
+  width: calc(100% - 48px);
+  transition: opacity 0.3s;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0;
+  color: #ff470d;
+
+  @media (max-width: $screen-lg) {
+    left: 14px;
+    width: calc(100% - 38px);
+  }
+
+  @media (max-width: $screen-md) {
+    left: 20px;
+    width: calc(100% - 44px);
+  }
+}
+
+.form-textarea svg {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  fill: #ff470d;
+
+  @media (max-width: $screen-lg) {
+    top: 18px;
+  }
+}
+
+.form-textarea textarea:focus + .form-textarea__label,
+.form-textarea textarea:not(:placeholder-shown) + .form-textarea__label,
+.form-textarea.error .form-textarea__label {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.form-textarea.error .form-textarea__error,
+.form-textarea.error svg {
+  opacity: 1;
+}
+
+.form-textarea.error textarea:focus ~ .form-textarea__error,
+.form-textarea.error textarea:focus ~ svg {
+  opacity: 0;
+}

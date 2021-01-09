@@ -6,16 +6,16 @@ import './general/intersection-observer';
 
 // region Blocks
 
-// import formInput from '../blocks/form-input/form-input';
-// import formTextarea from '../blocks/form-textarea/form-textarea';
+import formInput from '../blocks/form-input/form-input';
+import formTextarea from '../blocks/form-textarea/form-textarea';
 // import header from '../blocks/header/header';
 // import advantages from '../blocks/advantages/advantages';
-// import calculation from '../blocks/calculation/calculation';
+import contactForm from '../blocks/contact-form/contact-form';
 
 // endregion
 
-// formInput();
-// formTextarea();
+formInput();
+formTextarea();
 // header();
 // advantages();
-// calculation();
+contactForm();

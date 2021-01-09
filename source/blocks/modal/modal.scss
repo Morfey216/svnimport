@@ -1,0 +1,128 @@
+.modal {
+  display: none;
+  position: fixed;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 720px;
+  font-family: $ubuntu;
+  font-style: normal;
+  background: $white;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.modal.stores-map-modal {
+  width: 1120px;
+
+  @include tablet-max {
+    width: 700px;
+  }
+
+  @include mobile-max {
+    width: 284px;
+  }
+
+  .modal__close {
+    top: -41px;
+    right: -46px;
+
+    @include tablet-max {
+      right: -28px;
+      top: -16px;
+    }
+
+    @include mobile-max {
+      right: 9px;
+      top: -34px;
+    }
+  }
+
+  .modal__close-svg {
+    color: $gray;
+  }
+}
+
+.modal.enabled {
+  display: block;
+}
+
+.modal.scrolled {
+  max-height: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal__close {
+  position: absolute;
+  top: 31px;
+  right: 26px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  z-index: 10;
+
+  opacity: 0.5;
+}
+
+.modal__close-svg {
+  fill: $gray;
+}
+
+.modal__close:hover {
+  opacity: 1;
+}
+
+@media (max-width: $screen-lg) {
+  .modal {
+    width: 700px;
+  }
+
+  .modal__close {
+    right: 36px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .modal {
+    width: 284px;
+  }
+
+  .modal__close {
+    top: 14px;
+    right: 22px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.modal--video {
+  width: 70%;
+  background-color: transparent;
+
+  @include mobile-max {
+    width: 90%;
+  }
+
+  .modal__close {
+    top: -41px;
+    right: -46px;
+
+    @include tablet-max {
+      right: -28px;
+      top: -28px;
+    }
+
+    @include mobile-max {
+      right: 9px;
+      top: -34px;
+    }
+  }
+
+  .modal__close-svg {
+    fill: $gray;
+  }
+}

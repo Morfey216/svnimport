@@ -1,0 +1,10 @@
+include ../svg/svg
+
+mixin form-input(data, mod, marker)
+  label(class="form-input" + (mod ? ' form-input--' + mod : '') + (attributes.class ? ' ' + attributes.class : ''))
+    input(placeholder=" " id=attributes.id type=attributes.type name=attributes.name required).js-form-input
+    span.form-input__label!= data.label
+    span.form-input__error!= data.error
+    +svg('warning')(width="15" height="15")
+    if (marker)
+      img(src="img/icons/" + marker.img width= marker.w height= marker.h alt="").form-input__marker

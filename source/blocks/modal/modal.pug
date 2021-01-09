@@ -1,0 +1,8 @@
+include ../svg/svg
+
+mixin modal(madalid)
+  section(id=madalid).modal.js-modal&attributes(attributes)
+    button(type="button").modal__close.js-modal-close
+      span.visually-hidden Закрыть
+      +svg('cross')(width="16" height="16").modal__close-svg
+    block

@@ -1,10 +1,10 @@
-//- include ../blocks/head/head
+include ../blocks/head/head
 //- include ../blocks/header/header
-//- include ../blocks/page-footer/page-footer
+include ../blocks/page-footer/page-footer
 
 doctype html
 html(lang='ru')
-  //- +head('Доставка товаров из Китая и других стран')
+  +head('Доставка товаров из Китая и других стран')
   body
     //- +header
 
@@ -15,8 +15,7 @@ html(lang='ru')
     //-   include ../blocks/services/services
     //-   include ../blocks/advantages/advantages
     //-   include ../blocks/delivery/delivery
-    //-   include ../blocks/calculation/calculation
     //-   include ../blocks/contacts/contacts
-    //- +page-footer
+    +page-footer
 
-    //- include ../blocks/_scripts-block/_scripts-block
+    include ../blocks/_scripts-block/_scripts-block

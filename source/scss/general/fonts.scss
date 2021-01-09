@@ -22,10 +22,26 @@
   src: url("../fonts/cadillac-sans-a-semibold.woff2") format("woff2"), url("../fonts/cadillac-sans-a-semibold.woff") format("woff");
 }
 
-// @font-face {
-//   font-family: "Cadillac Sans A";
-//   font-weight: 700;
-//   font-style: normal;
-//   font-display: swap;
-//   src: url("../fonts/ubuntu-700-normal.woff2") format("woff2"), url("../fonts/ubuntu-700-normal.woff") format("woff");
-// }
+/* roboto-300 */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto/roboto-v20-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/roboto/roboto-v20-latin_cyrillic-300.woff") format("woff");
+}
+
+/* roboto-regular */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto/roboto-v20-latin_cyrillic-regular.woff") format("woff");
+}
+
+/* roboto-500 */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto/roboto-v20-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/roboto/roboto-v20-latin_cyrillic-500.woff") format("woff");
+}

@@ -1,0 +1,19 @@
+include ../modal/modal
+include ../link/link
+include ../button/button
+include ../form-input/form-input
+include ../form-textarea/form-textarea
+
+mixin ask-question-modal
+  +modal('ask-question-modal').ask-question-modal
+    h2 Задать вопрос
+    form(action="#" method="post").ask-question-modal__form.js-aqmf
+      +form-input({label: 'Введите имя', error: 'Введите имя',}).ask-question-modal__input.js-aqmf-validate.js-aqmf-name#aqmf-name
+      +form-input({label: '+375 ( _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',})(type="tel").ask-question-modal__input.js-aqmf-validate.js-aqmf-phone#aqmf-phone
+      +form-textarea({label: 'Текст вопроса', error: 'Напишите вопрос',}).ask-question-modal__input.ask-question-modal__input--textarea.js-aqmf-validate.js-aqmf-textarea#aqmf-message
+      footer.ask-question-modal__footer
+        //- p.ask-question-modal__note
+        //-   | Нажимая &laquo;Отправить&raquo;, вы&nbsp;даете согласие на&nbsp;обработку
+        //-   |
+        //-   a(href="#") персональных&nbsp;данных
+        +button('Отправить', 'orange')(type="submit").ask-question-modal__submit.js-aqmf-submit

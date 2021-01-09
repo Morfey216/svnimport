@@ -1,3 +1,10 @@
+@mixin roboto($size, $height, $weight) {
+  font-family: $roboto;
+  font-size: $size + px;
+  line-height: $height + px;
+  font-weight: $weight;
+}
+
 @mixin cadillac($size, $height, $weight) {
   font-family: $cadillac;
   font-size: $size + px;

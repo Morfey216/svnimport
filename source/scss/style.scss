@@ -1,4 +1,4 @@
-@import "normalize";
+// @import "normalize";
 @import "general/variables";
 @import "general/fonts";
 @import "general/mixins";
@@ -13,12 +13,12 @@
 //endregion
 
 // region Blocks
-// @import "../blocks/title/title";
+@import "../blocks/title/title";
 // @import "../blocks/pagination-bullet/pagination-bullet";
 // @import "../blocks/slider-navigation/slider-navigation";
-// @import "../blocks/button/button";
-// @import "../blocks/form-input/form-input";
-// @import "../blocks/form-textarea/form-textarea";
+@import "../blocks/button/button";
+@import "../blocks/form-input/form-input";
+@import "../blocks/form-textarea/form-textarea";
 // @import "../blocks/contacts-phone/contacts-phone";
 // @import "../blocks/contacts-mail/contacts-mail";
 // @import "../blocks/contacts-point/contacts-point";
@@ -28,9 +28,9 @@
 // @import "../blocks/services/services";
 // @import "../blocks/advantages/advantages";
 // @import "../blocks/delivery/delivery";
-// @import "../blocks/calculation/calculation";
+@import "../blocks/contact-form/contact-form";
 // @import "../blocks/contacts/contacts";
-// @import "../blocks/page-footer/page-footer";
+@import "../blocks/page-footer/page-footer";
 
 
 //endregion

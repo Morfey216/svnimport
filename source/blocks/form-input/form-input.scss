@@ -1,0 +1,165 @@
+.form-input {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #ffffff;
+  border-radius: 2px;
+
+  @media (max-width: $screen-lg) {
+    padding-top: 18px;
+    padding-bottom: 16px;
+    padding-left: 14px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+}
+
+.form-input input {
+  @include cadillac-b(17, 26);
+  width: 100%;
+  border: none;
+  padding: 0;
+  outline: none;
+  color: $very-light-gray;
+
+  &:hover {
+    color: $light-gray;
+  }
+
+  &:active,
+  &:focus {
+    color: $gray;
+
+    &::placeholder {
+      color: $header-gray;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 14px;
+  }
+}
+
+.form-input__label {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  width: calc(100% - 48px);
+  transform: translateY(-50%);
+  color: $icon-gray;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+
+  @include cadillac-b(17, 26);
+
+  @media (max-width: $screen-lg) {
+    left: 14px;
+    width: calc(100% - 38px);
+  }
+
+  @media (max-width: $screen-md) {
+    left: 20px;
+    width: calc(100% - 44px);
+    font-size: 14px;
+  }
+}
+
+.form-input:hover .form-input__label {
+  color: $light-gray;
+}
+
+.form-input__error {
+  position: absolute;
+  bottom: -18px;
+  left: 24px;
+  width: calc(100% - 48px);
+  transition: opacity 0.3s;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0;
+  color: #ff470d;
+
+  @media (max-width: $screen-lg) {
+    left: 14px;
+    width: calc(100% - 38px);
+  }
+
+  @media (max-width: $screen-md) {
+    left: 20px;
+    width: calc(100% - 44px);
+  }
+}
+
+.form-input svg {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  fill: #ff470d;
+}
+
+.form-input input:focus + .form-input__label,
+.form-input input:not(:placeholder-shown) + .form-input__label,
+.form-input.error .form-input__label {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.form-input.error .form-input__error,
+.form-input.error svg {
+  opacity: 1;
+}
+
+.form-input.error input:focus ~ .form-input__error,
+.form-input.error input:focus ~ svg {
+  opacity: 0;
+}
+
+.form-input--marker {
+  margin-bottom: 20px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  color: $decor-gray;
+
+  .form-input__label {
+    left: 55px;
+
+    @include mobile-medium-max {
+      width: calc(100% - 80px);
+    }
+  }
+
+  input {
+    padding-left: 30px;
+
+    @include tablet-max {
+      padding-left: 56px;
+    }
+
+    @include mobile-max {
+      padding-left: 47px;
+    }
+  }
+
+  .form-input__error {
+    background-color: $decor-gray;
+  }
+}
+
+.form-input__marker {
+  position: absolute;
+  top: 35%;
+  left: 24px;
+  pointer-events: none;
+}

@@ -1,0 +1,22 @@
+.title {
+  @include cadillac(38, 60, 600);
+  color: $blue;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include tablet-max {
+    @include cadillac(34, 36, 600);
+  }
+
+  @include mobile-max {
+    @include cadillac-b(24, 30);
+  }
+}
+
+.title--white {
+  color: $white;
+}
+
+.title--gray {
+  color: $gray;
+}

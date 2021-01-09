@@ -1,0 +1,8 @@
+include ../svg/svg
+
+mixin form-textarea(data)
+  label(class="form-textarea" + (attributes.class ? ' ' + attributes.class : ''))
+    textarea(placeholder=" " id=attributes.id name=attributes.name rows=attributes.rows required).js-form-textarea
+    span.form-textarea__label!= data.label
+    span.form-textarea__error!= data.error
+    +svg('warning')(width="15" height="15")

@@ -1,0 +1,148 @@
+.ask-question-modal {
+  width: 640px;
+  padding: 35px 40px 3px;
+  background: $white url("../img/decoration.png") no-repeat right bottom;
+
+  @include mobile-max {
+    max-width: 540px;
+  }
+
+  @include mobile-medium-max {
+    max-width: 280px;
+    padding: 35px 10px 3px;
+  }
+}
+
+.ask-question-modal h2 {
+  @include ubuntu(40, 60, 700);
+  margin-bottom: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $gray;
+
+  @include mobile-max {
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include mobile-medium-max {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.ask-question-modal__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include mobile-medium-max {
+    width: 260px;
+  }
+}
+
+.ask-question-modal__input {
+  width: 270px;
+  margin: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid $border-gray;
+  border-radius: 0;
+
+  @include mobile-max {
+    width: 220px;
+  }
+
+  @include mobile-medium-max {
+    max-width: 260px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 19px;
+  }
+}
+
+.ask-question-modal__input--textarea {
+  width: 570px;
+  min-height: 110px;
+
+  @include mobile-max {
+    width: 540px;
+  }
+
+  @include mobile-medium-max {
+    max-width: 260px;
+    width: 100%;
+    padding: 10px 19px;
+  }
+
+  textarea {
+    min-height: 110px;
+  }
+
+  .form-textarea__label {
+    top: 10px;
+  }
+}
+
+.ask-question-modal__footer {
+  width: 570px;
+
+  @include mobile-max {
+    display: flex;
+    align-items: center;
+    max-width: 540px;
+  }
+
+  @include mobile-medium-max {
+    display: block;
+  }
+}
+
+.ask-question-modal__note {
+  @include ubuntu(14, 18, 400);
+  color: $icon-bg-gray;
+  text-align: center;
+
+  @include mobile-max {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  @include mobile-medium-max {
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+  }
+}
+
+.ask-question-modal__note a {
+  border-bottom: 1px solid $border-gray;
+
+  &:hover,
+  &:focus {
+    color: $light-gray;
+    border-bottom: transparent;
+  }
+}
+
+.ask-question-modal__submit {
+  margin: 16px auto;
+  margin-top: 28px;
+  padding: 17px 43px;
+  text-transform: none;
+
+  @include mobile-max {
+    margin-left: 10px;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  @include mobile-medium-max {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 43px;
+  }
+}
