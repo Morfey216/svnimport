@@ -3,7 +3,7 @@ include ../title/title
 -
   const ourServices = [
       {
-        image: 'our-services-p1.png',
+        image: 'our-services-p1.jpg',
         alt: "Поиск/производство",
         title: 'Поиск/производство',
         details: [
@@ -13,7 +13,7 @@ include ../title/title
         ]
       },
       {
-        image: 'our-services-p2.png',
+        image: 'our-services-p2.jpg',
         alt: "Доставка/фрахт",
         title: 'Доставка/фрахт',
         details: [
@@ -23,7 +23,7 @@ include ../title/title
         ]
       },
       {
-        image: 'our-services-p3.png',
+        image: 'our-services-p3.jpg',
         alt: "Таможенное оформление/сертификация",
         title: 'Таможенное оформление/сертификация',
         details: [
@@ -41,7 +41,7 @@ section.our-services
       each service in ourServices
         li.our-services__item
           div.our-services__thumbnail-container
-            img(src='img/our-services/' + service.image width="335" height="220" alt= service.alt).our-services__thumbnail
+            img(src='img/our-services/' + service.image width="335" height="225" alt= service.alt).our-services__thumbnail
           div.our-services__service-wrapper
             h3.our-services__service-title!= service.title
             ul.our-services__details-list
