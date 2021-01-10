@@ -1,0 +1,116 @@
+.qualities {
+  // height: 790px;
+  background-image: url("../img/bg/svn-box.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $light-blue;
+
+  @include mobile-max {
+    background-image: none;
+  }
+}
+
+.qualities__container {
+  width: 60%;
+  margin-left: auto;
+  min-height: 750px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+
+  @include mobile-max {
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+  }
+}
+
+.qualities__list {
+  @include list-reset;
+  width: 80%;
+
+  & li {
+    @include roboto(20, 26, 500);
+    padding-bottom: 20px;
+    padding-left: 36px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      border: 2px solid $dark-blue;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 6px;
+      border-left: 2px solid $dark-blue;
+      border-bottom: 2px solid $dark-blue;
+      transform: rotate(-45deg);
+
+      position: absolute;
+      left: 8px;
+      top: 11px;
+    }
+  }
+
+  @include mobile-max {
+    width: 100%;
+
+    & li {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      padding-left: 0;
+      padding-top: 36px;
+
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &::after {
+        left: 50%;
+        top: 7px;
+        transform: rotate(-45deg) translateX(-50%);
+      }
+    }
+  }
+}
+
+.qualities__title {
+  margin-top: 60px;
+  margin-bottom: 45px;
+  padding-bottom: 20px;
+  text-align: left;
+  text-transform: none;
+  position: relative;
+
+  @include mobile-max {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    width: 150px;
+    height: 6px;
+    background-color: $dark-blue;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include mobile-max {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

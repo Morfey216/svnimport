@@ -1,6 +1,6 @@
 .company-description {
   min-height: 600px;
-  background-image: url("../img/company-description-bg.jpg");
+  background-image: url("../img/bg/company-description-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $light-blue;
@@ -17,14 +17,20 @@
   background-color: rgba(255, 255, 255, 0.8);
   text-align: right;
 
+  & p {
+    @include roboto(16, 22, 500);
+    padding-bottom: 14px;
+  }
+
   @include mobile-max {
     width: 100%;
     text-align: center;
-  }
 
-  & p {
-    @include roboto(14, 21, 400);
-    padding-bottom: 14px;
+    & p {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
   }
 }
 
