@@ -1,0 +1,51 @@
+include ../title/title
+
+-
+  const ourServices = [
+      {
+        image: 'our-services-p1.jpg',
+        alt: "Поиск/производство",
+        title: 'Поиск/производство',
+        details: [
+          'Наша команда проведет Вас через весь процесс разработки проекта: от дизайна логотипа до концептуализации продукта;',
+          'Перед производством продукта мы предоставим Вам образцы для согласования;',
+          'Проведем проверку товара на соответствие качества перед отправкой.',
+        ]
+      },
+      {
+        image: 'our-services-p2.jpg',
+        alt: "Доставка/фрахт",
+        title: 'Доставка/фрахт',
+        details: [
+          'С нами Вы получите «любые» грузы в кратчайшие сроки;',
+          'Найдем оптимальный для Вас способ доставки груза: авиа, авто, ж/д, море;',
+          '«Доставка под ключ» от склада производителя до Вашего склада.',
+        ]
+      },
+      {
+        image: 'our-services-p3.jpg',
+        alt: "Таможенное оформление/сертификация",
+        title: 'Таможенное оформление/сертификация',
+        details: [
+          'Наши опытные декларанты проведут таможенную очистку груза вместо Вас;',
+          'Оперативное и выгодное решение вопросов по сертификации товаров;',
+          'Большой опыт в сфере таможенного оформления.',
+        ]
+      },
+    ]
+
+section.our-services
+  div.our-services__wrapper.container
+    +title('Наши услуги', 'section').our-services__title
+    ul.our-services__list
+      each service in ourServices
+        li.our-services__item
+          div.our-services__thumbnail-container
+            img(src='img/our-services/' + service.image width="335" height="225" alt= service.alt).our-services__thumbnail
+          div.our-services__service-wrapper
+            h3.our-services__service-title!= service.title
+            ul.our-services__details-list
+              each point in service.details
+                li.our-services__detail-point
+                  p #{point}
+    a(href="services.html").our-services__all-services-link Полный пакет услуг
