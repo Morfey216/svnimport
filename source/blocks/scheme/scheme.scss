@@ -1,0 +1,12 @@
+.scheme {
+  padding-top: 40px;
+  background-color: $icon-gray;
+}
+
+.scheme__title {
+  margin-bottom: 40px;
+
+  @include mobile-max {
+    margin-bottom: 20px;
+  }
+}

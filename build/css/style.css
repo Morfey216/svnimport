@@ -60,6 +60,17 @@
     position: relative;
     height: 100%; } }
 
+p:not([class]) {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-bottom: 14px;
+  color: #666666; }
+  @media (max-width: 767px) {
+    p:not([class]) {
+      font-size: 14px; } }
+
 *,
 *::before,
 *::after {
@@ -1090,6 +1101,66 @@ button.swiper-pagination-bullet {
 .form-textarea.error textarea:focus ~ svg {
   opacity: 0; }
 
+.company-description {
+  min-height: 600px;
+  background-image: url("../img/company-description-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #e7edf3; }
+  @media (max-width: 767px) {
+    .company-description {
+      background-image: none; } }
+
+.company-description__container {
+  width: 55%;
+  min-height: 600px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: right; }
+  @media (max-width: 767px) {
+    .company-description__container {
+      width: 100%;
+      text-align: center; } }
+  .company-description__container p {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    padding-bottom: 14px; }
+
+.company-description__title {
+  margin-bottom: 22px;
+  padding-bottom: 20px;
+  text-align: right;
+  text-transform: none;
+  position: relative; }
+  @media (max-width: 767px) {
+    .company-description__title {
+      text-align: center; } }
+  .company-description__title::after {
+    content: "";
+    width: 150px;
+    height: 6px;
+    background-color: #1bb0ca;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    @media (max-width: 767px) {
+      .company-description__title::after {
+        right: 50%;
+        -webkit-transform: translateX(50%);
+                transform: translateX(50%); } }
+
+.scheme {
+  padding-top: 40px;
+  background-color: #c2c2c2; }
+
+.scheme__title {
+  margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .scheme__title {
+      margin-bottom: 20px; } }
+
 .contact-form {
   padding-top: 20px;
   margin-bottom: 15px; }
@@ -1271,17 +1342,10 @@ button.swiper-pagination-bullet {
   list-style: none; }
 
 .our-services__detail-point {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
   padding-left: 26px;
-  padding-bottom: 14px;
-  color: #666666;
   position: relative; }
-  @media (max-width: 767px) {
-    .our-services__detail-point {
-      font-size: 14px; } }
+  .our-services__detail-point p {
+    line-height: 20px; }
   .our-services__detail-point::before {
     content: "";
     width: 16px;
