@@ -19,6 +19,11 @@
   .header__toggle-svg-close {
     display: none;
   }
+
+  @include mobile-max {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .header__main-nav-container {
@@ -27,7 +32,7 @@
   padding-bottom: 12px;
 
   @include tablet-medium-max {
-    width: 570px;
+    // width: 570px;
     padding: 0;
     margin: 0;
     margin-right: auto;
@@ -35,11 +40,11 @@
   }
 
   @include mobile-max {
-    width: 500px;
+    // width: 500px;
   }
 
   @include mobile-medium-max {
-    display: block;
+    // display: block;
     width: 100%;
   }
 }
@@ -54,7 +59,7 @@
   }
 
   @include mobile-max {
-    width: 260px;
+    width: 160px;
     margin-right: 0;
   }
 }
@@ -67,37 +72,9 @@
   }
 }
 
-.header__contacts {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 215px;
-
-  @include tablet-max {
-    width: 450px;
-  }
-
-  @include tablet-medium-max {
-    display: block;
-    width: 200px;
-    margin-left: 0;
-
-    .header__contacts-phone a,
-    .header__contacts-mail a {
-      @include cadillac(16, 22, 600);
-    }
-  }
-
-  @include mobile-medium-max {
-    display: none;
-    width: 185px;
-    margin-top: 15px;
-  }
-}
-
-.header__contacts-mail {
-  @include mobile-medium-max {
-    display: none;
+.header__contacts-button {
+  @include mobile-max {
+    padding: 5px 20px;
   }
 }
 
@@ -159,16 +136,17 @@
   }
 
   .header__dropdown {
-    @include tablet-max {
-      visibility: visible;
-      width: 297px;
-      padding: 24px 28px 17px;
+    visibility: visible;
+    width: 297px;
+    padding: 24px 28px 17px;
 
-      background-color: $white;
-      opacity: 1;
-      transition: opacity 0.3s;
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
+    background-color: $white;
+    opacity: 1;
+    transition: opacity 0.3s;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    @include tablet-max {
     }
 
     @include mobile-max {
@@ -384,11 +362,17 @@
 }
 
 .header__toggle {
-  display: none;
+  position: absolute;
+  bottom: 44px;
+  right: 50%;
+  transform: translateX(50%);
+
+  display: block;
   padding: 0;
 
   background: transparent;
   border: none;
+  cursor: pointer;
 
   z-index: 0;
 
@@ -402,14 +386,16 @@
 
   @include tablet-medium-max {
     position: absolute;
-    right: 18px;
-    bottom: 32px;
+    // right: 18px;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 24px;
     display: block;
     cursor: pointer;
   }
 
   @include mobile-max {
-    bottom: 32px;
+    bottom: 14px;
   }
 }
 

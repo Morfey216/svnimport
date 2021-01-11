@@ -1,6 +1,6 @@
 .scheme {
   padding-top: 40px;
-  background-color: $icon-gray;
+  background-color: $hard-medium-gray;
 }
 
 .scheme__title {
@@ -9,4 +9,8 @@
   @include mobile-max {
     margin-bottom: 20px;
   }
+}
+
+.scheme__img {
+  margin: 0 auto;
 }

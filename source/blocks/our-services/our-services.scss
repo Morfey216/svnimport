@@ -20,26 +20,33 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto;
   margin-bottom: 40px;
   text-align: left;
 
   @include tablet-max {
     flex-direction: column;
     align-items: center;
+    width: auto;
     margin-bottom: 20px;
   }
 }
 
 .our-services__item {
+  background-color: $decor-gray;
+
   @include tablet-max {
     display: flex;
     margin-bottom: 30px;
+    padding: 20px;
   }
 
   @include mobile-max {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    padding: 0;
   }
 }
 
@@ -48,10 +55,10 @@
   height: 225px;
   margin: 0 auto;
   margin-bottom: 20px;
-  border-radius: 10px;
   overflow: hidden;
 
   @include tablet-max {
+    width: 355px;
     margin-right: 20px;
   }
 
@@ -64,7 +71,9 @@
 }
 
 .our-services__service-wrapper {
-  width: 350px;
+  width: 335px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include mobile-max {
     max-width: 300px;

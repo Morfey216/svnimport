@@ -2,7 +2,8 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from '../../js/libs/bodySc
 
 export default () => {
   const WindowBreakpoints = {
-    DESKTOP: 1024,
+    DESKTOP_BIG: 1920,
+    DESKTOP: 1280,
     TABLET: 1023,
     MOBILE: 320,
   };
@@ -19,11 +20,20 @@ export default () => {
   const mainNavWrap = header.querySelector('.header__main-nav-wrap');
   const mainNav = header.querySelector('.header__main-nav');
 
-  const adjustDesktop = () => {
-    clearAllBodyScrollLocks(dropdown);
-    mainNavWrap.prepend(mainNav);
-  };
+  // const adjustDesktopBig = () => {
+  //   clearAllBodyScrollLocks(dropdown);
+  //   mainNavWrap.prepend(mainNav);
+  // };
 
+  const adjustDesktop = () => {
+    if (header.classList.contains('header--menu-opened')) {
+      disableBodyScroll(header);
+    }
+
+    const fragment = new DocumentFragment();
+    fragment.appendChild(mainNav);
+    dropdown.appendChild(fragment);
+  };
 
   const adjustTablet = () => {
     if (header.classList.contains('header--menu-opened')) {
@@ -49,6 +59,9 @@ export default () => {
 
 
   const checkWindowWidth = () => {
+    if (window.matchMedia(`(min-width: ${WindowBreakpoints.DESKTOP_BIG}px)`).matches) {
+      return WindowBreakpoints.DESKTOP_BIG;
+    }
     if (window.matchMedia(`(min-width: ${WindowBreakpoints.DESKTOP}px)`).matches) {
       return WindowBreakpoints.DESKTOP;
     }
@@ -76,8 +89,12 @@ export default () => {
         case WindowBreakpoints.TABLET:
           adjustTablet();
           break;
+        case WindowBreakpoints.DESKTOP:
+          adjustDesktop();
+          break;
         default:
           adjustDesktop();
+          // adjustDesktopBig();
           break;
       }
       lastWindowMode = currentWindowMode;
