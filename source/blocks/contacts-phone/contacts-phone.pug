@@ -1,0 +1,8 @@
+mixin contacts-phone(mod)
+  div(class='contacts-phone')&attributes(attributes)
+    img(src = 'img/icons/phone-icon.png', width='31', height='31', alt='', class= mod ? 'contacts-phone__icon--' + mod : '').contacts-phone__icon
+    div(class= mod ? 'contacts-phone__phones--' + mod : '').contacts-phone__phones
+      a(href="tel:+375291932333").contacts-phone__phone.contacts-phone__phone--first +375 29 193 23 33,
+      a(href="tel:+79639249590").contacts-phone__phone.contacts-phone__phone--second +7 963 924 95 90
+      if (mod === 'messenger')
+        p.contacts-phone__messenger (whatsapp, telegram, viber)

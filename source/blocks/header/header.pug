@@ -1,0 +1,62 @@
+include ../svg/svg
+include ../button/button
+include ../contacts-phone/contacts-phone
+include ../menu-nav/menu-nav
+
+-
+  const mainNavList = [
+      {
+        link: 'index.html',
+        item: 'Главная',
+        anchor: '',
+      },
+      {
+        link: 'services.html',
+        item: 'Услуги',
+        anchor: '',
+      },
+      {
+        link: 'index.html',
+        item: 'О нас',
+        anchor: 'about',
+      },
+      {
+        link: 'index.html',
+        item: 'Преимущества',
+        anchor: 'advantages',
+      },
+      //- {
+      //-   link: '',
+      //-   item: 'Отзывы',
+      //-   anchor: '',
+      //- },
+      //- {
+      //-   link: '',
+      //-   item: 'Миссия',
+      //-   anchor: '',
+      //- },
+      //- {
+      //-   link: 'contacts.html',
+      //-   item: 'Контакты',
+      //-   anchor: '',
+      //- },
+    ]
+
+mixin header
+  header.header
+    div.container
+      div.header__main-nav-container
+        div.header__logo
+          a.header__logo-link(href="#")
+            img.header__logo-img(src="img/logo/svn-logo.png" width="375" height="68" alt="Логотип")
+        div.header__contacts
+          +contacts-phone('col').header__contacts-phone
+        div.header__main-nav-wrap
+          +menu-nav(mainNavList, 'Главное меню').header__main-nav
+
+    button(type="button").header__toggle
+      span.visually-hidden Открыть/закрыть
+      +svg('burger')(width="32" height="23").header__toggle-svg-open
+      +svg('cross')(width="23" height="23").header__toggle-svg-close
+    div.header__dropdown
+    div.header__overlay

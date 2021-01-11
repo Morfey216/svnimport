@@ -1,0 +1,58 @@
+.contacts-phone {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-phone__icon {
+  margin-right: 15px;
+
+  &--messenger {
+    margin-right: 25px;
+  }
+
+  @include mobile-max {
+    margin-right: 10px;
+
+    &--messenger {
+      margin-right: 20px;
+    }
+  }
+}
+
+.contacts-phone__phones {
+  &--col {
+    display: flex;
+    flex-direction: column;
+
+    .contacts-phone__phone {
+      @include cadillac(18, 24, 600);
+    }
+  }
+
+  @include mobile-max {
+    &--messenger {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.contacts-phone__phone {
+  @include cadillac(24, 30, 600);
+  color: $gray;
+
+  &:hover,
+  :focus,
+  :active {
+    color: $medium-gray;
+  }
+}
+
+.contacts-phone__phone--first {
+  margin-right: 10px;
+}
+
+.contacts-phone__messenger {
+  @include cadillac(24, 24, 600);
+  color: $gray;
+}

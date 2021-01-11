@@ -1,0 +1,38 @@
+//- -
+//-   const navList = [
+//-       {
+//-         item: 'Оффер',
+//-         anchor: 'offer',
+//-       },
+//-       {
+//-         item: 'Услуги',
+//-         anchor: 'services',
+//-       },
+//-       {
+//-         item: 'Гарантии',
+//-         anchor: 'warranty',
+//-       },
+//-       {
+//-         item: 'Доставка',
+//-         anchor: 'delivery',
+//-       },
+//-       {
+//-         item: 'Отзывы',
+//-         anchor: 'reviews',
+//-       },
+//-       {
+//-         item: 'Вопросы',
+//-         anchor: 'faq',
+//-       },
+//-       {
+//-         item: 'Контакты',
+//-         anchor: 'contacts',
+//-       },
+//-     ]
+
+mixin menu-nav(navList, label)
+  nav.menu-nav&attributes(attributes)(aria-label= label)
+    ul.menu-nav__list
+      each navItem in navList
+        li.menu-nav__item
+          a.menu-nav__link(href= navItem.anchor ? navItem.link + "#" + navItem.anchor : navItem.link) #{navItem.item}

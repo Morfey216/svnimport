@@ -8,7 +8,7 @@ import './general/intersection-observer';
 
 import formInput from '../blocks/form-input/form-input';
 import formTextarea from '../blocks/form-textarea/form-textarea';
-// import header from '../blocks/header/header';
+import header from '../blocks/header/header';
 // import advantages from '../blocks/advantages/advantages';
 import contactForm from '../blocks/contact-form/contact-form';
 
@@ -16,6 +16,6 @@ import contactForm from '../blocks/contact-form/contact-form';
 
 formInput();
 formTextarea();
-// header();
+header();
 // advantages();
 contactForm();
