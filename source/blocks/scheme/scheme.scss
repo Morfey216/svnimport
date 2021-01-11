@@ -1,10 +1,26 @@
 .scheme {
   padding-top: 40px;
-  background-color: $hard-medium-gray;
+  background-color: $base-color;
 }
 
 .scheme__title {
+  position: relative;
   margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    width: 270px;
+    height: 2px;
+    background-color: $base-green;
+
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+
+    @include mobile-max {
+    }
+  }
 
   @include mobile-max {
     margin-bottom: 20px;

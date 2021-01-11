@@ -1168,8 +1168,8 @@
     var headerOpenedClass = 'header--menu-opened';
     if (!header) return;
     var burgerToggle = header.querySelector('.header__toggle');
-    var dropdown = header.querySelector('.header__dropdown');
-    var mainNavWrap = header.querySelector('.header__main-nav-wrap');
+    var dropdown = header.querySelector('.header__dropdown'); // const mainNavWrap = header.querySelector('.header__main-nav-wrap');
+
     var mainNav = header.querySelector('.header__main-nav'); // const adjustDesktopBig = () => {
     //   clearAllBodyScrollLocks(dropdown);
     //   mainNavWrap.prepend(mainNav);

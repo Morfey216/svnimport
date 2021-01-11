@@ -1,9 +1,8 @@
 .qualities {
-  // height: 790px;
   background-image: url("../img/bg/svn-box.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $light-blue;
+  background-color: $light-base-color;
 
   @include mobile-max {
     background-image: none;
@@ -11,12 +10,11 @@
 }
 
 .qualities__container {
-  width: 60%;
-  margin-left: auto;
+  width: 45%;
   min-height: 750px;
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: left;
+  background-color: rgba(48, 48, 48, 0.5);
+  text-align: right;
 
   @include mobile-max {
     width: 100%;
@@ -28,36 +26,14 @@
 .qualities__list {
   @include list-reset;
   width: 80%;
+  margin-left: auto;
 
   & li {
     @include roboto(20, 26, 500);
     padding-bottom: 20px;
     padding-left: 36px;
     position: relative;
-
-    &::before {
-      content: "";
-      width: 26px;
-      height: 26px;
-      border: 2px solid $dark-blue;
-      border-radius: 50%;
-      position: absolute;
-      left: 0;
-      top: 2px;
-    }
-
-    &::after {
-      content: "";
-      width: 10px;
-      height: 6px;
-      border-left: 2px solid $dark-blue;
-      border-bottom: 2px solid $dark-blue;
-      transform: rotate(-45deg);
-
-      position: absolute;
-      left: 8px;
-      top: 11px;
-    }
+    color: $border-gray;
   }
 
   @include mobile-max {
@@ -68,18 +44,6 @@
       line-height: 22px;
       font-weight: 400;
       padding-left: 0;
-      padding-top: 36px;
-
-      &::before {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      &::after {
-        left: 50%;
-        top: 7px;
-        transform: rotate(-45deg) translateX(-50%);
-      }
     }
   }
 }
@@ -87,9 +51,10 @@
 .qualities__title {
   margin-top: 60px;
   margin-bottom: 45px;
-  padding-bottom: 20px;
-  text-align: left;
-  text-transform: none;
+  padding-bottom: 5px;
+  text-align: right;
+  text-transform: capitalize;
+  color: $base-green;;
   position: relative;
 
   @include mobile-max {
@@ -100,12 +65,12 @@
 
   &::after {
     content: "";
-    width: 150px;
-    height: 6px;
-    background-color: $dark-blue;
+    width: 270px;
+    height: 2px;
+    background-color: $base-white-underline;
 
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
 
     @include mobile-max {

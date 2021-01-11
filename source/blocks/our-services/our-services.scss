@@ -1,6 +1,7 @@
 .our-services {
   padding: 60px 0;
   text-align: center;
+  background-color: $dark-base-color;
 
   @include tablet-medium-max {
     padding: 55px 0;
@@ -9,6 +10,7 @@
 
 .our-services__title {
   margin-bottom: 40px;
+  color: $base-green;
 
   @include mobile-max {
     margin-bottom: 28px;
@@ -34,7 +36,7 @@
 }
 
 .our-services__item {
-  background-color: $decor-gray;
+  // background-color: $decor-gray;
 
   @include tablet-max {
     display: flex;
@@ -82,9 +84,9 @@
 }
 
 .our-services__service-title {
-  @include roboto(20, 24, 700);
+  @include roboto(20, 24, 400);
   padding-bottom: 20px;
-  color: $gray;
+  color: $decor-gray;
 
   @include mobile-max {
     padding-bottom: 14px;
@@ -102,13 +104,14 @@
 
   & p {
     line-height: 20px;
+    color: $base-green;
   }
 
   &::before {
     content: "";
     width: 16px;
     height: 16px;
-    border: 1px solid $medium-gray;
+    border: 1px solid $base-green;;
     border-radius: 50%;
     position: absolute;
     left: 0;
@@ -119,8 +122,8 @@
     content: "";
     width: 8px;
     height: 4px;
-    border-left: 1px solid $medium-gray;
-    border-bottom: 1px solid $medium-gray;
+    border-left: 1px solid $base-green;;
+    border-bottom: 1px solid $base-green;;
     transform: rotate(-45deg);
 
     position: absolute;
@@ -130,14 +133,18 @@
 }
 
 .our-services__all-services-link {
-  @include roboto(16, 20, 400);
-  color: $medium-gray;
+  @include roboto(22, 22, 400);
+  color: $base-white-underline;
   outline: none;
-  border-bottom: 2px solid $medium-gray;
+  border-bottom: 2px solid $base-white-underline;
 
   &:hover,
   &:focus {
     color: $blue;
     border-color: transparent;
+  }
+
+  @include mobile-max {
+    font-size: 18px;
   }
 }
