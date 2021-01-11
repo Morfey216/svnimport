@@ -17,7 +17,7 @@ export default () => {
 
   const dropdown = header.querySelector('.header__dropdown');
 
-  const mainNavWrap = header.querySelector('.header__main-nav-wrap');
+  // const mainNavWrap = header.querySelector('.header__main-nav-wrap');
   const mainNav = header.querySelector('.header__main-nav');
 
   // const adjustDesktopBig = () => {

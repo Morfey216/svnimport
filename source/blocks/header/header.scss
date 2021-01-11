@@ -59,7 +59,7 @@
   }
 
   @include mobile-max {
-    width: 160px;
+    width: 120px;
     margin-right: 0;
   }
 }
@@ -145,9 +145,6 @@
     transition: opacity 0.3s;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-
-    @include tablet-max {
-    }
 
     @include mobile-max {
       width: 320px;
