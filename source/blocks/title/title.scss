@@ -1,15 +1,14 @@
 .title {
-  @include cadillac(38, 60, 600);
-  color: $blue;
-  text-transform: uppercase;
+  @include montserrat(40, 48, 700);
+  color: $black-title;
   text-align: center;
 
   @include tablet-max {
-    @include cadillac(34, 36, 600);
+    @include montserrat(34, 36, 700);
   }
 
   @include mobile-max {
-    @include cadillac-b(24, 30);
+    @include montserrat(24, 30, 500);
   }
 }
 

@@ -4,14 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
   color: $white;
-  background-color: $blue;
+  background-color: $btn-color;
   border: none;
   outline: none;
   border-radius: 2px;
 
-  @include cadillac(18, 18, 600);
+  @include opensans(14, 18, 500);
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -23,7 +22,7 @@
 
   &:hover,
   &:focus {
-    background-color: $dark-blue;
+    background-color: $btn-hover-color;
   }
 }
 
@@ -45,4 +44,13 @@
 
 .button__icon-tape {
   margin-right: 7px;
+}
+
+.button--green {
+  background-color: $btn-green-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-green-hover-color;
+  }
 }

@@ -31,7 +31,7 @@
 // region text-style
 
 p:not([class]) {
-  @include roboto(16, 24, 400);
+  @include opensans(16, 24, 400);
   padding-bottom: 14px;
   color: $gray;
 
