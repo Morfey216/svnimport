@@ -1,4 +1,4 @@
-.company-description {
+.about-company {
   min-height: 600px;
   background-image: url("../img/bg/company-description-bg.jpg");
   background-repeat: no-repeat;
@@ -10,23 +10,27 @@
   }
 }
 
-.company-description__container {
+.about-company__wrapper {
+  background-color: rgba(48, 48, 48, 0.5);
+}
+
+.about-company__container {
   width: 55%;
   min-height: 600px;
   margin-left: auto;
   padding: 40px;
-  background-color: rgba(48, 48, 48, 0.5);
   text-align: left;
 
   & p {
-    @include roboto(16, 22, 500);
-    padding-bottom: 14px;
-    color: $border-gray;
+    @include opensans(16, 24, 400);
+    color: $white;
   }
 
   @include mobile-max {
     width: 100%;
-    text-align: center;
+    padding: 5px;
+    padding-top: 20px;
+    // text-align: center;
 
     & p {
       font-size: 14px;
@@ -36,12 +40,10 @@
   }
 }
 
-.company-description__title {
+.about-company__title {
   margin-bottom: 22px;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
   text-align: left;
-  text-transform: none;
-  color: $base-green;
   position: relative;
 
   @include mobile-max {
@@ -50,17 +52,30 @@
 
   &::after {
     content: "";
-    width: 270px;
-    height: 2px;
-    background-color: $base-white-underline;
+    width: 315px;
+    height: 3px;
+    background-color: $btn-color;
 
     position: absolute;
     left: 0;
     bottom: 0;
 
     @include mobile-max {
+      width: 200px;
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+}
+
+.about-company__all-link {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: $white;
+  outline: none;
+
+  @include mobile-max {
+    font-size: 15px;
   }
 }

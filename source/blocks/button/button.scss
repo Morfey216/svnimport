@@ -54,3 +54,12 @@
     background-color: $btn-green-hover-color;
   }
 }
+
+.button--gray {
+  background-color: $base-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-gray-color;
+  }
+}

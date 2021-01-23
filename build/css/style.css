@@ -824,6 +824,11 @@ button.swiper-pagination-bullet {
   .button--green:hover, .button--green:focus {
     background-color: #2f7977; }
 
+.button--gray {
+  background-color: #2e2e2e; }
+  .button--gray:hover, .button--gray:focus {
+    background-color: #434344; }
+
 .form-input {
   display: block;
   position: relative;
@@ -1564,62 +1569,75 @@ button.swiper-pagination-bullet {
       width: 17px;
       height: 17px; } }
 
-.company-description {
+.about-company {
   min-height: 600px;
   background-image: url("../img/bg/company-description-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #717171; }
   @media (max-width: 767px) {
-    .company-description {
+    .about-company {
       background-image: none; } }
 
-.company-description__container {
+.about-company__wrapper {
+  background-color: rgba(48, 48, 48, 0.5); }
+
+.about-company__container {
   width: 55%;
   min-height: 600px;
   margin-left: auto;
   padding: 40px;
-  background-color: rgba(48, 48, 48, 0.5);
   text-align: left; }
-  .company-description__container p {
-    font-family: "Roboto", "Arial", sans-serif;
+  .about-company__container p {
+    font-family: "OpenSans", "Arial", sans-serif;
     font-size: 16px;
-    line-height: 22px;
-    font-weight: 500;
-    padding-bottom: 14px;
-    color: #d7d7d7; }
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff; }
   @media (max-width: 767px) {
-    .company-description__container {
+    .about-company__container {
       width: 100%;
-      text-align: center; }
-      .company-description__container p {
+      padding: 5px;
+      padding-top: 20px; }
+      .about-company__container p {
         font-size: 14px;
         line-height: 22px;
         font-weight: 400; } }
 
-.company-description__title {
+.about-company__title {
   margin-bottom: 22px;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
   text-align: left;
-  text-transform: none;
-  color: #35998d;
   position: relative; }
   @media (max-width: 767px) {
-    .company-description__title {
+    .about-company__title {
       text-align: center; } }
-  .company-description__title::after {
+  .about-company__title::after {
     content: "";
-    width: 270px;
-    height: 2px;
-    background-color: #d7d7d7;
+    width: 315px;
+    height: 3px;
+    background-color: #8a0808;
     position: absolute;
     left: 0;
     bottom: 0; }
     @media (max-width: 767px) {
-      .company-description__title::after {
+      .about-company__title::after {
+        width: 200px;
         left: 50%;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%); } }
+
+.about-company__all-link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #ffffff;
+  outline: none; }
+  @media (max-width: 767px) {
+    .about-company__all-link {
+      font-size: 15px; } }
 
 .qualities {
   background-image: url("../img/bg/svn-box.jpg");
@@ -1693,25 +1711,7 @@ button.swiper-pagination-bullet {
                 transform: translateX(-50%); } }
 
 .scheme {
-  padding-top: 40px;
-  background-color: #484848; }
-
-.scheme__title {
-  position: relative;
-  margin-bottom: 40px; }
-  .scheme__title::after {
-    content: "";
-    width: 270px;
-    height: 2px;
-    background-color: #35998d;
-    position: absolute;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-    bottom: 0; }
-  @media (max-width: 767px) {
-    .scheme__title {
-      margin-bottom: 20px; } }
+  background-color: #2e2e2e; }
 
 .scheme__img {
   margin: 0 auto; }
@@ -1913,7 +1913,7 @@ button.swiper-pagination-bullet {
       padding-right: 20px; } }
 
 .our-services__service-title {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 21px;
   line-height: 28px;
   font-weight: 700;
@@ -1975,11 +1975,11 @@ button.swiper-pagination-bullet {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  color: #d7d7d7;
+  color: #ffffff;
   outline: none; }
   @media (max-width: 767px) {
     .our-services__all-services-link {
-      font-size: 18px; } }
+      font-size: 15px; } }
 
 .services {
   padding: 60px 0;
@@ -2135,7 +2135,7 @@ button.swiper-pagination-bullet {
           align-items: center;
   margin: 0 auto;
   width: 100%;
-  background-color: #484848; }
+  background-color: #2e2e2e; }
 
 .page-footer__social {
   display: -webkit-box;
@@ -2204,7 +2204,7 @@ button.swiper-pagination-bullet {
 
 .page-footer__bottom {
   width: 100%;
-  background-color: #262626; }
+  background-color: #1b1b1c; }
 
 .page-footer__wrapper {
   display: -webkit-box;

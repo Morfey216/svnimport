@@ -9,8 +9,11 @@ include ../title/title
       'СВН импорт гарантирует Вам доставку необходимого продукта до&nbsp;Вашего склада в&nbsp;кратчайшие сроки.',
     ]
 
-section.company-description#about
-  div.company-description__container
-    +title('Об СВН импорт:', 'gray').company-description__title
-    each desc in companyDescriptions
-      p!= desc
+section.about-company#about
+  div.about-company__wrapper
+    div.container
+      div.about-company__container
+        +title('Об СВН импорт:', 'white').about-company__title
+        each desc in companyDescriptions
+          p!= desc
+        a(href="services.html").button.button--gray.about-company__all-link Читать далее

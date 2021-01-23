@@ -109,7 +109,7 @@
 }
 
 .our-services__service-title {
-  @include roboto(21, 28, 700);
+  @include montserrat(21, 28, 700);
   display: flex;
   align-items: center;
   min-height: 75px;
@@ -167,10 +167,10 @@
 .our-services__all-services-link {
   width: fit-content;
   margin: 0 auto;
-  color: $base-white-underline;
+  color: $white;
   outline: none;
 
   @include mobile-max {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
