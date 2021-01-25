@@ -12,32 +12,6 @@
   }
 }
 
-.our-services__title {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  position: relative;
-
-  &::after {
-    content: "";
-    width: 50%;
-    height: 3px;
-    background-color: $btn-color;
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-
-    @include mobile-max {
-      height: 2px;
-    }
-  }
-
-  @include mobile-max {
-    margin-bottom: 28px;
-  }
-}
-
 .our-services__list {
   @include list-reset;
   position: relative;
