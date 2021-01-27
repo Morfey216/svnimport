@@ -62,7 +62,7 @@ include ../title/title
     ]
 
 mixin page-footer(mod)
-  footer.page-footer
+  footer(class='page-footer' + (mod ? ' page-footer--' + mod : ''))&attributes(attributes)
     div.page-footer__top
       +title('Есть план? Пиши Нам!', 'white').page-footer__title
       p.page-footer__title-description Бесплатно ответим на все ваши вопросы и воплотим ваш План в Реальность
@@ -90,7 +90,7 @@ mixin page-footer(mod)
                     +svg(social.icon)(width= social.w height= social.h).page-footer__icon
                     span.visually-hidden #{social.desc}
         include ../footer-contact-form/footer-contact-form
-    div.page-footer__middle
+    div(class='page-footer__middle' + (mod ? ' page-footer__middle--' + mod : ''))
       div.page-footer__logo
         a.page-footer__logo-link(href="index.html")
           img.page-footer__logo-img(src="img/logo/logo_165.png" width="165" height="35" alt="Логотип")
