@@ -8,7 +8,8 @@ include ../title/title
 
 section.qualities
   div.qualities__container
-    +title('Почему выбирают нас?', 'white').qualities__title
-    ul.qualities__list
-      each it in qualities
-        li!= it
+    div.qualities__column-wrapper
+      +title('Почему выбирают нас?').qualities__title
+      ul.qualities__list
+        each it in qualities
+          li!= it

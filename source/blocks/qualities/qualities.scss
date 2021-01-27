@@ -11,30 +11,40 @@
 }
 
 .qualities__container {
-  width: 45%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.qualities__column-wrapper {
+  width: 515px;
   min-height: 750px;
-  padding: 40px;
-  background-color: rgba(48, 48, 48, 0.5);
-  text-align: right;
+  margin-left: 25%;
+  text-align: left;
+  transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
 
   @include mobile-max {
     width: 100%;
+    margin: 0;
+    padding: 15px;
     min-height: auto;
     text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.02);
   }
 }
 
 .qualities__list {
   @include list-reset;
-  width: 80%;
+  width: 100%;
   margin-left: auto;
 
   & li {
-    @include opensans(16, 24, 400);
+    @include opensans(15, 22, 700);
     padding-bottom: 20px;
-    padding-left: 36px;
     position: relative;
-    color: $white;
+    color: $black;
   }
 
   @include mobile-max {
@@ -53,25 +63,28 @@
   margin-top: 60px;
   margin-bottom: 45px;
   padding-bottom: 5px;
-  text-align: right;
+  font-size: 30px;
+  text-align: left;
   text-transform: capitalize;
-  color: $white;
+  color: $black;
   position: relative;
 
   @include mobile-max {
     margin-top: 20px;
     margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-size: 24px;
     text-align: center;
   }
 
   &::after {
     content: "";
-    width: 315px;
-    height: 3px;
+    width: 500px;
+    height: 2px;
     background-color: $btn-color;
 
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
 
     @include mobile-max {
