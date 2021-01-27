@@ -37,6 +37,30 @@ include ../title/title
       //- },
     ]
 
+-
+  const footerMenu = [
+      {
+        link: '',
+        desc: 'О компании',
+      },
+      {
+        link: '',
+        desc: 'Услуги',
+      },
+      {
+        link: '',
+        desc: 'Отзывы',
+      },
+      {
+        link: '',
+        desc: 'Каталог',
+      },
+      {
+        link: '',
+        desc: 'Контакты',
+      },
+    ]
+
 mixin page-footer(mod)
   footer.page-footer
     div.page-footer__top
@@ -45,6 +69,18 @@ mixin page-footer(mod)
       div.page-footer__wrapper
         div.page-footer__contacts
           h3.page-footer__contacts-title Контакты
+          div.page-footer__contacts-info
+            p.page-footer__address Адрес: Минск/Чапаева/3-246
+            p
+              span Телефон:
+              |
+              |
+              a(href="tel:+375291932333" target="_blank").page-footer__phone +375 (29) 193 23 33
+            p
+              span Email:
+              |
+              |
+              a(href="mailto:info@svnimport.com" target="_blank").page-footer__mail info@svnimport.com
           div.page-footer__social
             h2.visually-hidden Мы в соцсетях
             ul.page-footer__social-list
@@ -53,9 +89,15 @@ mixin page-footer(mod)
                   a(href= social.link target="_blank").page-footer__social-link
                     +svg(social.icon)(width= social.w height= social.h).page-footer__icon
                     span.visually-hidden #{social.desc}
-        //- include ../contact-form/contact-form
+        include ../footer-contact-form/footer-contact-form
     div.page-footer__middle
-      //- img(src='img/icons/' + advantage.image width= advantage.w height= advantage.h alt= advantage.alt).page-footer__logo
+      div.page-footer__logo
+        a.page-footer__logo-link(href="index.html")
+          img.page-footer__logo-img(src="img/logo/logo_165.png" width="165" height="35" alt="Логотип")
+      ul.page-footer__nav
+        each menuItem in footerMenu
+          li.page-footer__nav-item
+            a(href= menuItem.link).page-footer__nav-link #{menuItem.desc}
     div.page-footer__bottom
       div.page-footer__wrapper
         p.page-footer__details ООО "СВН импорт", УНП 193430086

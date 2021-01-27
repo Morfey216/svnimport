@@ -11,6 +11,7 @@ import formTextarea from '../blocks/form-textarea/form-textarea';
 import header from '../blocks/header/header';
 // import advantages from '../blocks/advantages/advantages';
 import contactForm from '../blocks/contact-form/contact-form';
+import footerContactForm from '../blocks/footer-contact-form/footer-contact-form';
 
 // endregion
 
@@ -19,3 +20,4 @@ formTextarea();
 header();
 // advantages();
 contactForm();
+footerContactForm();

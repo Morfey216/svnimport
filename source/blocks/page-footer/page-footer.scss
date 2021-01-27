@@ -5,6 +5,7 @@
   background-position: 50% 50%;
   background-size: cover;
   background-color: $bg-brown-color;
+  overflow: hidden;
 }
 
 .page-footer__top {
@@ -15,7 +16,6 @@
   margin: 0 auto;
   margin-top: 70px;
   width: 100%;
-  // background-color: $base-color;
 }
 
 .page-footer__title {
@@ -25,6 +25,14 @@
 .page-footer__title-description {
   @include montserrat(22, 33, 400);
   color: $white;
+
+  @include tablet-max {
+    padding: 10px;
+    padding-top: 0;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .page-footer__wrapper {
@@ -33,7 +41,7 @@
   justify-content: space-between;
   align-items: baseline;
   margin: 0 auto;
-  padding: 15px 15px 15px;
+  padding: 15px 0 15px;
   max-width: 1170px;
   width: 100%;
 
@@ -48,9 +56,44 @@
   }
 }
 
+.page-footer__contacts {
+  @include mobile-max {
+    order: 1;
+  }
+}
+
 .page-footer__contacts-title {
   @include montserrat(40, 48, 700);
+  margin-bottom: 40px;
   color: $white;
+
+  @include tablet-max {
+    @include montserrat(34, 36, 700);
+    margin-bottom: 30px;
+  }
+
+  @include mobile-max {
+    @include montserrat(24, 30, 500);
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__contacts-info {
+  @include opensans(16, 21, 700);
+  margin-bottom: 20px;
+  color: $white;
+}
+
+.page-footer__contacts-info p {
+  @include opensans(16, 21, 700);
+  color: $white;
+  display: block;
+  margin-top: 20px;
+  padding: 0;
+
+  @include mobile-max {
+    font-size: 14px;
+  }
 }
 
 .page-footer__social {
@@ -108,6 +151,58 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+.page-footer__middle {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $base-color;
+}
+
+.page-footer__logo-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-footer__nav {
+  @include list-reset;
+  @include opensans(16, 21, 400);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: max-content;
+  // width: 500px;
+  margin: 0 auto;
+  color: $white;
+
+  @include mobile-max {
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    font-size: 14px;
+  }
+}
+
+.page-footer__nav-item {
+  padding: 15px;
+
+  @include mobile-max {
+    padding: 5px;
+  }
+}
+
+.page-footer__nav-link {
+  position: relative;
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: $light-base-color;
+    left: 0;
+    right: 0;
+    bottom: -3px;
   }
 }
 

@@ -48,10 +48,10 @@ mixin header
       div.header__main-nav-container
         div.header__logo
           a.header__logo-link(href="index.html")
-            img.header__logo-img(src="img/logo/svn-logo.png" width="375" height="68" alt="Логотип")
+            img.header__logo-img(src="img/logo/logo_165.png" width="165" height="35" alt="Логотип")
         div.header__main-nav-wrap
           +menu-nav(mainNavList, 'Главное меню').header__main-nav
-        +button("Контакты")(aria-label='Контакты' type="button").header__contacts-button.js-contacts-open
+        +button("Задать вопрос")(aria-label='Задать вопрос' type="button").header__contacts-button.js-contacts-open
 
     button(type="button").header__toggle
       span.visually-hidden Открыть/закрыть
