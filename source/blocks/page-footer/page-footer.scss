@@ -8,6 +8,11 @@
   overflow: hidden;
 }
 
+.page-footer--services {
+  background-image: url("../img/bg/servises-footer-bg-70.jpg");
+  background-color: $bg-purple-color;
+}
+
 .page-footer__top {
   display: flex;
   flex-direction: column;
@@ -206,6 +211,14 @@
   }
 }
 
+.page-footer__middle--services {
+  background-color: $white;
+
+  & .page-footer__nav {
+    color: $dark-base-color;
+  }
+}
+
 .page-footer__bottom {
   width: 100%;
   background-color: $dark-base-color;
@@ -217,8 +230,6 @@
 
 .page-footer__details,
 .page-footer__copyright {
-  // width: 280px;
-
   @include opensans(14, 21, 400);
   color: $white;
 
