@@ -55,3 +55,7 @@ my-block/           # Папка блока.
 Скрипты блоков подключаются в `source/js/main.js`.
 
 В `/source/js/general/utils.js` содержится несколько вспомогательных функций.
+
+### Публикация
+
+Site is published at https://morfey216.github.io/svnimport/
