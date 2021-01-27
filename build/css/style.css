@@ -1793,31 +1793,41 @@ button.swiper-pagination-bullet {
       background-image: none; } }
 
 .qualities__container {
-  width: 45%;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.qualities__column-wrapper {
+  width: 515px;
   min-height: 750px;
-  padding: 40px;
-  background-color: rgba(48, 48, 48, 0.5);
-  text-align: right; }
+  margin-left: 25%;
+  text-align: left;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1); }
   @media (max-width: 767px) {
-    .qualities__container {
+    .qualities__column-wrapper {
       width: 100%;
+      margin: 0;
+      padding: 15px;
       min-height: auto;
       text-align: center; } }
+  .qualities__column-wrapper:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02); }
 
 .qualities__list {
   padding: 0;
   list-style: none;
-  width: 80%;
+  width: 100%;
   margin-left: auto; }
   .qualities__list li {
     font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 700;
     padding-bottom: 20px;
-    padding-left: 36px;
     position: relative;
-    color: #ffffff; }
+    color: #000000; }
   @media (max-width: 767px) {
     .qualities__list {
       width: 100%; }
@@ -1831,22 +1841,25 @@ button.swiper-pagination-bullet {
   margin-top: 60px;
   margin-bottom: 45px;
   padding-bottom: 5px;
-  text-align: right;
+  font-size: 30px;
+  text-align: left;
   text-transform: capitalize;
-  color: #ffffff;
+  color: #000000;
   position: relative; }
   @media (max-width: 767px) {
     .qualities__title {
       margin-top: 20px;
       margin-bottom: 15px;
+      padding-bottom: 15px;
+      font-size: 24px;
       text-align: center; } }
   .qualities__title::after {
     content: "";
-    width: 315px;
-    height: 3px;
+    width: 500px;
+    height: 2px;
     background-color: #8a0808;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0; }
     @media (max-width: 767px) {
       .qualities__title::after {
