@@ -1335,6 +1335,52 @@
     }, false);
   });
 
+  var footerContactForm = (function () {
+    var form = document.querySelector('.js-fcf');
+    if (!form) return;
+    var inputs = form.querySelectorAll('input');
+    var desc = form.querySelector('textarea');
+    var upload = form.querySelector('.footer-contact-form__upload-message');
+
+    function clearData() {
+      inputs.forEach(function (it) {
+        // eslint-disable-next-line no-param-reassign
+        it.value = '';
+      });
+      desc.value = '';
+      $('.js-fcf-submit').prop('disabled', false);
+    }
+
+    function createMessage(mess) {
+      upload.textContent = mess;
+      setTimeout(function () {
+        upload.textContent = '';
+      }, 3000);
+    }
+
+    form.addEventListener('submit', function (evt) {
+      var http = new XMLHttpRequest();
+      evt.preventDefault();
+      http.open('POST', 'mail/mail.php', true);
+
+      http.onreadystatechange = function () {
+        if (http.readyState === 4 && http.status === 200) {
+          clearData();
+          createMessage(http.responseText);
+        }
+      };
+
+      http.onerror = function () {
+        clearData(); // eslint-disable-next-line no-alert
+
+        alert('Ошибка, попробуйте еще раз');
+      };
+
+      $('.js-fcf-submit').prop('disabled', true);
+      http.send(new FormData(form));
+    }, false);
+  });
+
   /* eslint-disable */
 
   formInput();
@@ -1342,6 +1388,7 @@
   header(); // advantages();
 
   contactForm();
+  footerContactForm();
 
 }());
 //# sourceMappingURL=main.js.map

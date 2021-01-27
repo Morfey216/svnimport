@@ -1,4 +1,5 @@
 include ../svg/svg
+include ../title/title
 
 -
   const socialList = [
@@ -36,20 +37,68 @@ include ../svg/svg
       //- },
     ]
 
+-
+  const footerMenu = [
+      {
+        link: '',
+        desc: 'О компании',
+      },
+      {
+        link: '',
+        desc: 'Услуги',
+      },
+      {
+        link: '',
+        desc: 'Отзывы',
+      },
+      {
+        link: '',
+        desc: 'Каталог',
+      },
+      {
+        link: '',
+        desc: 'Контакты',
+      },
+    ]
+
 mixin page-footer(mod)
   footer.page-footer
     div.page-footer__top
+      +title('Есть план? Пиши Нам!', 'white').page-footer__title
+      p.page-footer__title-description Бесплатно ответим на все ваши вопросы и воплотим ваш План в Реальность
       div.page-footer__wrapper
-      include ../contact-form/contact-form
+        div.page-footer__contacts
+          h3.page-footer__contacts-title Контакты
+          div.page-footer__contacts-info
+            p.page-footer__address Адрес: Минск/Чапаева/3-246
+            p
+              span Телефон:
+              |
+              |
+              a(href="tel:+375291932333" target="_blank").page-footer__phone +375 (29) 193 23 33
+            p
+              span Email:
+              |
+              |
+              a(href="mailto:info@svnimport.com" target="_blank").page-footer__mail info@svnimport.com
+          div.page-footer__social
+            h2.visually-hidden Мы в соцсетях
+            ul.page-footer__social-list
+              each social in socialList
+                li.page-footer__social-item
+                  a(href= social.link target="_blank").page-footer__social-link
+                    +svg(social.icon)(width= social.w height= social.h).page-footer__icon
+                    span.visually-hidden #{social.desc}
+        include ../footer-contact-form/footer-contact-form
+    div.page-footer__middle
+      div.page-footer__logo
+        a.page-footer__logo-link(href="index.html")
+          img.page-footer__logo-img(src="img/logo/logo_165.png" width="165" height="35" alt="Логотип")
+      ul.page-footer__nav
+        each menuItem in footerMenu
+          li.page-footer__nav-item
+            a(href= menuItem.link).page-footer__nav-link #{menuItem.desc}
     div.page-footer__bottom
       div.page-footer__wrapper
         p.page-footer__details ООО "СВН импорт", УНП 193430086
-        div.page-footer__social
-          h2.visually-hidden Мы в соцсетях
-          ul.page-footer__social-list
-            each social in socialList
-              li.page-footer__social-item
-                a(href= social.link target="_blank").page-footer__social-link
-                  +svg(social.icon)(width= social.w height= social.h).page-footer__icon
-                  span.visually-hidden #{social.desc}
-        p.page-footer__copyright All contents © Copyright 2020
+        p.page-footer__copyright © 2021 Company Inc. Все права защищены

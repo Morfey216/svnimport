@@ -1,15 +1,14 @@
 .title {
-  @include cadillac(38, 60, 600);
-  color: $blue;
-  text-transform: uppercase;
+  @include montserrat(40, 48, 700);
+  color: $black-title;
   text-align: center;
 
   @include tablet-max {
-    @include cadillac(34, 36, 600);
+    @include montserrat(34, 36, 700);
   }
 
   @include mobile-max {
-    @include cadillac-b(24, 30);
+    @include montserrat(24, 30, 500);
   }
 }
 
@@ -19,4 +18,30 @@
 
 .title--gray {
   color: $gray;
+}
+
+.title--section-decor {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: $btn-color;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    @include mobile-max {
+      height: 2px;
+    }
+  }
+
+  @include mobile-max {
+    margin-bottom: 28px;
+  }
 }

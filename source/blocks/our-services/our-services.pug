@@ -1,11 +1,12 @@
 include ../title/title
+include ../button/button
 
 -
   const ourServices = [
       {
         image: 'our-services-p1.jpg',
-        alt: "Поиск/производство",
-        title: 'Поиск/производство',
+        alt: "Поиск и Производство",
+        title: 'Поиск и Производство',
         details: [
           'Наша команда проведет Вас через весь процесс разработки проекта: от дизайна логотипа до концептуализации продукта;',
           'Перед производством продукта мы предоставим Вам образцы для согласования;',
@@ -14,8 +15,8 @@ include ../title/title
       },
       {
         image: 'our-services-p2.jpg',
-        alt: "Доставка/фрахт",
-        title: 'Доставка/фрахт',
+        alt: "Транспортировка груза",
+        title: 'Транспортировка груза',
         details: [
           'С нами Вы получите «любые» грузы в кратчайшие сроки;',
           'Найдем оптимальный для Вас способ доставки груза: авиа, авто, ж/д, море;',
@@ -24,8 +25,8 @@ include ../title/title
       },
       {
         image: 'our-services-p3.jpg',
-        alt: "Таможенное оформление/сертификация",
-        title: 'Таможенное оформление/сертификация',
+        alt: "Таможенное оформление/ Сертификация",
+        title: 'Таможенное оформление/ Сертификация',
         details: [
           'Наши опытные декларанты проведут таможенную очистку груза вместо Вас;',
           'Оперативное и выгодное решение вопросов по сертификации товаров;',
@@ -36,7 +37,7 @@ include ../title/title
 
 section.our-services
   div.our-services__wrapper.container
-    +title('Наши услуги').our-services__title
+    +title('Краткое описание Наших услуг', 'section-decor').our-services__title
     ul.our-services__list
       each service in ourServices
         li.our-services__item
@@ -48,4 +49,4 @@ section.our-services
               each point in service.details
                 li.our-services__detail-point
                   p #{point}
-    a(href="services.html").our-services__all-services-link Полный пакет услуг
+    a(href="services.html").button.our-services__all-services-link Все Услуги

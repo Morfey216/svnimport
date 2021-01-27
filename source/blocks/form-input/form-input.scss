@@ -24,7 +24,7 @@
 }
 
 .form-input input {
-  @include cadillac-b(17, 26);
+  @include opensans(17, 26, 400);
   width: 100%;
   border: none;
   padding: 0;
@@ -59,7 +59,7 @@
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 
-  @include cadillac-b(17, 26);
+  @include opensans(17, 26, 400);
 
   @media (max-width: $screen-lg) {
     left: 14px;

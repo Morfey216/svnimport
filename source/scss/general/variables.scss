@@ -27,7 +27,7 @@ $blue: #58c5d9; //цвет фона, иконок, текста
 $blue-active: #99f0ff; //цвет фона, иконок, текста
 $light-blue: #e7edf3; //цвет светлого фона
 
-$title-color: #394b50;
+$title-color: #393950;
 $text-color: #7b7b7b;
 
 $white: #ffffff; // Цвет текста на цветном фоне.
@@ -36,12 +36,20 @@ $black-title: #0b0000; //Цвет заголовка
 
 // region dark color
 
-$base-color: #484848;
+$base-color: #2e2e2e;
 $light-base-color: #717171;
-$dark-base-color: #262626;
+$dark-base-color: #1b1b1c;
 $base-green: #35998d;
+$dark-green: #006360;
 $base-underline: #1bb0ca;
 $base-white-underline: #d7d7d7;
+$btn-color: #8a0808;
+$btn-hover-color: #963535;
+$btn-green-color: #006360;
+$btn-green-hover-color: #2f7977;
+$btn-gray-color: #434344;
+$btn-gray-hover-color: #787878;
+$bg-brown-color: #582a1a;
 
 
 // $bg-gradient-gray: linear-gradient(0deg, rgba(216, 216, 216, 0.2) -5.21%, rgba(216, 216, 216, 0) 88.31%);
@@ -51,6 +59,8 @@ $base-white-underline: #d7d7d7;
 $cadillac: "Cadillac Sans A", "Arial", sans-serif;
 $cadillac-b: "Cadillac Sans A Book", "Arial", sans-serif;
 $roboto: "Roboto", "Arial", sans-serif;
+$opensans: "OpenSans", "Arial", sans-serif;
+$montserrat: "Montserrat", "Arial", sans-serif;
 // endregion
 
 // region retina

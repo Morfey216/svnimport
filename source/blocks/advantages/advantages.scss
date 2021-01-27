@@ -1,0 +1,114 @@
+.advantages {
+  padding: 65px 0 40px 0;
+  text-align: center;
+  background-image: url("../img/bg/bg-holder-55.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: $decor-gray;
+
+  @include tablet-medium-max {
+    padding: 55px 0 30px 0;
+  }
+
+  @include mobile-max {
+    padding-bottom: 20px;
+  }
+}
+
+.advantages__list {
+  @include list-reset;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+
+  @include tablet-max {
+    justify-content: space-around;
+  }
+
+  @include mobile-max {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+}
+
+.advantages__item {
+  width: 350px;
+  margin: 5px;
+  margin-bottom: 40px;
+  padding: 26px;
+  padding-bottom: 40px;
+  color: $white;
+  background-color: rgba(46, 46, 46, 0.15);
+  transition: transform 0.3s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
+
+  &:nth-child(2n) {
+    color: $title-color;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  @include tablet-max {
+    width: 400px;
+  }
+
+  @include mobile-max {
+    width: 270px;
+  }
+}
+
+.advantages__item-title {
+  @include montserrat(22, 33, 700);
+  color: $dark-base-color;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: $dark-green;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    @include mobile-max {
+      height: 2px;
+    }
+  }
+
+  @include mobile-max {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+}
+
+.advantages__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  color: $dark-green;
+}
+
+.advantages__item-description {
+  @include opensans(14, 21, 600);
+
+  @include mobile-max {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
