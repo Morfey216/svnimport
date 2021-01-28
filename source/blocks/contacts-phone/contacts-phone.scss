@@ -4,29 +4,29 @@
 }
 
 .contacts-phone__icon {
-  margin-right: 15px;
+  margin-right: 5px;
+  fill: $dark-base-color;
 
-  &--messenger {
-    margin-right: 25px;
-  }
-
-  @include mobile-max {
-    margin-right: 10px;
-
-    &--messenger {
-      margin-right: 20px;
-    }
+  @include tablet-max {
+    margin-bottom: 10px;
+    fill: $dark-base-color;
   }
 }
 
 .contacts-phone__phones {
+  margin-right: 40px;
+
   &--col {
     display: flex;
     flex-direction: column;
 
     .contacts-phone__phone {
-      @include cadillac(18, 24, 600);
+      @include opensans(16, 24, 700);
     }
+  }
+
+  @include tablet-max {
+    margin-bottom: 10px;
   }
 
   @include mobile-max {
@@ -38,13 +38,19 @@
 }
 
 .contacts-phone__phone {
-  @include cadillac(24, 30, 600);
-  color: $gray;
+  @include opensans(16, 24, 400);
+  color: $dark-base-color;
+  transition: opacity 0.3s ease;
 
   &:hover,
   :focus,
   :active {
-    color: $medium-gray;
+    opacity: 0.7;
+  }
+
+  @include tablet-max {
+    font-size: 14px;
+    font-weight: 500;
   }
 }
 
@@ -53,6 +59,6 @@
 }
 
 .contacts-phone__messenger {
-  @include cadillac(24, 24, 600);
+  @include opensans(18, 26, 700);
   color: $gray;
 }

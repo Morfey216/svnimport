@@ -3,7 +3,7 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from '../../js/libs/bodySc
 export default () => {
   const WindowBreakpoints = {
     DESKTOP_BIG: 1920,
-    DESKTOP: 1280,
+    DESKTOP: 1024,
     TABLET: 1023,
     MOBILE: 320,
   };
@@ -16,23 +16,21 @@ export default () => {
   const burgerToggle = header.querySelector('.header__toggle');
 
   const dropdown = header.querySelector('.header__dropdown');
+  const overlay = header.querySelector('.header__overlay');
 
-  // const mainNavWrap = header.querySelector('.header__main-nav-wrap');
+  const mainNavContainer = header.querySelector('.header__main-nav-container');
+
+  const mainNavWrap = header.querySelector('.header__main-nav-wrap');
   const mainNav = header.querySelector('.header__main-nav');
 
-  // const adjustDesktopBig = () => {
-  //   clearAllBodyScrollLocks(dropdown);
-  //   mainNavWrap.prepend(mainNav);
-  // };
+  const contactsWrap = header.querySelector('.header__contacts-wrap');
+  // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
+  // const contactButton = contactsWrap.querySelector('.header__contacts-button');
 
   const adjustDesktop = () => {
-    if (header.classList.contains('header--menu-opened')) {
-      disableBodyScroll(header);
-    }
-
-    const fragment = new DocumentFragment();
-    fragment.appendChild(mainNav);
-    dropdown.appendChild(fragment);
+    clearAllBodyScrollLocks(dropdown);
+    mainNavWrap.prepend(mainNav);
+    mainNavContainer.append(contactsWrap);
   };
 
   const adjustTablet = () => {
@@ -42,6 +40,7 @@ export default () => {
 
     const fragment = new DocumentFragment();
     fragment.appendChild(mainNav);
+    fragment.appendChild(contactsWrap);
     dropdown.appendChild(fragment);
   };
 
@@ -51,9 +50,8 @@ export default () => {
     }
 
     const fragment = new DocumentFragment();
-
     fragment.appendChild(mainNav);
-
+    fragment.appendChild(contactsWrap);
     dropdown.appendChild(fragment);
   };
 
@@ -76,6 +74,8 @@ export default () => {
     const rect = header.getBoundingClientRect();
 
     dropdown.style.maxHeight = `calc(100vh - ${rect.bottom}px)`;
+    overlay.style.maxHeight = `calc(100vh - ${rect.bottom}px)`;
+    overlay.style.top = `${rect.bottom}px`;
   };
 
   let lastWindowMode = -1;
@@ -94,7 +94,6 @@ export default () => {
           break;
         default:
           adjustDesktop();
-          // adjustDesktopBig();
           break;
       }
       lastWindowMode = currentWindowMode;
@@ -103,14 +102,14 @@ export default () => {
 
   const closeMenu = () => {
     header.classList.remove(headerOpenedClass);
-    // clearAllBodyScrollLocks(dropdown);
+    clearAllBodyScrollLocks(dropdown);
   };
 
   const openMenu = () => {
     adjustDropdownMaxHeight();
     header.classList.add(headerOpenedClass);
     adjustMenu();
-    // disableBodyScroll(dropdown);
+    disableBodyScroll(dropdown);
   };
 
   burgerToggle.addEventListener('click', () => {
@@ -136,6 +135,21 @@ export default () => {
     }
   }
 
+  function scrolled() {
+    const scrollTop = window.scrollY;
+
+    console.log(window.outerHeight);
+
+    if (scrollTop >= window.outerHeight / 6) {
+      header.classList.remove('header--primary-position');
+    } else {
+      header.classList.add('header--primary-position');
+    }
+  }
+
   window.addEventListener('resize', resizeThrottler, false);
+  window.addEventListener('scroll', scrolled);
+
   adjustMenu();
+  scrolled();
 };

@@ -1,11 +1,13 @@
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1;
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid $border-gray;
   background-color: $white;
+  transition: all 0.3s ease;
 
   .header__toggle-svg-open {
     display: block;
@@ -26,25 +28,52 @@
   }
 }
 
+@media (min-width: $screen-l + 1) {
+  .header--primary-position {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease;
+
+    & .menu-nav__link {
+      color: $white;
+    }
+
+    & .menu-nav__list:hover .menu-nav__link {
+      opacity: 0.5;
+      transition-delay: 0.1s;
+
+      &:hover {
+        color: $white;
+        opacity: 1;
+      }
+    }
+
+    & .contacts-phone__icon {
+      fill: $white;
+    }
+
+    & .contacts-phone__phone {
+      font-weight: 600;
+      color: $white;
+    }
+  }
+}
+
 .header__main-nav-container {
   display: flex;
   justify-content: space-between;
   padding-bottom: 12px;
 
   @include tablet-medium-max {
-    // width: 570px;
     padding: 0;
     margin: 0;
     margin-right: auto;
     border-bottom: none;
   }
 
-  @include mobile-max {
-    // width: 500px;
-  }
-
   @include mobile-medium-max {
-    // display: block;
     width: 100%;
   }
 }
@@ -72,12 +101,6 @@
   }
 }
 
-.header__contacts-button {
-  @include mobile-max {
-    padding: 5px 20px;
-  }
-}
-
 .header__call-request {
   font-size: 13px;
 }
@@ -87,6 +110,19 @@
 .header__main-nav-wrap {
   display: flex;
   justify-content: flex-end;
+}
+
+.header__contacts-wrap {
+  display: flex;
+  justify-content: flex-end;
+
+  @include tablet-medium-max {
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    bottom: 20px;
+  }
 }
 
 // Модальное меню
@@ -104,6 +140,10 @@
 
   overflow: auto;
   z-index: 5;
+
+  @include tablet-max {
+    height: 100vh;
+  }
 }
 
 .header__overlay {
@@ -114,6 +154,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
 
   z-index: -1;
 }
@@ -183,7 +224,7 @@
 
       padding-bottom: 17px;
 
-      @include cadillac(14, 20, 600);
+      @include opensans(14, 20, 600);
 
       &::before {
         content: "";
@@ -211,7 +252,7 @@
 
     .nav-window__item:hover {
       .nav-window__link {
-        @include cadillac-b(13, 20);
+        @include opensans(13, 20, 400);
       }
 
       .nav-window__sub {
@@ -230,7 +271,7 @@
       padding-bottom: 14px;
       padding-right: 13px;
 
-      @include cadillac-b(13, 20);
+      @include opensans(13, 20, 400);
     }
 
     .nav-window__sub {
@@ -245,12 +286,12 @@
       padding-bottom: 8px;
       padding-left: 19px;
 
-      @include cadillac-b(13, 20);
+      @include opensans(13, 20, 400);
     }
 
     .nav-window__sub-item:hover {
       .nav-window__sub-link {
-        @include cadillac-b(13, 20);
+        @include opensans(13, 20, 400);
       }
 
       .nav-window__sub-preview {
@@ -359,12 +400,7 @@
 }
 
 .header__toggle {
-  position: absolute;
-  bottom: 44px;
-  right: 50%;
-  transform: translateX(50%);
-
-  display: block;
+  display: none;
   padding: 0;
 
   background: transparent;
@@ -383,9 +419,7 @@
 
   @include tablet-medium-max {
     position: absolute;
-    // right: 18px;
-    right: 50%;
-    transform: translateX(50%);
+    right: 18px;
     bottom: 24px;
     display: block;
     cursor: pointer;

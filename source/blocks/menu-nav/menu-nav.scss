@@ -4,7 +4,6 @@
 
 .menu-nav__list {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
@@ -16,16 +15,16 @@
 }
 
 .menu-nav__link {
-  @include cadillac(18, 24, 600);
+  @include opensans(16, 24, 400);
   display: block;
   padding: 12px 10px 10px 10px;
-  color: $text-color;
-  text-transform: uppercase;
+  color: $base-color;
+  transition: opacity 0.3s ease;
 
   &:hover,
   :focus,
   :active {
-    color: $blue;
+    opacity: 0.5;
   }
 
   @include tablet-medium-max {
@@ -35,6 +34,22 @@
   @include mobile-max {
     padding: 8px 0;
   }
+}
+
+@media (min-width: $screen-l) {
+  // .menu-nav__link {
+  //   color: $white;
+  // }
+
+  // .menu-nav__list:hover .menu-nav__link {
+  //   opacity: 0.5;
+  //   transition-delay: 0.1s;
+
+  //   &:hover {
+  //     color: $white;
+  //     opacity: 1;
+  //   }
+  // }
 }
 
 .menu-nav__item {
