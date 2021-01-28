@@ -1,7 +1,7 @@
 .advantages {
   padding: 65px 0 40px 0;
   text-align: center;
-  background-image: url("../img/bg/bg-holder-55.jpg");
+  background-image: url("../img/bg/bg-holder-1920.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -43,7 +43,7 @@
   padding: 26px;
   padding-bottom: 40px;
   color: $white;
-  background-color: rgba(46, 46, 46, 0.15);
+  background-color: rgba(46, 46, 46, 0.35);
   transition: transform 0.3s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
 
   &:nth-child(2n) {

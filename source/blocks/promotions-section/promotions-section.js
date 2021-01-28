@@ -31,6 +31,10 @@ export default () => {
         nextEl: '.promotions-section__navigation-btn-next',
         prevEl: '.promotions-section__navigation-btn-prev',
       },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
     });
   }
 
