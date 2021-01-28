@@ -1,0 +1,7 @@
+include ../svg/svg
+
+mixin link(text, href, mod)
+  a(class='link' + (mod ? ' link--' + mod : '') href= href)&attributes(attributes)
+    if (mod === 'phone')
+      +svg('phone')(class = 'link__icon-' + mod, width = '26', height = '26')
+    span #{text}

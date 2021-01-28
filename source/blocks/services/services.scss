@@ -64,6 +64,7 @@
   position: relative;
   width: 268px;
   margin: 0 5px;
+  background-color: $bg-blue-color;
   transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
 
   &:hover {

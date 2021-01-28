@@ -1,0 +1,45 @@
+.link {
+  @include opensans(14, 18, 500);
+  position: relative;
+  display: block;
+  color: $btn-color;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.link--phone {
+  @include opensans(14, 18, 500);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: $white;
+  text-decoration: none;
+
+  background-color: $btn-green-color;
+  border-radius: 4px;
+
+  svg {
+    margin-right: 10px;
+    fill: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $btn-green-hover-color;
+  }
+}
+
+.link--red {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: $white;
+  text-decoration: none;
+  background-color: $btn-color;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-color;
+  }
+}

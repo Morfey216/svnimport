@@ -1,5 +1,6 @@
 include ../svg/svg
 include ../button/button
+include ../link/link
 include ../contacts-phone/contacts-phone
 include ../menu-nav/menu-nav
 
@@ -53,7 +54,7 @@ mixin header
           +menu-nav(mainNavList, 'Главное меню').header__main-nav
         div.header__contacts-wrap
           +contacts-phone.header__contacts-phone
-          +button("Задать вопрос")(aria-label='Задать вопрос' type="button").header__contacts-button.js-contacts-open
+          +link('Задать вопрос', '#footer-contact-form').link--red.header__contacts-button.js-contacts-open
 
     button(type="button").header__toggle
       span.visually-hidden Открыть/закрыть

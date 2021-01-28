@@ -1216,7 +1216,8 @@
     var mainNavContainer = header.querySelector('.header__main-nav-container');
     var mainNavWrap = header.querySelector('.header__main-nav-wrap');
     var mainNav = header.querySelector('.header__main-nav');
-    var contactsWrap = header.querySelector('.header__contacts-wrap'); // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
+    var contactsWrap = header.querySelector('.header__contacts-wrap');
+    var contactsButton = header.querySelector('.header__contacts-button'); // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
     // const contactButton = contactsWrap.querySelector('.header__contacts-button');
 
     var adjustDesktop = function adjustDesktop() {
@@ -1301,6 +1302,7 @@
     var closeMenu = function closeMenu() {
       header.classList.remove(headerOpenedClass);
       clearAllBodyScrollLocks();
+      contactsButton.removeEventListener('click', closeMenu);
     };
 
     var openMenu = function openMenu() {
@@ -1332,7 +1334,6 @@
 
     function scrolled() {
       var scrollTop = window.scrollY;
-      console.log(window.outerHeight);
 
       if (scrollTop >= window.outerHeight / 6) {
         header.classList.remove('header--primary-position');
@@ -1343,8 +1344,43 @@
 
     window.addEventListener('resize', resizeThrottler, false);
     window.addEventListener('scroll', scrolled);
+    contactsButton.addEventListener('click', closeMenu);
     adjustMenu();
     scrolled();
+  });
+
+  /* global Swiper */
+  var promoSection = (function () {
+    var promoSection = document.querySelector('.promotions-section');
+    if (!promoSection) return;
+    var container = promoSection.querySelector('.promotions-section__slider-container');
+    var wrapper = container.querySelector('.promotions-section__promo-list');
+    var slides = container.querySelectorAll('.promotions-section__promo-item');
+
+    function sliderInit() {
+      container.classList.add('swiper-container');
+      wrapper.classList.add('swiper-wrapper');
+      slides.forEach(function (slide) {
+        slide.classList.add('swiper-slide');
+      });
+      var slider = new Swiper(container, {
+        direction: 'horizontal',
+        loop: true,
+        preloadImages: true,
+        loadPrevNext: true,
+        loadPrevNextAmount: 2,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        navigation: {
+          nextEl: '.promotions-section__navigation-btn-next',
+          prevEl: '.promotions-section__navigation-btn-prev'
+        }
+      });
+    }
+
+    sliderInit();
   });
 
   var contactForm = (function () {
@@ -1443,7 +1479,8 @@
 
   formInput();
   formTextarea();
-  header(); // advantages();
+  header();
+  promoSection(); // advantages();
 
   contactForm();
   footerContactForm();
