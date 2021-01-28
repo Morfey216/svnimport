@@ -24,6 +24,7 @@ export default () => {
   const mainNav = header.querySelector('.header__main-nav');
 
   const contactsWrap = header.querySelector('.header__contacts-wrap');
+  const contactsButton = header.querySelector('.header__contacts-button');
   // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
   // const contactButton = contactsWrap.querySelector('.header__contacts-button');
 
@@ -103,6 +104,7 @@ export default () => {
   const closeMenu = () => {
     header.classList.remove(headerOpenedClass);
     clearAllBodyScrollLocks(dropdown);
+    contactsButton.removeEventListener('click', closeMenu);
   };
 
   const openMenu = () => {
@@ -138,8 +140,6 @@ export default () => {
   function scrolled() {
     const scrollTop = window.scrollY;
 
-    console.log(window.outerHeight);
-
     if (scrollTop >= window.outerHeight / 6) {
       header.classList.remove('header--primary-position');
     } else {
@@ -149,6 +149,7 @@ export default () => {
 
   window.addEventListener('resize', resizeThrottler, false);
   window.addEventListener('scroll', scrolled);
+  contactsButton.addEventListener('click', closeMenu);
 
   adjustMenu();
   scrolled();

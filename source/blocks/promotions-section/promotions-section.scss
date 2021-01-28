@@ -1,0 +1,128 @@
+.promotions-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.promotions-section__content-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.promotions-section__promo-list {
+  margin: 0 auto;
+}
+
+.promotions-section__promo-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/bg/bg-holder-55.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: $light-base-color;
+  overflow: hidden;
+}
+
+.promotions-section__item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  a {
+    z-index: 2;
+  }
+}
+
+.promotions-section__title {
+  @include montserrat(47, 60, 700);
+  width: 650px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+
+  @include tablet-max {
+    width: 90%;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.promotions-section__title-description {
+  @include montserrat(26, 40, 500);
+  margin-bottom: 30px;
+  padding: 20px;
+  color: $white;
+  text-align: center;
+
+  @include mobile-medium-max {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+
+.promotions-section__slider-navigation {
+  position: absolute;
+  bottom: 45%;
+  left: 25px;
+  right: 25px;
+  z-index: 1;
+
+  @include mobile-max {
+    bottom: 50px;
+    left: 55px;
+    right: 55px;
+  }
+}
+
+.promotions-section__item-content--slide-1 {
+  background-image: url("../img/bg/main-promo-1-35.jpg");
+}
+
+.promotions-section__item-content--slide-2 {
+  background-image: url("../img/bg/main-promo-2-45.jpg");
+}
+
+.promotions-section__item-content--slide-3 {
+  background-image: url("../img/bg/main-promo-3-50.jpg");
+
+  @media (min-width: $screen-md + 1) {
+    .promotions-section__item-content {
+      width: 565px;
+      margin-right: 100px;
+    }
+
+    .promotions-section__title,
+    .promotions-section__title-description {
+      width: 100%;
+      margin-right: 0;
+      padding: 20px 0;
+      text-align: left;
+    }
+  }
+
+  .promotions-section__title {
+    @include tablet-max {
+      width: 90%;
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    @include mobile-max {
+      margin-bottom: 5px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

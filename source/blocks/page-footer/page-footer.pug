@@ -62,7 +62,7 @@ include ../title/title
     ]
 
 mixin page-footer(mod)
-  footer(class='page-footer' + (mod ? ' page-footer--' + mod : ''))&attributes(attributes)
+  footer(class='page-footer' + (mod ? ' page-footer--' + mod : ''))&attributes(attributes)#footer-contact-form
     div.page-footer__top
       +title('Есть план? Пиши Нам!', 'white').page-footer__title
       p.page-footer__title-description Бесплатно ответим на все ваши вопросы и воплотим ваш План в Реальность
