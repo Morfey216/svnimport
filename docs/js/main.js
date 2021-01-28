@@ -1081,6 +1081,26 @@
     });
   };
 
+  var restoreOverflowSetting = function restoreOverflowSetting() {
+    // Setting overflow on body/documentElement synchronously in Desktop Safari slows down
+    // the responsiveness for some reason. Setting within a setTimeout fixes this.
+    setTimeout(function () {
+      if (previousBodyPaddingRight !== undefined) {
+        document.body.style.paddingRight = previousBodyPaddingRight; // Restore previousBodyPaddingRight to undefined so setOverflowHidden knows it
+        // can be set again.
+
+        previousBodyPaddingRight = undefined;
+      }
+
+      if (previousBodyOverflowSetting !== undefined) {
+        document.body.style.overflow = previousBodyOverflowSetting; // Restore previousBodyOverflowSetting to undefined
+        // so setOverflowHidden knows it can be set again.
+
+        previousBodyOverflowSetting = undefined;
+      }
+    });
+  }; // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+
 
   var isTargetElementTotallyScrolled = function isTargetElementTotallyScrolled(targetElement) {
     return targetElement ? targetElement.scrollHeight - targetElement.scrollTop <= targetElement.clientHeight : false;
@@ -1156,11 +1176,34 @@
       locks = [].concat(_toConsumableArray(locks), [_lock]);
     }
   };
+  var clearAllBodyScrollLocks = function clearAllBodyScrollLocks() {
+    if (isIosDevice) {
+      // Clear all locks ontouchstart/ontouchmove handlers, and the references
+      locks.forEach(function (lock) {
+        lock.targetElement.ontouchstart = null;
+        lock.targetElement.ontouchmove = null;
+      });
+
+      if (documentListenerAdded) {
+        document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? {
+          passive: false
+        } : undefined);
+        documentListenerAdded = false;
+      }
+
+      locks = []; // Reset initial clientY
+
+      initialClientY = -1;
+    } else {
+      restoreOverflowSetting();
+      locks = [];
+    }
+  };
 
   var header = (function () {
     var WindowBreakpoints = {
       DESKTOP_BIG: 1920,
-      DESKTOP: 1280,
+      DESKTOP: 1024,
       TABLET: 1023,
       MOBILE: 320
     };
@@ -1168,21 +1211,18 @@
     var headerOpenedClass = 'header--menu-opened';
     if (!header) return;
     var burgerToggle = header.querySelector('.header__toggle');
-    var dropdown = header.querySelector('.header__dropdown'); // const mainNavWrap = header.querySelector('.header__main-nav-wrap');
-
-    var mainNav = header.querySelector('.header__main-nav'); // const adjustDesktopBig = () => {
-    //   clearAllBodyScrollLocks(dropdown);
-    //   mainNavWrap.prepend(mainNav);
-    // };
+    var dropdown = header.querySelector('.header__dropdown');
+    var overlay = header.querySelector('.header__overlay');
+    var mainNavContainer = header.querySelector('.header__main-nav-container');
+    var mainNavWrap = header.querySelector('.header__main-nav-wrap');
+    var mainNav = header.querySelector('.header__main-nav');
+    var contactsWrap = header.querySelector('.header__contacts-wrap'); // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
+    // const contactButton = contactsWrap.querySelector('.header__contacts-button');
 
     var adjustDesktop = function adjustDesktop() {
-      if (header.classList.contains('header--menu-opened')) {
-        disableBodyScroll(header);
-      }
-
-      var fragment = new DocumentFragment();
-      fragment.appendChild(mainNav);
-      dropdown.appendChild(fragment);
+      clearAllBodyScrollLocks();
+      mainNavWrap.prepend(mainNav);
+      mainNavContainer.append(contactsWrap);
     };
 
     var adjustTablet = function adjustTablet() {
@@ -1192,6 +1232,7 @@
 
       var fragment = new DocumentFragment();
       fragment.appendChild(mainNav);
+      fragment.appendChild(contactsWrap);
       dropdown.appendChild(fragment);
     };
 
@@ -1202,6 +1243,7 @@
 
       var fragment = new DocumentFragment();
       fragment.appendChild(mainNav);
+      fragment.appendChild(contactsWrap);
       dropdown.appendChild(fragment);
     };
 
@@ -1224,6 +1266,8 @@
     var adjustDropdownMaxHeight = function adjustDropdownMaxHeight() {
       var rect = header.getBoundingClientRect();
       dropdown.style.maxHeight = "calc(100vh - ".concat(rect.bottom, "px)");
+      overlay.style.maxHeight = "calc(100vh - ".concat(rect.bottom, "px)");
+      overlay.style.top = "".concat(rect.bottom, "px");
     };
 
     var lastWindowMode = -1;
@@ -1246,8 +1290,7 @@
             break;
 
           default:
-            adjustDesktop(); // adjustDesktopBig();
-
+            adjustDesktop();
             break;
         }
 
@@ -1256,13 +1299,15 @@
     };
 
     var closeMenu = function closeMenu() {
-      header.classList.remove(headerOpenedClass); // clearAllBodyScrollLocks(dropdown);
+      header.classList.remove(headerOpenedClass);
+      clearAllBodyScrollLocks();
     };
 
     var openMenu = function openMenu() {
       adjustDropdownMaxHeight();
       header.classList.add(headerOpenedClass);
-      adjustMenu(); // disableBodyScroll(dropdown);
+      adjustMenu();
+      disableBodyScroll(dropdown);
     };
 
     burgerToggle.addEventListener('click', function () {
@@ -1285,8 +1330,21 @@
       }
     }
 
+    function scrolled() {
+      var scrollTop = window.scrollY;
+      console.log(window.outerHeight);
+
+      if (scrollTop >= window.outerHeight / 6) {
+        header.classList.remove('header--primary-position');
+      } else {
+        header.classList.add('header--primary-position');
+      }
+    }
+
     window.addEventListener('resize', resizeThrottler, false);
+    window.addEventListener('scroll', scrolled);
     adjustMenu();
+    scrolled();
   });
 
   var contactForm = (function () {

@@ -43,7 +43,7 @@ include ../menu-nav/menu-nav
     ]
 
 mixin header
-  header.header
+  header.header.header--primary-position
     div.container
       div.header__main-nav-container
         div.header__logo
@@ -51,7 +51,9 @@ mixin header
             img.header__logo-img(src="img/logo/logo_165.png" width="165" height="35" alt="Логотип")
         div.header__main-nav-wrap
           +menu-nav(mainNavList, 'Главное меню').header__main-nav
-        +button("Задать вопрос")(aria-label='Задать вопрос' type="button").header__contacts-button.js-contacts-open
+        div.header__contacts-wrap
+          +contacts-phone.header__contacts-phone
+          +button("Задать вопрос")(aria-label='Задать вопрос' type="button").header__contacts-button.js-contacts-open
 
     button(type="button").header__toggle
       span.visually-hidden Открыть/закрыть
