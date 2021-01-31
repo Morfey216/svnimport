@@ -2140,35 +2140,41 @@ button.swiper-pagination-bullet {
       font-size: 15px; } }
 
 .qualities {
-  background-image: url("../img/bg/svn-box.jpg");
+  background-image: url("../img/bg/bg-holder-1920.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #717171; }
-  @media (max-width: 767px) {
-    .qualities {
-      background-image: none; } }
 
 .qualities__container {
-  background-color: rgba(255, 255, 255, 0.5); }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (max-width: 1023px) {
+    .qualities__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
-.qualities__column-wrapper {
+.qualities__list-wrapper {
   width: 515px;
-  min-height: 750px;
-  margin-left: 25%;
   text-align: left;
   -webkit-transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
   transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
   transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
   transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1); }
-  @media (max-width: 767px) {
-    .qualities__column-wrapper {
+  @media (max-width: 1023px) {
+    .qualities__list-wrapper {
       width: 100%;
       margin: 0;
       padding: 15px;
       min-height: auto;
       text-align: center; } }
-  .qualities__column-wrapper:hover {
+  .qualities__list-wrapper:hover {
     -webkit-transform: scale(1.02);
             transform: scale(1.02); }
 
@@ -2203,13 +2209,15 @@ button.swiper-pagination-bullet {
   text-transform: capitalize;
   color: #000000;
   position: relative; }
+  @media (max-width: 1023px) {
+    .qualities__title {
+      text-align: center;
+      margin-bottom: 15px;
+      padding-bottom: 15px; } }
   @media (max-width: 767px) {
     .qualities__title {
       margin-top: 20px;
-      margin-bottom: 15px;
-      padding-bottom: 15px;
-      font-size: 24px;
-      text-align: center; } }
+      font-size: 24px; } }
   .qualities__title::after {
     content: "";
     width: 500px;
@@ -2218,14 +2226,43 @@ button.swiper-pagination-bullet {
     position: absolute;
     left: 0;
     bottom: 0; }
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       .qualities__title::after {
         width: 200px;
         left: 50%;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%); } }
 
+.qualities__img-container {
+  width: 630px;
+  margin-top: 60px;
+  margin-bottom: 45px;
+  margin-left: 25px;
+  text-align: left;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1); }
+  @media (max-width: 1023px) {
+    .qualities__img-container {
+      width: 100%;
+      margin-top: 40px;
+      margin-left: 0;
+      padding: 15px;
+      min-height: auto;
+      text-align: center; } }
+  @media (max-width: 767px) {
+    .qualities__img-container {
+      margin-top: 0; } }
+  .qualities__img-container:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02); }
+
 .scheme {
+  background-image: url("../img/bg/bg-holder-1920.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
   background-color: #2e2e2e; }
 
 .scheme__img {
