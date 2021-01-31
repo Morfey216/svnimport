@@ -2,10 +2,10 @@
   display: block;
   position: relative;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 18px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+  padding-right: 25px;
   background-color: #ffffff;
   border-radius: 2px;
 
@@ -22,7 +22,7 @@
 }
 
 .form-textarea textarea {
-  @include opensans(17, 26, 400);
+  @include opensans(16, 24, 400);
   width: 100%;
   border: none;
   padding: 0;
@@ -45,11 +45,12 @@
 }
 
 .form-textarea__label {
-  @include opensans(17, 26, 400);
+  @include opensans(16, 24, 400);
   position: absolute;
-  top: 20px;
+  top: 50%;
   left: 24px;
   width: calc(100% - 48px);
+  transform: translateY(-50%);
   transition: transform 0.3s, opacity 0.3s;
   color: $icon-gray;
   pointer-events: none;
@@ -69,6 +70,16 @@
 
 .form-textarea:hover .form-textarea__label {
   color: $light-gray;
+}
+
+.form-textarea__label--label-top {
+  top: -20px;
+  left: 0;
+  color: $white;
+}
+
+.form-textarea--label-top:hover .form-textarea__label {
+  color: $white;
 }
 
 
@@ -112,6 +123,13 @@
 .form-textarea.error .form-textarea__label {
   opacity: 0;
   transform: translateY(-100%);
+}
+
+.form-textarea--label-top textarea:focus + .form-textarea__label,
+.form-textarea--label-top textarea:not(:placeholder-shown) + .form-textarea__label,
+.form-textarea--label-top.error .form-textarea__label {
+  opacity: 1;
+  transform: translateY(-50%);
 }
 
 .form-textarea.error .form-textarea__error,
