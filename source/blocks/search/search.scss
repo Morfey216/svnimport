@@ -1,5 +1,5 @@
-.audit {
-  padding: 90px 0;
+.search {
+  padding: 120px 0;
   padding-bottom: 60px;
   background-image: url("../img/bg/bg-holder-1920.jpg");
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   background-color: $decor-gray;
 
   @include tablet-medium-max {
-    padding: 55px 0;
+    padding: 75px 0;
   }
 
   @include mobile-max {
@@ -16,14 +16,13 @@
   }
 }
 
-.audit__container {
+.search__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @include tablet-max {
+  @include tablet-medium-max {
     flex-direction: column;
-    width: 450px;
   }
 
   @include mobile-max {
@@ -31,11 +30,11 @@
   }
 }
 
-.audit__content-wrapper {
-  width: 700px;
+.search__content-wrapper {
+  width: 640px;
 
-  @include tablet-max {
-    width: 450px;
+  @include tablet-medium-max {
+    width: 80%;
   }
 
   @include mobile-max {
@@ -43,20 +42,23 @@
   }
 }
 
-.audit__title {
+.search__title {
   margin-bottom: 20px;
   font-size: 34px;
+  line-height: 40px;
   font-weight: normal;
 }
 
-.audit__title-description {
+.search__title-description {
   @include montserrat(18, 24, 700);
   text-align: center;
   margin-bottom: 20px;
 }
 
-.audit__img-container {
-  width: 450px;
+.search__img-container {
+  display: flex;
+  justify-content: center;
+  width: 515px;
   overflow: hidden;
 
   @include mobile-max {
@@ -64,7 +66,7 @@
   }
 }
 
-.audit__img {
+.search__img {
   transition: transform 1s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
 
   &:hover {
