@@ -1,0 +1,75 @@
+.production {
+  padding: 120px 0;
+  padding-bottom: 60px;
+  background-image: url("../img/bg/bg-holder-1920.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-color: $decor-gray;
+
+  @include tablet-medium-max {
+    padding: 75px 0;
+  }
+
+  @include mobile-max {
+    padding-top: 60px;
+  }
+}
+
+.production__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet-medium-max {
+    flex-direction: column;
+  }
+
+  @include mobile-max {
+    width: 100%;
+  }
+}
+
+.production__content-wrapper {
+  width: 640px;
+
+  @include tablet-medium-max {
+    width: 80%;
+  }
+
+  @include mobile-max {
+    width: 100%;
+  }
+}
+
+.production__title {
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: normal;
+}
+
+.production__title-description {
+  @include montserrat(18, 24, 700);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.production__img-container {
+  display: flex;
+  justify-content: center;
+  width: 515px;
+  overflow: hidden;
+
+  @include mobile-max {
+    width: 100%;
+  }
+}
+
+.production__img {
+  transition: transform 1s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}

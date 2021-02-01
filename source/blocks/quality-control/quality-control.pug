@@ -1,0 +1,29 @@
+include ../title/title
+
+-
+  const qualityContents = [
+      ' Наши сотрудники в Китае выполняют проверку соответствия показателей качества конкретного товара требованиям, установленным стандартами, техническими условиями, а так же требованиям, определенным в договоре поставки. ',
+      'Это позволяет устранить проблемы с качеством товара, не выезжая с завода, тем самым сэкономив Ваше время.',
+      'Особенности данной услуги:',
+    ]
+
+-
+  const qualityLists = [
+      'Снижает риски на получение брака',
+      'Снижает риски на недостачу товара',
+      'Предотвращает появления дефектов еще до получения конечного продукта, так как мы контролируем весь процесс производства',
+      'Экономит время при работе с Китаем',
+    ]
+
+section.quality-control
+  div.quality-control__container.container
+    div.quality-control__content-wrapper.content
+      +title('Контроль качества', 'section-decor').quality-control__title
+      p.quality-control__title-description От Вас необходима идея - а мы воплотим ее в жизнь
+      each itContent in qualityContents
+        p!= itContent
+      ul
+        each it in qualityLists
+          li!= it
+    div.quality-control__img-container
+      img(src="img/our-services/pages/quality.jpg" width="490" height="530" alt= "Контроль качества").quality-control__img

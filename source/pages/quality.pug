@@ -1,0 +1,17 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/page-footer/page-footer
+
+doctype html
+html(lang='ru')
+  +head('Контроль качества')
+  body
+    +header('dark')
+
+    main
+      h1.visually-hidden Доставка товаров из Китая и других стран - Контроль качества
+
+    include ../blocks/quality-control/quality-control
+    +page-footer('services')
+
+    include ../blocks/_scripts-block/_scripts-block
