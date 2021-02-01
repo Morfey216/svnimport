@@ -1,4 +1,4 @@
-.production {
+.services-content {
   padding: 120px 0;
   padding-bottom: 60px;
   background-image: url("../img/bg/bg-holder-1920.jpg");
@@ -16,7 +16,7 @@
   }
 }
 
-.production__container {
+.services-content__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@
   }
 }
 
-.production__content-wrapper {
+.services-content__content-wrapper {
   width: 640px;
 
   @include tablet-medium-max {
@@ -42,7 +42,7 @@
   }
 }
 
-.production__title {
+.services-content__title {
   margin-bottom: 20px;
   font-size: 34px;
   line-height: 40px;
@@ -53,13 +53,13 @@
   }
 }
 
-.production__title-description {
+.services-content__title-description {
   @include montserrat(18, 24, 700);
   text-align: center;
   margin-bottom: 20px;
 }
 
-.production__img-container {
+.services-content__img-container {
   display: flex;
   justify-content: center;
   width: 515px;
@@ -70,7 +70,7 @@
   }
 }
 
-.production__img {
+.services-content__img {
   transition: transform 1s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
 
   &:hover {

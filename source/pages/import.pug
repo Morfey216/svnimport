@@ -1,0 +1,17 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/page-footer/page-footer
+
+doctype html
+html(lang='ru')
+  +head('Импорт')
+  body
+    +header('dark')
+
+    main
+      h1.visually-hidden Доставка товаров из Китая и других стран - Импорт
+
+    include ../blocks/import/import
+    +page-footer('services')
+
+    include ../blocks/_scripts-block/_scripts-block
