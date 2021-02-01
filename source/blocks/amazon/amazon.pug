@@ -1,0 +1,25 @@
+include ../title/title
+
+-
+  const amazonContents = [
+      'Ознакомление с образцами продукции является важным этапом процесса оптовых поставок. Только лично увидев интересующий товар и убедившись в его качестве, можно принимать решение о размещении заказа на заводе/фабрике в Китае. Поэтому для многих компаний получение образцов является насущным вопросом.',
+      'Если Вы заказываете образцы у нескольких производителей, то целесообразно объединить их в одну посылку. Наша компания осуществит консолидацию заказов, соберет все модели товаров, а также проверит, чтобы они соответствовали заявленным артикулам.',
+    ]
+
+//- -
+//-   const amazonLists = [
+//-       '',
+//-     ]
+
+section.amazon.services-content
+  div.services-content__container.container
+    div.services-content__img-container.amazon__img-container
+      img(src="img/our-services/pages/amazon.jpg" width="440" height="410" alt= "Amazon").services-content__img
+    div.services-content__content-wrapper.content
+      +title('Amazon', 'section-decor').services-content__title
+      p.services-content__title-description Быстро, выгодно, надежно!
+      each itContent in amazonContents
+        p!= itContent
+      //- ul
+      //-   each it in amazonLists
+      //-     li!= it

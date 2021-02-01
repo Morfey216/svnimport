@@ -3108,6 +3108,89 @@ button.swiper-pagination-bullet {
       font-size: 14px;
       text-align: center; } }
 
+.services-content {
+  padding: 120px 0;
+  padding-bottom: 60px;
+  background-image: url("../img/bg/bg-holder-1920.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-color: #f8f8f8; }
+  @media (max-width: 1023px) {
+    .services-content {
+      padding: 75px 0; } }
+  @media (max-width: 767px) {
+    .services-content {
+      padding-top: 60px; } }
+
+.services-content__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 1023px) {
+    .services-content__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  @media (max-width: 767px) {
+    .services-content__container {
+      width: 100%; } }
+
+.services-content__content-wrapper {
+  width: 640px; }
+  @media (max-width: 1023px) {
+    .services-content__content-wrapper {
+      width: 80%; } }
+  @media (max-width: 767px) {
+    .services-content__content-wrapper {
+      width: 100%; } }
+
+.services-content__title {
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 500; }
+  @media (max-width: 767px) {
+    .services-content__title {
+      font-size: 28px; } }
+
+.services-content__title-description {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px; }
+
+.services-content__img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 515px;
+  overflow: hidden; }
+  @media (max-width: 767px) {
+    .services-content__img-container {
+      width: 100%; } }
+
+.services-content__img {
+  -webkit-transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 1s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 1s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: transform 1s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
+  transition: transform 1s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 1s cubic-bezier(0.21, 0.67, 0.58, 1); }
+  .services-content__img:hover {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04); }
+
 .search {
   padding: 120px 0;
   padding-bottom: 60px;
@@ -3156,7 +3239,10 @@ button.swiper-pagination-bullet {
   margin-bottom: 20px;
   font-size: 34px;
   line-height: 40px;
-  font-weight: normal; }
+  font-weight: 500; }
+  @media (max-width: 767px) {
+    .search__title {
+      font-size: 28px; } }
 
 .search__title-description {
   font-family: "Montserrat", "Arial", sans-serif;
@@ -3236,7 +3322,11 @@ button.swiper-pagination-bullet {
 .audit__title {
   margin-bottom: 20px;
   font-size: 34px;
-  font-weight: normal; }
+  line-height: 40px;
+  font-weight: 500; }
+  @media (max-width: 767px) {
+    .audit__title {
+      font-size: 28px; } }
 
 .audit__title-description {
   font-family: "Montserrat", "Arial", sans-serif;
@@ -3310,7 +3400,10 @@ button.swiper-pagination-bullet {
   margin-bottom: 20px;
   font-size: 34px;
   line-height: 40px;
-  font-weight: normal; }
+  font-weight: 500; }
+  @media (max-width: 767px) {
+    .production__title {
+      font-size: 28px; } }
 
 .production__title-description {
   font-family: "Montserrat", "Arial", sans-serif;
@@ -3390,7 +3483,10 @@ button.swiper-pagination-bullet {
   margin-bottom: 20px;
   font-size: 34px;
   line-height: 40px;
-  font-weight: normal; }
+  font-weight: 500; }
+  @media (max-width: 767px) {
+    .quality-control__title {
+      font-size: 28px; } }
 
 .quality-control__title-description {
   font-family: "Montserrat", "Arial", sans-serif;
@@ -3470,7 +3566,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 20px;
   font-size: 34px;
   line-height: 40px;
-  font-weight: normal; }
+  font-weight: 500; }
   @media (max-width: 767px) {
     .brand__title {
       font-size: 28px; } }
@@ -3504,3 +3600,6 @@ button.swiper-pagination-bullet {
   .brand__img:hover {
     -webkit-transform: scale(1.04);
             transform: scale(1.04); }
+
+.amazon__img-container {
+  margin-bottom: 20px; }
