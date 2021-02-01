@@ -1,9 +1,20 @@
 .scheme {
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: $base-color;
+  // background-image: url("../img/bg/bg-holder-1920.jpg");
+  // background-repeat: no-repeat;
+  // background-position: bottom;
+  // background-size: cover;
+  // background-color: $base-color;
+}
+
+.scheme__title {
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.scheme__img-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .scheme__img {

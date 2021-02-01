@@ -21,7 +21,7 @@
     flex-direction: column;
 
     .contacts-phone__phone {
-      @include opensans(16, 24, 700);
+      @include opensans(16, 24, 500);
     }
   }
 

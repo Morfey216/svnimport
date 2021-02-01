@@ -55,7 +55,7 @@
     }
 
     & .contacts-phone__phone {
-      font-weight: 600;
+      font-weight: 500;
       color: $white;
     }
 
@@ -147,6 +147,11 @@
 
   @include tablet-max {
     height: 100vh;
+  }
+
+  & .contacts-phone__phone {
+    display: flex;
+    flex-direction: column;
   }
 }
 

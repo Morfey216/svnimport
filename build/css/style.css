@@ -54,6 +54,11 @@
   font-display: swap;
   src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff"); }
 
+body {
+  background-image: url("../img/bg/bg-template-36.png");
+  background-repeat: repeat;
+  background-color: #d7d7d7; }
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -1383,7 +1388,7 @@ button.swiper-pagination-bullet {
       font-family: "OpenSans", "Arial", sans-serif;
       font-size: 16px;
       line-height: 24px;
-      font-weight: 700; }
+      font-weight: 500; }
   @media (max-width: 1199px) {
     .contacts-phone__phones {
       margin-bottom: 10px; } }
@@ -1520,7 +1525,7 @@ button.swiper-pagination-bullet {
     .header--primary-position .contacts-phone__icon {
       fill: #ffffff; }
     .header--primary-position .contacts-phone__phone {
-      font-weight: 600;
+      font-weight: 500;
       color: #ffffff; }
     .header--primary-position.header--dark {
       background-color: #1b1b1c; } }
@@ -1610,6 +1615,14 @@ button.swiper-pagination-bullet {
   @media (max-width: 1199px) {
     .header__dropdown {
       height: 100vh; } }
+  .header__dropdown .contacts-phone__phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 
 .header__overlay {
   display: none;
@@ -1963,12 +1976,7 @@ button.swiper-pagination-bullet {
 
 .advantages {
   padding: 65px 0 40px 0;
-  text-align: center;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  text-align: center; }
   @media (max-width: 1023px) {
     .advantages {
       padding: 55px 0 30px 0; } }
@@ -2094,16 +2102,17 @@ button.swiper-pagination-bullet {
       background-image: none; } }
 
 .about-company__wrapper {
-  background-color: rgba(48, 48, 48, 0.5); }
+  background-color: rgba(0, 0, 0, 0.4); }
 
 .about-company__container {
   width: 55%;
   min-height: 600px;
   margin-left: auto;
   padding: 40px;
+  padding-right: 2%;
   text-align: left; }
   .about-company__container p {
-    font-family: "OpenSans", "Arial", sans-serif;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -2145,7 +2154,6 @@ button.swiper-pagination-bullet {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
   margin-top: 10px;
   color: #ffffff;
   outline: none; }
@@ -2154,11 +2162,7 @@ button.swiper-pagination-bullet {
       font-size: 15px; } }
 
 .qualities {
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #717171; }
+  margin-top: 40px; }
 
 .qualities__container {
   display: -webkit-box;
@@ -2166,7 +2170,10 @@ button.swiper-pagination-bullet {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media (max-width: 1023px) {
     .qualities__container {
       -webkit-box-orient: vertical;
@@ -2175,7 +2182,7 @@ button.swiper-pagination-bullet {
               flex-direction: column; } }
 
 .qualities__list-wrapper {
-  width: 515px;
+  width: 530px;
   text-align: left;
   -webkit-transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
   transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
@@ -2198,10 +2205,10 @@ button.swiper-pagination-bullet {
   width: 100%;
   margin-left: auto; }
   .qualities__list li {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 15px;
-    line-height: 22px;
-    font-weight: 700;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
     padding-bottom: 20px;
     position: relative;
     color: #000000; }
@@ -2215,12 +2222,8 @@ button.swiper-pagination-bullet {
         padding-left: 0; } }
 
 .qualities__title {
-  margin-top: 60px;
-  margin-bottom: 45px;
-  padding-bottom: 5px;
-  font-size: 30px;
+  padding-bottom: 20px;
   text-align: left;
-  text-transform: capitalize;
   color: #000000;
   position: relative; }
   @media (max-width: 1023px) {
@@ -2234,12 +2237,11 @@ button.swiper-pagination-bullet {
       font-size: 24px; } }
   .qualities__title::after {
     content: "";
-    width: 500px;
-    height: 2px;
-    background-color: #8a0808;
-    position: absolute;
+    width: 70%;
+    height: 3px;
     left: 0;
-    bottom: 0; }
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
     @media (max-width: 1023px) {
       .qualities__title::after {
         width: 200px;
@@ -2248,9 +2250,6 @@ button.swiper-pagination-bullet {
                 transform: translateX(-50%); } }
 
 .qualities__img-container {
-  width: 630px;
-  margin-top: 60px;
-  margin-bottom: 45px;
   margin-left: 25px;
   text-align: left;
   -webkit-transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
@@ -2272,12 +2271,14 @@ button.swiper-pagination-bullet {
     -webkit-transform: scale(1.02);
             transform: scale(1.02); }
 
-.scheme {
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #2e2e2e; }
+.scheme__title {
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-bottom: 20px; }
+
+.scheme__img-container {
+  width: 80%;
+  margin: 0 auto; }
 
 .scheme__img {
   margin: 0 auto; }
@@ -2446,12 +2447,7 @@ button.swiper-pagination-bullet {
 
 .our-services {
   padding: 60px 0;
-  text-align: center;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  text-align: center; }
   @media (max-width: 1023px) {
     .our-services {
       padding: 55px 0; } }
@@ -2468,7 +2464,7 @@ button.swiper-pagination-bullet {
           justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 40px;
-  text-align: left; }
+  text-align: center; }
   @media (max-width: 1199px) {
     .our-services__list {
       -webkit-box-orient: vertical;
@@ -2543,6 +2539,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2583,10 +2582,10 @@ button.swiper-pagination-bullet {
 .our-services__detail-point {
   position: relative; }
   .our-services__detail-point p {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 800;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
     color: #0b0000; }
     @media (max-width: 767px) {
       .our-services__detail-point p {

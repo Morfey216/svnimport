@@ -53,7 +53,7 @@ mixin header(mod)
         div.header__main-nav-wrap
           +menu-nav(mainNavList, 'Главное меню').header__main-nav
         div.header__contacts-wrap
-          +contacts-phone.header__contacts-phone
+          +contacts-phone('').header__contacts-phone
           +link('Задать вопрос', '#footer-contact-form').link--red.header__contacts-button.js-contacts-open
 
     button(type="button").header__toggle
