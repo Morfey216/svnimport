@@ -29,9 +29,11 @@
 
 .page-footer__title-description {
   @include montserrat(22, 33, 400);
+  margin-bottom: 40px;
   color: $white;
 
   @include tablet-max {
+    margin-bottom: 20px;
     padding: 10px;
     padding-top: 0;
     font-size: 16px;
@@ -90,13 +92,25 @@
 }
 
 .page-footer__contacts-info p {
-  @include opensans(16, 21, 700);
+  @include opensans(16, 22, 700);
   color: $white;
   display: block;
-  margin-top: 20px;
-  padding: 0;
+  width: 550px;
+  margin-top: 10px;
+  padding: 10px 0 20px 0;
+  border-bottom: 1px solid rgba($color: $white, $alpha: 0.1);
+
+  @include tablet-max {
+    width: 470px;
+  }
+
+  @include tablet-medium-max {
+    width: 270px;
+  }
 
   @include mobile-max {
+    @include opensans(14, 21, 400);
+    width: auto;
     font-size: 14px;
   }
 }

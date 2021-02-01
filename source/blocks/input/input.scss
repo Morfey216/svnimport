@@ -1,0 +1,66 @@
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: $opensans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(103, 76, 51, 0.4);
+  border: 1px solid rgba(103, 76, 51, 0.1);
+  outline: none;
+
+  &:hover {
+    color: rgba(103, 76, 51, 0.6);
+    border: 1px solid rgba(103, 76, 51, 0.4);
+
+    &::placeholder {
+      color: rgba(103, 76, 51, 0.6);
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(103, 76, 51, 1);
+    border-color: $brown;
+
+    &::placeholder {
+      color: rgba(103, 76, 51, 1);
+    }
+  }
+
+  &::placeholder {
+    color: rgba(103, 76, 51, 0.4);
+  }
+}
+
+.input:not([type="checkbox"]):not([type="radio"]) {
+  border-radius: 4px;
+}
+
+.input--without-border {
+  color: $brown;
+  border: 1px solid $white;
+
+  &::placeholder {
+    color: $brown;
+  }
+
+  &:hover {
+    border: 1px solid $white;
+
+    &::placeholder {
+      color: $brown;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $brown;
+    border: 1px solid $white;
+
+    &::placeholder {
+      color: $brown;
+    }
+  }
+}

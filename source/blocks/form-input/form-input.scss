@@ -2,10 +2,10 @@
   display: block;
   position: relative;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 18px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+  padding-right: 25px;
   background-color: #ffffff;
   border-radius: 2px;
 
@@ -24,7 +24,7 @@
 }
 
 .form-input input {
-  @include opensans(17, 26, 400);
+  @include opensans(16, 24, 400);
   width: 100%;
   border: none;
   padding: 0;
@@ -59,7 +59,7 @@
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 
-  @include opensans(17, 26, 400);
+  @include opensans(16, 24, 400);
 
   @media (max-width: $screen-lg) {
     left: 14px;
@@ -75,6 +75,16 @@
 
 .form-input:hover .form-input__label {
   color: $light-gray;
+}
+
+.form-input__label--label-top {
+  top: -20px;
+  left: 0;
+  color: $white;
+}
+
+.form-input--label-top:hover .form-input__label {
+  color: $white;
 }
 
 .form-input__error {
@@ -114,6 +124,13 @@
 .form-input.error .form-input__label {
   opacity: 0;
   transform: translateY(-100%);
+}
+
+.form-input--label-top input:focus + .form-input__label,
+.form-input--label-top input:not(:placeholder-shown) + .form-input__label,
+.form-input--label-top.error .form-input__label {
+  opacity: 1;
+  transform: translateY(-50%);
 }
 
 .form-input.error .form-input__error,

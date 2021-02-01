@@ -1,0 +1,12 @@
+include ../svg/svg
+include ../input/input
+
+mixin client-phone(label)
+  fieldset.client-phone&attributes(attributes)
+    label.client-phone__description(for="client-phone") #{label}
+    +input.client-phone__value(
+      name="client-phone"
+      type="tel"
+      id="client-phone"
+      placeholder="+7 ( _ _ _ ) _ _ _ – _ _ – _ _")
+    +svg('warning').client-phone__value-svg(width="15" height="15")

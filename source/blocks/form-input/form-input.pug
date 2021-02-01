@@ -2,8 +2,8 @@ include ../svg/svg
 
 mixin form-input(data, mod, marker)
   label(class="form-input" + (mod ? ' form-input--' + mod : '') + (attributes.class ? ' ' + attributes.class : ''))
-    input(placeholder=" " id=attributes.id type=attributes.type name=attributes.name required).js-form-input
-    span.form-input__label!= data.label
+    input(placeholder=" " id=attributes.id type=attributes.type name=attributes.name required=attributes.required).js-form-input
+    span(class="form-input__label" + (mod ? ' form-input__label--' + mod : ''))!= data.label
     span.form-input__error!= data.error
     +svg('warning')(width="15" height="15")
     if (marker)

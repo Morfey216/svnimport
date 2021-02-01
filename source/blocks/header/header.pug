@@ -43,8 +43,8 @@ include ../menu-nav/menu-nav
       //- },
     ]
 
-mixin header
-  header.header.header--primary-position
+mixin header(mod)
+  header.header.header--primary-position(class= mod ? ' header--' + mod : '')
     div.container
       div.header__main-nav-container
         div.header__logo

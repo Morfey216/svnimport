@@ -3,8 +3,8 @@
   width: 100%;
   top: 0;
   z-index: 5;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  // padding-bottom: 15px;
   border-bottom: 1px solid $border-gray;
   background-color: $white;
   transition: all 0.3s ease;
@@ -57,6 +57,10 @@
     & .contacts-phone__phone {
       font-weight: 600;
       color: $white;
+    }
+
+    &.header--dark {
+      background-color: $dark-base-color;
     }
   }
 }
