@@ -19,7 +19,7 @@ include ../button/button
         title: 'Транспортировка груза',
         details: [
           'С нами Вы получите «любые» грузы в кратчайшие сроки;',
-          'Найдем оптимальный для Вас способ доставки груза: авиа, авто, ж/д, море;',
+          'Найдем оптимальный для Вас способ доставки груза: авиа, авто, ж/&nbsp;д, море;',
           '«Доставка под ключ» от склада производителя до Вашего склада.',
         ]
       },
@@ -48,5 +48,5 @@ section.our-services
             ul.our-services__details-list
               each point in service.details
                 li.our-services__detail-point
-                  p #{point}
+                  p!= point
     a(href="services.html").button.our-services__all-services-link Все Услуги

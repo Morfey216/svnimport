@@ -17,7 +17,7 @@
 
 
 .qualities__list-wrapper {
-  width: 515px;
+  width: 530px;
   text-align: left;
   transition: transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1), opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1);
 
@@ -40,7 +40,7 @@
   margin-left: auto;
 
   & li {
-    @include opensans(15, 22, 700);
+    @include montserrat(16, 24, 400);
     padding-bottom: 20px;
     position: relative;
     color: $black;
@@ -61,10 +61,8 @@
 .qualities__title {
   margin-top: 60px;
   margin-bottom: 45px;
-  padding-bottom: 5px;
-  font-size: 30px;
+  padding-bottom: 20px;
   text-align: left;
-  text-transform: capitalize;
   color: $black;
   position: relative;
 
@@ -82,12 +80,9 @@
   &::after {
     content: "";
     width: 500px;
-    height: 2px;
-    background-color: $btn-color;
-
-    position: absolute;
+    height: 3px;
     left: 0;
-    bottom: 0;
+    transform: translateX(0);
 
     @include tablet-medium-max {
       width: 200px;

@@ -11,7 +11,7 @@
 }
 
 .about-company__wrapper {
-  background-color: rgba(48, 48, 48, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .about-company__container {
@@ -19,10 +19,11 @@
   min-height: 600px;
   margin-left: auto;
   padding: 40px;
+  padding-right: 2%;
   text-align: left;
 
   & p {
-    @include opensans(16, 24, 400);
+    @include montserrat(16, 24, 400);
     color: $white;
   }
 
@@ -69,7 +70,7 @@
 
 .about-company__all-link {
   width: fit-content;
-  margin: 0 auto;
+  // margin: 0 auto;
   margin-top: 10px;
   color: $white;
   outline: none;

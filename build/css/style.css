@@ -2094,16 +2094,17 @@ button.swiper-pagination-bullet {
       background-image: none; } }
 
 .about-company__wrapper {
-  background-color: rgba(48, 48, 48, 0.5); }
+  background-color: rgba(0, 0, 0, 0.4); }
 
 .about-company__container {
   width: 55%;
   min-height: 600px;
   margin-left: auto;
   padding: 40px;
+  padding-right: 2%;
   text-align: left; }
   .about-company__container p {
-    font-family: "OpenSans", "Arial", sans-serif;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -2145,7 +2146,6 @@ button.swiper-pagination-bullet {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
   margin-top: 10px;
   color: #ffffff;
   outline: none; }
@@ -2175,7 +2175,7 @@ button.swiper-pagination-bullet {
               flex-direction: column; } }
 
 .qualities__list-wrapper {
-  width: 515px;
+  width: 530px;
   text-align: left;
   -webkit-transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
   transition: opacity 0.5s cubic-bezier(0.21, 0.67, 0.58, 1), -webkit-transform 0.2s cubic-bezier(0.21, 0.67, 0.58, 1);
@@ -2198,10 +2198,10 @@ button.swiper-pagination-bullet {
   width: 100%;
   margin-left: auto; }
   .qualities__list li {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 15px;
-    line-height: 22px;
-    font-weight: 700;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
     padding-bottom: 20px;
     position: relative;
     color: #000000; }
@@ -2217,10 +2217,8 @@ button.swiper-pagination-bullet {
 .qualities__title {
   margin-top: 60px;
   margin-bottom: 45px;
-  padding-bottom: 5px;
-  font-size: 30px;
+  padding-bottom: 20px;
   text-align: left;
-  text-transform: capitalize;
   color: #000000;
   position: relative; }
   @media (max-width: 1023px) {
@@ -2235,11 +2233,10 @@ button.swiper-pagination-bullet {
   .qualities__title::after {
     content: "";
     width: 500px;
-    height: 2px;
-    background-color: #8a0808;
-    position: absolute;
+    height: 3px;
     left: 0;
-    bottom: 0; }
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
     @media (max-width: 1023px) {
       .qualities__title::after {
         width: 200px;
@@ -2468,7 +2465,7 @@ button.swiper-pagination-bullet {
           justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 40px;
-  text-align: left; }
+  text-align: center; }
   @media (max-width: 1199px) {
     .our-services__list {
       -webkit-box-orient: vertical;
@@ -2543,6 +2540,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2583,10 +2583,10 @@ button.swiper-pagination-bullet {
 .our-services__detail-point {
   position: relative; }
   .our-services__detail-point p {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 800;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
     color: #0b0000; }
     @media (max-width: 767px) {
       .our-services__detail-point p {
