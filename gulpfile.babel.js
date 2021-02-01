@@ -23,7 +23,7 @@ const rollup = require('rollup');
 const server = browserSync.create();
 
 gulp.task('html', () => gulp
-  .src('source/pages/*.pug')
+  .src('source/pages/**/*.pug')
   .pipe(pug({}))
   .pipe(gulp.dest('build'))
   .pipe(

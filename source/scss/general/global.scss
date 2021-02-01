@@ -40,4 +40,17 @@ p:not([class]) {
   }
 }
 
+.content {
+  & p:not([class]),
+  ul:not([class]) {
+    @include opensans(16, 24, 400);
+    color: $dark-base-color;
+    padding-bottom: 14px;
+
+    @include mobile-max {
+      font-size: 14px;
+    }
+  }
+}
+
 //endregion
