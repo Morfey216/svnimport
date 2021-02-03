@@ -21,9 +21,22 @@
   }
 }
 
+.services__chart-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.services__chart-img {
+  margin: 60px auto;
+
+  @include mobile-max {
+    margin: 0 auto;
+  }
+}
+
 .services__title {
   margin-bottom: 20px;
-  // color: $dark-base-color;
 
   &::after {
     background-color: $dark-green;

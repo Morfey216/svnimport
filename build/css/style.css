@@ -1925,6 +1925,22 @@ button.swiper-pagination-bullet {
       font-size: 26px;
       line-height: 36px; } }
 
+.promotions-section__title--fs {
+  font-size: 60px;
+  line-height: 68px; }
+  @media (max-width: 1199px) {
+    .promotions-section__title--fs {
+      font-size: 46px;
+      line-height: 58px; } }
+  @media (max-width: 767px) {
+    .promotions-section__title--fs {
+      font-size: 32px;
+      line-height: 46px; } }
+  @media (max-width: 579px) {
+    .promotions-section__title--fs {
+      font-size: 26px;
+      line-height: 36px; } }
+
 .promotions-section__title-description {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 26px;
@@ -2082,10 +2098,10 @@ button.swiper-pagination-bullet {
   color: #006360; }
 
 .advantages__item-description {
-  font-family: "OpenSans", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 600; }
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400; }
   @media (max-width: 767px) {
     .advantages__item-description {
       font-size: 14px;
@@ -2669,6 +2685,17 @@ button.swiper-pagination-bullet {
   @media (max-width: 767px) {
     .services {
       padding-top: 40px; } }
+
+.services__chart-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px; }
+
+.services__chart-img {
+  margin: 60px auto; }
+  @media (max-width: 767px) {
+    .services__chart-img {
+      margin: 0 auto; } }
 
 .services__title {
   margin-bottom: 20px; }
