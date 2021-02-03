@@ -1,0 +1,54 @@
+.cargo-transportation-welcome {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/bg/transportation-header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: $bg-blue-color;
+  overflow: hidden;
+
+  @include mobile-medium-max {
+    background-position: right 50%;
+  }
+}
+
+.cargo-transportation-welcome__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  @include mobile-medium-max {
+    width: 100%;
+  }
+}
+
+.cargo-transportation-welcome__title {
+  margin-bottom: 20px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 66px;
+
+  @include mobile-medium-max {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.cargo-transportation-welcome__title-description {
+  @include montserrat(22, 30, 500);
+  margin-bottom: 30px;
+  padding: 20px;
+  color: $white;
+  text-align: center;
+
+  @include mobile-medium-max {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}

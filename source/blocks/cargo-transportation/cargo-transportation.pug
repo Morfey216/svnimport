@@ -1,0 +1,36 @@
+include ../title/title
+include ../link/link
+
+-
+  const transportationList = [
+    {
+      image: 'airplane.jpg',
+      alt: "Авиаперевозки грузов",
+      title: 'Авиаперевозки грузов',
+      desc: 'Грузовые авиаперевозки – это один из быстрых способов доставки Вашего товара от отправителя к месту назначения. Мы сотрудничаем с ведущими авиакомпаниями мира и глобальными экспедиторскими сетями, поэтому наши специалисты разрабатывают максимально выгодное и оптимальное с точки зрения срока и стоимости транспортировки предложение',
+      link: '#',
+    },
+  ]
+
+section.cargo-transportation
+  div.container
+    div.cargo-transportation__wrapper
+      +title('Международные Грузоперевозки', 'section-decor').cargo-transportation__title
+      div.cargo-transportation__description
+        p Под международной грузоперевозкой понимается перевозка грузов между двумя и более государствами, выполняемая на условиях, которые установлены международными соглашениями.
+        p Мы предлагаем оптимальные схемы грузоперевозок любыми видами транспорта. Составляем оптимальные логистические маршруты и сотрудничаем с ведущими операторами контейнерных перевозок. Четкая и отлаженная схема работы позволяет осуществлять доставку с минимальными рисками и точно в срок.
+        p С нами ваш товар будет застрахован от потерь и повреждений во время его транспортировки.
+      ul.cargo-transportation__features-list
+        li.cargo-transportation__features-item Груз загружается в контейнер на складе отправителя и в нем же прибывает на склад получателя, исключая перетарку во время транспортировки.
+        li.cargo-transportation__features-item Контейнеры будут доставлены Клиенту морским, железнодорожным, автотранспортом и любыми их комбинациями.
+        li.cargo-transportation__features-item При перевозке грузов в контейнерах повышается скорость обработки в транзитных и перевалочных пунктах; снижается себестоимость перевозки; повышается сохранность грузов.
+
+      ul.cargo-transportation__transportation-list
+        each item in transportationList
+          li.cargo-transportation__transportation-item
+            div.cargo-transportation__transportation-image-wrapper
+              img(src="img/transportation/" + item.image, alt= item.alt).cargo-transportation__transportation-image
+            div.cargo-transportation__transportation-content
+              h3!= item.title
+              p.cargo-transportation__transportation-description!= item.desc
+              +link('Подробнее', item.link).link--red
