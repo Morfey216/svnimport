@@ -63,6 +63,26 @@
   }
 }
 
+.promotions-section__title--fs {
+  font-size: 60px;
+  line-height: 68px;
+
+  @include tablet-max {
+    font-size: 46px;
+    line-height: 58px;
+  }
+
+  @include mobile-max {
+    font-size: 32px;
+    line-height: 46px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
 .promotions-section__title-description {
   @include montserrat(26, 40, 500);
   margin-bottom: 30px;

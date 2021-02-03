@@ -105,7 +105,8 @@
 }
 
 .advantages__item-description {
-  @include opensans(14, 21, 600);
+  // @include montserrat(14, 21, 500);
+  @include montserrat(16, 24, 400);
 
   @include mobile-max {
     font-size: 14px;
