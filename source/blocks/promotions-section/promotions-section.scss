@@ -64,6 +64,7 @@
 }
 
 .promotions-section__title--fs {
+  width: 850px;
   font-size: 60px;
   line-height: 68px;
 
@@ -73,6 +74,7 @@
   }
 
   @include mobile-max {
+    width: 90%;
     font-size: 32px;
     line-height: 46px;
   }
