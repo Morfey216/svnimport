@@ -80,19 +80,19 @@ body {
     height: 100%; } }
 
 p:not([class]) {
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   padding-bottom: 14px;
-  color: #666666; }
+  color: #1b1b1c; }
   @media (max-width: 767px) {
     p:not([class]) {
       font-size: 14px; } }
 
 .content p:not([class]),
 .content ul:not([class]) {
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -2074,9 +2074,6 @@ button.swiper-pagination-bullet {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     bottom: 0; }
-    @media (max-width: 767px) {
-      .advantages__item-title::after {
-        height: 2px; } }
   @media (max-width: 767px) {
     .advantages__item-title {
       margin-bottom: 20px;
@@ -2125,6 +2122,7 @@ button.swiper-pagination-bullet {
   min-height: 600px;
   margin-left: auto;
   padding: 40px;
+  padding-top: 70px;
   padding-right: 2%;
   text-align: left; }
   .about-company__container p {
@@ -3629,3 +3627,215 @@ button.swiper-pagination-bullet {
 
 .amazon__img-container {
   margin-bottom: 20px; }
+
+.cargo-transportation-welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/bg/transportation-header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: #687289;
+  overflow: hidden; }
+  @media (max-width: 579px) {
+    .cargo-transportation-welcome {
+      background-position: right 50%; } }
+
+.cargo-transportation-welcome__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto; }
+  @media (max-width: 579px) {
+    .cargo-transportation-welcome__wrapper {
+      width: 100%; } }
+
+.cargo-transportation-welcome__title {
+  margin-bottom: 20px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 66px; }
+  @media (max-width: 579px) {
+    .cargo-transportation-welcome__title {
+      font-size: 28px;
+      line-height: 36px; } }
+
+.cargo-transportation-welcome__title-description {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center; }
+  @media (max-width: 579px) {
+    .cargo-transportation-welcome__title-description {
+      margin-bottom: 5px;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 400; } }
+
+.cargo-transportation {
+  padding: 60px 0;
+  padding-bottom: 30px;
+  text-align: center; }
+
+.cargo-transportation__features-list {
+  padding: 0;
+  list-style: none;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+  padding-bottom: 14px; }
+  @media (max-width: 767px) {
+    .cargo-transportation__features-list {
+      font-size: 14px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.cargo-transportation__features-item {
+  position: relative;
+  width: 30%;
+  margin-top: 20px;
+  padding-top: 80px;
+  padding-bottom: 20px; }
+  @media (max-width: 767px) {
+    .cargo-transportation__features-item {
+      width: 100%; } }
+  .cargo-transportation__features-item::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #006360;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+.cargo-transportation__transportation-list {
+  padding: 0;
+  list-style: none;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1b1b1c; }
+  @media (max-width: 1023px) {
+    .cargo-transportation__transportation-list {
+      font-size: 15px; } }
+
+.cargo-transportation__transportation-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 70px;
+  margin-bottom: 70px; }
+  @media (max-width: 767px) {
+    .cargo-transportation__transportation-item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+.cargo-transportation__transportation-image-wrapper {
+  width: 415px; }
+  @media (max-width: 1023px) {
+    .cargo-transportation__transportation-image-wrapper {
+      width: 340px; } }
+  @media (max-width: 579px) {
+    .cargo-transportation__transportation-image-wrapper {
+      width: 80%; } }
+  @media (max-width: 767px) {
+    .cargo-transportation__transportation-image-wrapper {
+      margin-bottom: 20px; } }
+
+.cargo-transportation__transportation-content {
+  width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px; }
+  @media (max-width: 1023px) {
+    .cargo-transportation__transportation-content {
+      width: 435px; } }
+  @media (max-width: 767px) {
+    .cargo-transportation__transportation-content {
+      width: auto; } }
+
+.cargo-transportation__transportation-title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 34px;
+  line-height: 46px;
+  font-weight: 500;
+  color: #1b1b1c;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative; }
+  .cargo-transportation__transportation-title::after {
+    content: "";
+    width: 280px;
+    height: 2px;
+    background-color: #006360;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0; }
+  @media (max-width: 1023px) {
+    .cargo-transportation__transportation-title {
+      font-size: 30px;
+      line-height: 32px; } }
+  @media (max-width: 767px) {
+    .cargo-transportation__transportation-title {
+      margin-bottom: 20px;
+      font-size: 26px;
+      line-height: 28px;
+      font-weight: 500; } }
+
+.cargo-transportation__transportation-more-link {
+  margin-top: 20px; }
