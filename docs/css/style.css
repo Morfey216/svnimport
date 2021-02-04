@@ -55,7 +55,7 @@
   src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff"); }
 
 body {
-  background-image: url("../img/bg/pattern-93.jpg");
+  background-image: url("../img/bg/pattern-93a.jpg");
   background-repeat: repeat;
   background-color: #d7d7d7; }
 
@@ -2627,16 +2627,17 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 100px 0;
+  padding: 80px 0;
   background-image: url("../img/bg/servises-header-bg-35.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: left bottom;
   background-size: cover;
   background-color: #687289;
   overflow: hidden; }
   @media (max-width: 579px) {
     .services-welcome {
-      background-position: right 50%; } }
+      padding: 60px 0;
+      background-position: center center; } }
 
 .services-welcome__wrapper {
   width: 520px;
@@ -2670,12 +2671,7 @@ button.swiper-pagination-bullet {
 .services {
   padding: 60px 0;
   padding-bottom: 30px;
-  text-align: center;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  text-align: center; }
   @media (max-width: 1023px) {
     .services {
       padding: 55px 0; } }
@@ -3136,12 +3132,7 @@ button.swiper-pagination-bullet {
 
 .services-content {
   padding: 120px 0;
-  padding-bottom: 60px;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  padding-bottom: 60px; }
   @media (max-width: 1023px) {
     .services-content {
       padding: 75px 0; } }
@@ -3219,12 +3210,7 @@ button.swiper-pagination-bullet {
 
 .search {
   padding: 120px 0;
-  padding-bottom: 60px;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  padding-bottom: 60px; }
   @media (max-width: 1023px) {
     .search {
       padding: 75px 0; } }
@@ -3302,12 +3288,7 @@ button.swiper-pagination-bullet {
 
 .audit {
   padding: 90px 0;
-  padding-bottom: 60px;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  padding-bottom: 60px; }
   @media (max-width: 1023px) {
     .audit {
       padding: 55px 0; } }
@@ -3380,12 +3361,7 @@ button.swiper-pagination-bullet {
 
 .production {
   padding: 120px 0;
-  padding-bottom: 60px;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  padding-bottom: 60px; }
   @media (max-width: 1023px) {
     .production {
       padding: 75px 0; } }
@@ -3463,12 +3439,7 @@ button.swiper-pagination-bullet {
 
 .quality-control {
   padding: 120px 0;
-  padding-bottom: 60px;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  padding-bottom: 60px; }
   @media (max-width: 1023px) {
     .quality-control {
       padding: 75px 0; } }
@@ -3546,12 +3517,7 @@ button.swiper-pagination-bullet {
 
 .brand {
   padding: 120px 0;
-  padding-bottom: 60px;
-  background-image: url("../img/bg/bg-holder-1920.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: #f8f8f8; }
+  padding-bottom: 60px; }
   @media (max-width: 1023px) {
     .brand {
       padding: 75px 0; } }
