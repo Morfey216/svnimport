@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-short-down" viewBox="0 0 8 5">
   <path d="M7.76898 1.39382L4.57688 4.74717C4.2636 5.08458 3.73595 5.08393 3.42292 4.74729L0.231162 1.39397C-0.0811663 1.07395 -0.0721598 0.563131 0.228867 0.246866C0.544816 -0.0858524 1.06475 -0.0768973 1.3783 0.241394L1.38393 0.247116L4 2.78645L6.62119 0.247241C6.93422 -0.0821515 7.45835 -0.081747 7.77113 0.246867C8.07242 0.563409 8.08085 1.07376 7.76898 1.39382Z"/>
-</symbol><symbol id="burger" viewBox="0 0 26 18">
+</symbol><symbol id="big-arrow" viewBox="0 0 21 41"><path d="M20.3 40.8L0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"/></symbol><symbol id="burger" viewBox="0 0 26 18">
   <rect fill="#373737" width="26" height="2" rx="1"/>
   <rect fill="#373737" y="8" width="26" height="2" rx="1"/>
   <rect fill="#373737" y="16" width="26" height="2" rx="1"/>

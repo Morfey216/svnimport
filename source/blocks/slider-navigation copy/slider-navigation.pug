@@ -1,7 +1,7 @@
 include ../svg/svg
 
-mixin slider-navigation(hasPagination, elementBaseClass, mod)
-  div(class="slider-navigation" + (mod ? ' slider-navigation--' + mod : '') + (attributes.class ? ' ' + attributes.class : ''))
+mixin slider-navigation(hasPagination, elementBaseClass)
+  div(class="slider-navigation" + (attributes.class ? ' ' + attributes.class : ''))
     button.slider-navigation__btn.slider-navigation__btn--prev(class=elementBaseClass ? elementBaseClass + '__navigation-btn-prev': '' type="button")
       span.visually-hidden Назад
       +svg('arrow-short-down')(width="7" height="4").slider-navigation__icon.slider-navigation__icon--prev
