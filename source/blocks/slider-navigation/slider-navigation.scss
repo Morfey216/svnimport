@@ -14,35 +14,35 @@
 
   background-color: transparent;
   box-sizing: border-box;
-  border: 1px solid $white;
-  border-radius: 50%;
+  border: none;
 
   svg {
-    width: 9px;
-    height: 11px;
-    transform: rotate(-90deg);
+    width: 18px;
+    height: 38px;
     fill: $white;
   }
 
-  &:hover {
-    background-color: $dark-green;
-
-    svg {
-      fill: $white;
-    }
+  &:hover svg {
+    opacity: 0.6;
   }
 
   &:focus {
     outline: none;
   }
 
-  &--prev {
+  &--next {
     transform: rotate(180deg);
   }
 
   @include mobile-max {
     width: 30px;
     height: 30px;
+
+    svg {
+      width: 14px;
+      height: 27px;
+      fill: $white;
+    }
   }
 }
 
