@@ -2293,7 +2293,6 @@ button.swiper-pagination-bullet {
   padding-bottom: 20px; }
 
 .scheme__img-container {
-  width: 80%;
   margin: 0 auto; }
 
 .scheme__img {
@@ -2602,7 +2601,8 @@ button.swiper-pagination-bullet {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    color: #0b0000; }
+    color: #0b0000;
+    text-align: justify; }
     @media (max-width: 767px) {
       .our-services__detail-point p {
         font-size: 14px;

@@ -130,8 +130,9 @@
 
   & p {
     // @include opensans(14, 21, 800);
-    @include montserrat(16, 24, 500);
+    @include mainfont(16, 24, 500);
     color: $black-title;
+    text-align: justify;
 
     @include mobile-max {
       font-size: 14px;
