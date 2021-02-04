@@ -39,9 +39,9 @@ body {
 // region text-style
 
 p:not([class]) {
-  @include opensans(16, 24, 400);
+  @include mainfont(16, 24, 400);
   padding-bottom: 14px;
-  color: $gray;
+  color: $dark-base-color;
 
   @include mobile-max {
     font-size: 14px;
@@ -51,7 +51,7 @@ p:not([class]) {
 .content {
   & p:not([class]),
   ul:not([class]) {
-    @include opensans(16, 24, 400);
+    @include mainfont(16, 24, 400);
     color: $dark-base-color;
     padding-bottom: 14px;
 

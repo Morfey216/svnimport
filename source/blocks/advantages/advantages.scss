@@ -82,10 +82,6 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-
-    @include mobile-max {
-      height: 2px;
-    }
   }
 
   @include mobile-max {

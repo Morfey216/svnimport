@@ -1,0 +1,145 @@
+.cargo-transportation {
+  padding: 60px 0;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.cargo-transportation__features-list {
+  @include list-reset();
+  @include mainfont(16, 24, 400);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-bottom: 14px;
+
+  @include mobile-max {
+    font-size: 14px;
+    flex-direction: column;
+  }
+}
+
+.cargo-transportation__features-item {
+  position: relative;
+  width: 30%;
+  margin-top: 20px;
+  padding-top: 80px;
+  padding-bottom: 20px;
+
+  @include mobile-max {
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $dark-green;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.cargo-transportation__transportation-list {
+  @include list-reset();
+  @include mainfont(16, 24, 400);
+  color: $dark-base-color;
+
+  @include tablet-medium-max {
+    font-size: 15px;
+  }
+}
+
+.cargo-transportation__transportation-item {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  @include mobile-max {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cargo-transportation__transportation-image-wrapper {
+  width: 415px;
+
+  @include tablet-medium-max {
+    width: 340px;
+  }
+
+  @include mobile-medium-max {
+    width: 80%;
+  }
+
+  @include mobile-max {
+    margin-bottom: 20px;
+  }
+}
+
+.cargo-transportation__transportation-content {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15px;
+
+  @include tablet-medium-max {
+    width: 435px;
+  }
+
+  @include mobile-max {
+    width: auto;
+  }
+}
+
+.cargo-transportation__transportation-title {
+  @include montserrat(34, 46, 500);
+  color: $dark-base-color;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 280px;
+    height: 2px;
+    background-color: $dark-green;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  @include tablet-medium-max {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+}
+
+// .cargo-transportation__transportation-description {
+//   @include tablet-medium-max {
+//     font-size: 15px;
+//   }
+// }
+
+.cargo-transportation__transportation-more-link {
+  margin-top: 20px;
+}
