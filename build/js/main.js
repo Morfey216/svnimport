@@ -1378,8 +1378,8 @@
           prevEl: '.promotions-section__navigation-btn-prev'
         },
         autoplay: {
-          delay: 5000 // disableOnInteraction: false,
-
+          delay: 5000,
+          disableOnInteraction: false
         }
       });
     }

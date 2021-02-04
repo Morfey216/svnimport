@@ -55,7 +55,7 @@
   src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff"); }
 
 body {
-  background-image: url("../img/bg/bg-template-36.png");
+  background-image: url("../img/bg/pattern-93.jpg");
   background-repeat: repeat;
   background-color: #d7d7d7; }
 
@@ -2602,7 +2602,7 @@ button.swiper-pagination-bullet {
     line-height: 24px;
     font-weight: 500;
     color: #0b0000;
-    text-align: justify; }
+    text-align: left; }
     @media (max-width: 767px) {
       .our-services__detail-point p {
         font-size: 14px;

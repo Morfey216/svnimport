@@ -132,7 +132,7 @@
     // @include opensans(14, 21, 800);
     @include mainfont(16, 24, 500);
     color: $black-title;
-    text-align: justify;
+    text-align: left;
 
     @include mobile-max {
       font-size: 14px;
