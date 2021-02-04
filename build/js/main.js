@@ -1373,12 +1373,13 @@
         spaceBetween: 10,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
+        speed: 2100,
         navigation: {
           nextEl: '.promotions-section__navigation-btn-next',
           prevEl: '.promotions-section__navigation-btn-prev'
         },
         autoplay: {
-          delay: 5000,
+          delay: 4000,
           disableOnInteraction: false
         }
       });

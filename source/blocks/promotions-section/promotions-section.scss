@@ -25,6 +25,8 @@
   background-size: cover;
   background-color: $light-base-color;
   overflow: hidden;
+
+  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .promotions-section__item-content {
@@ -116,6 +118,10 @@
 
 .promotions-section__item-content--slide-1 {
   background-image: url("../img/bg/main-promo-1-35.jpg");
+
+  .promotions-section__title-description {
+    width: 80%;
+  }
 }
 
 .promotions-section__item-content--slide-2 {
