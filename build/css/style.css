@@ -59,10 +59,6 @@ body {
   background-repeat: repeat;
   background-color: #d7d7d7; }
 
-.promotions-section__slider-container * {
-  -webkit-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-          transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1); }
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -1887,9 +1883,7 @@ button.swiper-pagination-bullet {
   background-position: 50% 50%;
   background-size: cover;
   background-color: #717171;
-  overflow: hidden;
-  -webkit-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-          transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1); }
+  overflow: hidden; }
 
 .promotions-section__item-content {
   display: -webkit-box;
@@ -1998,6 +1992,10 @@ button.swiper-pagination-bullet {
       text-align: left; }
     .promotions-section__item-content--slide-3 a {
       margin-right: auto; } }
+
+.promotions-section__slider-container * {
+  -webkit-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1); }
 
 .advantages {
   padding: 65px 0 40px 0;
