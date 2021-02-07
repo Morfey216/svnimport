@@ -4,11 +4,6 @@ body {
   background-color: $border-gray;
 }
 
-
-.promotions-section__slider-container * {
-  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-}
-
 .container {
   max-width: 1200px;
   width: 100%;
