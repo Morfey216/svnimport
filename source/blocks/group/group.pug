@@ -1,0 +1,24 @@
+include ../title/title
+
+-
+  const groupContents = [
+      'Текст',
+    ]
+
+//- -
+//-   const exportLists = [
+//-       '',
+//-     ]
+
+section.group.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Сборные грузы', 'section-decor').services-content__title
+      p.services-content__title-description Особенности перевозок сборных грузов
+      each itContent in groupContents
+        p!= itContent
+      //- ul
+      //-   each it in qualityLists
+      //-     li!= it
+    div.services-content__img-container
+      img(src="img/our-services/pages/group.jpg" width="415" height="280" alt= "Сборные грузы").services-content__img

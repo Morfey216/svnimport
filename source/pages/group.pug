@@ -1,0 +1,17 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/page-footer/page-footer
+
+doctype html
+html(lang='ru')
+  +head('Сборные грузы')
+  body
+    +header('dark')
+
+    main
+      h1.visually-hidden Доставка товаров из Китая и других стран - Экспорт
+
+    include ../blocks/group/group
+    +page-footer('services')
+
+    include ../blocks/_scripts-block/_scripts-block
