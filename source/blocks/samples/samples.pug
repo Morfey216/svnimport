@@ -35,3 +35,33 @@ section.samples.services-content
         p!= itContent2
     div.services-content__img-container
       img(src="img/our-services/pages/samples.jpg" width="490" height="650" alt= "Образцы").services-content__img
+
+  div.samples__details.container
+    div
+      p.samples__details-desc 1 кг
+      p.samples__details-title Минимальный вес
+    div
+      p.samples__details-desc Согласовать
+      p.samples__details-title Стоимость
+    div
+      p.samples__details-desc 5-10 дней
+      p.samples__details-title Сроки
+  div.samples__stages.container
+    +title('Этапы работы').samples__stages-title
+    ul.samples__stages-list
+      li.samples__stages-item
+        div.samples__stages-icon
+          img(src="img/icons/bag.svg" width="47" height="47" alt= "")
+        p.samples__stages-phase Связываемся с Вашим поставщиком
+      li.samples__stages-item
+        div.samples__stages-icon
+          img(src="img/icons/sample.svg" width="47" height="47" alt= "")
+        p.samples__stages-phase Согласовываем образцы
+      li.samples__stages-item
+        div.samples__stages-icon
+          img(src="img/icons/value.svg" width="47" height="47" alt= "")
+        p.samples__stages-phase Согласовываем цену
+      li.samples__stages-item
+        div.samples__stages-icon
+          img(src="img/icons/car.svg" width="47" height="47" alt= "")
+        p.samples__stages-phase Доставляем образцы к Вам в руки
