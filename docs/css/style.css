@@ -1837,7 +1837,7 @@ button.swiper-pagination-bullet {
     .header__toggle {
       position: absolute;
       right: 18px;
-      bottom: 24px;
+      bottom: 12px;
       display: block;
       cursor: pointer; } }
   @media (max-width: 767px) {
@@ -2142,7 +2142,7 @@ button.swiper-pagination-bullet {
     .about-company__container {
       width: 100%;
       padding: 5px;
-      padding-top: 20px; }
+      padding-top: 50px; }
       .about-company__container p {
         font-size: 14px;
         line-height: 22px;
