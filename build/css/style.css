@@ -2184,6 +2184,9 @@ button.swiper-pagination-bullet {
 
 .qualities {
   margin-top: 40px; }
+  @media (max-width: 767px) {
+    .qualities {
+      margin-top: 5px; } }
 
 .qualities__container {
   display: -webkit-box;
@@ -2292,13 +2295,20 @@ button.swiper-pagination-bullet {
     -webkit-transform: scale(1.02);
             transform: scale(1.02); }
 
+.scheme {
+  background: transparent; }
+
 .scheme__title {
   margin-top: 40px;
   margin-bottom: 0;
   padding-bottom: 20px; }
 
 .scheme__img-container {
-  margin: 0 auto; }
+  margin: 40px auto; }
+  @media (max-width: 767px) {
+    .scheme__img-container {
+      margin-top: 20px;
+      margin-bottom: 5px; } }
 
 .scheme__img {
   margin: 0 auto; }

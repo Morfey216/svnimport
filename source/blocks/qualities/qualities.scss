@@ -5,6 +5,10 @@
   // background-repeat: no-repeat;
   // background-size: cover;
   // background-color: $border-gray;
+
+  @include mobile-max {
+    margin-top: 5px;
+  }
 }
 
 .qualities__container {

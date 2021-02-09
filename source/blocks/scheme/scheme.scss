@@ -4,6 +4,7 @@
   // background-position: bottom;
   // background-size: cover;
   // background-color: $base-color;
+  background: transparent;
 }
 
 .scheme__title {
@@ -14,7 +15,12 @@
 
 .scheme__img-container {
   // width: 80%;
-  margin: 0 auto;
+  margin: 40px auto;
+
+  @include mobile-max {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
 }
 
 .scheme__img {
