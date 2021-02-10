@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  color: $base-color;
 
   @include tablet-medium-max {
     flex-direction: column;
@@ -18,7 +19,7 @@
   @include opensans(16, 24, 400);
   display: block;
   padding: 12px 10px 10px 10px;
-  color: $base-color;
+  color: inherit;
   transition: opacity 0.3s ease;
 
   &:hover,
@@ -33,6 +34,49 @@
 
   @include mobile-max {
     padding: 8px 0;
+  }
+}
+
+.menu-nav__item--more {
+  position: relative;
+  padding: 12px 40px 10px 10px;
+  cursor: pointer;
+  color: $base-color;
+  transition: opacity 0.3s ease;
+
+  &:hover,
+  :focus,
+  :active {
+    svg {
+      opacity: 0.5;
+    }
+
+    .menu-nav__sublist {
+      display: block;
+    }
+  }
+}
+
+.menu-nav__sublist {
+  display: none;
+  width: auto;
+  padding: 20px;
+  list-style: none;
+  background-color: $white;
+  box-shadow: 0 11px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: opacity 0.5s;
+
+  position: absolute;
+  top: 100%;
+
+  & .menu-nav__link {
+    padding: 5px 10px 4px 4px;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }
 
@@ -54,16 +98,16 @@
 
 .menu-nav__item {
   position: relative;
-  // margin-right: 20px;
 
-  &--active,
-  &:hover {
-    position: relative;
+  // &--active,
+  // &:hover {
+  //   position: relative;
+  //   color: $blue;
 
-    .main-nav__link {
-      color: $blue;
-    }
-  }
+  //   .main-nav__link {
+  //     color: inherit;
+  //   }
+  // }
 
   @include tablet-max {
     margin-right: 5px;

@@ -1438,7 +1438,8 @@ button.swiper-pagination-bullet {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  color: #2e2e2e; }
   @media (max-width: 1023px) {
     .menu-nav__list {
       -webkit-box-orient: vertical;
@@ -1454,7 +1455,7 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   display: block;
   padding: 12px 10px 10px 10px;
-  color: #2e2e2e;
+  color: inherit;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
   .menu-nav__link:hover,
@@ -1468,12 +1469,42 @@ button.swiper-pagination-bullet {
     .menu-nav__link {
       padding: 8px 0; } }
 
+.menu-nav__item--more {
+  position: relative;
+  padding: 12px 40px 10px 10px;
+  cursor: pointer;
+  color: #2e2e2e;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+  .menu-nav__item--more:hover svg,
+  .menu-nav__item--more :focus svg,
+  .menu-nav__item--more :active svg {
+    opacity: 0.5; }
+  .menu-nav__item--more:hover .menu-nav__sublist,
+  .menu-nav__item--more :focus .menu-nav__sublist,
+  .menu-nav__item--more :active .menu-nav__sublist {
+    display: block; }
+
+.menu-nav__sublist {
+  display: none;
+  width: auto;
+  padding: 20px;
+  list-style: none;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 11px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 11px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  position: absolute;
+  top: 100%; }
+  .menu-nav__sublist .menu-nav__link {
+    padding: 5px 10px 4px 4px; }
+  .menu-nav__sublist:hover {
+    opacity: 1; }
+
 .menu-nav__item {
   position: relative; }
-  .menu-nav__item--active, .menu-nav__item:hover {
-    position: relative; }
-    .menu-nav__item--active .main-nav__link, .menu-nav__item:hover .main-nav__link {
-      color: #58c5d9; }
   @media (max-width: 1199px) {
     .menu-nav__item {
       margin-right: 5px; } }
@@ -1512,15 +1543,36 @@ button.swiper-pagination-bullet {
     border: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    .header--primary-position .menu-nav__link {
+    .header--primary-position .menu-nav__item {
       color: #ffffff; }
+    .header--primary-position .menu-nav__list:hover .menu-nav__item,
     .header--primary-position .menu-nav__list:hover .menu-nav__link {
-      opacity: 0.5;
+      opacity: 0.8;
       -webkit-transition-delay: 0.1s;
               transition-delay: 0.1s; }
-      .header--primary-position .menu-nav__list:hover .menu-nav__link:hover {
+      .header--primary-position .menu-nav__list:hover .menu-nav__item:hover,
+      .header--primary-position .menu-nav__list:hover .menu-nav__item :focus,
+      .header--primary-position .menu-nav__list:hover .menu-nav__item :active,
+      .header--primary-position .menu-nav__list:hover .menu-nav__link:hover,
+      .header--primary-position .menu-nav__list:hover .menu-nav__link :focus,
+      .header--primary-position .menu-nav__list:hover .menu-nav__link :active {
         color: #ffffff;
         opacity: 1; }
+        .header--primary-position .menu-nav__list:hover .menu-nav__item:hover svg,
+        .header--primary-position .menu-nav__list:hover .menu-nav__item :focus svg,
+        .header--primary-position .menu-nav__list:hover .menu-nav__item :active svg,
+        .header--primary-position .menu-nav__list:hover .menu-nav__link:hover svg,
+        .header--primary-position .menu-nav__list:hover .menu-nav__link :focus svg,
+        .header--primary-position .menu-nav__list:hover .menu-nav__link :active svg {
+          opacity: 1; }
+    .header--primary-position .menu-nav__sublist .menu-nav__item {
+      color: #2e2e2e; }
+    .header--primary-position .menu-nav__list:hover .menu-nav__sublist {
+      color: #2e2e2e;
+      opacity: 1; }
+      .header--primary-position .menu-nav__list:hover .menu-nav__sublist .menu-nav__item,
+      .header--primary-position .menu-nav__list:hover .menu-nav__sublist .menu-nav__link {
+        color: #2e2e2e; }
     .header--primary-position .contacts-phone__icon {
       fill: #ffffff; }
     .header--primary-position .contacts-phone__phone {

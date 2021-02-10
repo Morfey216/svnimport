@@ -1216,13 +1216,24 @@
     var mainNavContainer = header.querySelector('.header__main-nav-container');
     var mainNavWrap = header.querySelector('.header__main-nav-wrap');
     var mainNav = header.querySelector('.header__main-nav');
+    var mainSubNav = mainNav.querySelector('.menu-nav__sublist');
+    var menuFragment = new DocumentFragment();
     var contactsWrap = header.querySelector('.header__contacts-wrap');
     var contactsButton = header.querySelector('.header__contacts-button'); // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
     // const contactButton = contactsWrap.querySelector('.header__contacts-button');
 
+    var createActualNav = function createActualNav() {
+      var actualNav = mainNav.cloneNode(true);
+      menuFragment.appendChild(mainNav); // const sublist = actualNav.querySelector('.menu-nav__sublist');
+      // const moreLinc = actualNav.querySelector('.menu-nav__item--more');
+
+      return actualNav;
+    };
+
     var adjustDesktop = function adjustDesktop() {
-      clearAllBodyScrollLocks();
-      mainNavWrap.prepend(mainNav);
+      clearAllBodyScrollLocks(); // mainNavWrap.prepend(mainNav);
+
+      mainNavWrap.prepend(menuFragment);
       mainNavContainer.append(contactsWrap);
     };
 
@@ -1232,8 +1243,9 @@
       }
 
       var fragment = new DocumentFragment();
-      fragment.appendChild(mainNav);
+      fragment.appendChild(createActualNav());
       fragment.appendChild(contactsWrap);
+      dropdown.innerHTML = '';
       dropdown.appendChild(fragment);
     };
 
@@ -1243,8 +1255,9 @@
       }
 
       var fragment = new DocumentFragment();
-      fragment.appendChild(mainNav);
+      fragment.appendChild(createActualNav());
       fragment.appendChild(contactsWrap);
+      dropdown.innerHTML = '';
       dropdown.appendChild(fragment);
     };
 

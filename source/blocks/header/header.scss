@@ -36,17 +36,38 @@
     border: none;
     transition: all 0.3s ease;
 
-    & .menu-nav__link {
+    & .menu-nav__item {
       color: $white;
     }
 
-    & .menu-nav__list:hover .menu-nav__link {
-      opacity: 0.5;
+    & .menu-nav__list:hover .menu-nav__item,
+    .menu-nav__list:hover .menu-nav__link {
+      opacity: 0.8;
       transition-delay: 0.1s;
 
-      &:hover {
+      &:hover,
+      :focus,
+      :active {
         color: $white;
         opacity: 1;
+
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+
+    & .menu-nav__sublist .menu-nav__item {
+      color: $base-color;
+    }
+
+    & .menu-nav__list:hover .menu-nav__sublist {
+      color: $base-color;
+      opacity: 1;
+
+      & .menu-nav__item,
+      .menu-nav__link {
+        color: $base-color;
       }
     }
 
