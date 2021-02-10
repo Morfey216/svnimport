@@ -22,15 +22,28 @@ export default () => {
 
   const mainNavWrap = header.querySelector('.header__main-nav-wrap');
   const mainNav = header.querySelector('.header__main-nav');
+  const mainSubNav = mainNav.querySelector('.menu-nav__sublist');
+  const menuFragment = new DocumentFragment();
 
   const contactsWrap = header.querySelector('.header__contacts-wrap');
   const contactsButton = header.querySelector('.header__contacts-button');
   // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
   // const contactButton = contactsWrap.querySelector('.header__contacts-button');
 
+  const createActualNav = () => {
+    const actualNav = mainNav.cloneNode(true);
+    menuFragment.appendChild(mainNav);
+
+    // const sublist = actualNav.querySelector('.menu-nav__sublist');
+    // const moreLinc = actualNav.querySelector('.menu-nav__item--more');
+
+    return actualNav;
+  };
+
   const adjustDesktop = () => {
     clearAllBodyScrollLocks(dropdown);
-    mainNavWrap.prepend(mainNav);
+    // mainNavWrap.prepend(mainNav);
+    mainNavWrap.prepend(menuFragment);
     mainNavContainer.append(contactsWrap);
   };
 
@@ -40,8 +53,9 @@ export default () => {
     }
 
     const fragment = new DocumentFragment();
-    fragment.appendChild(mainNav);
+    fragment.appendChild(createActualNav());
     fragment.appendChild(contactsWrap);
+    dropdown.innerHTML = '';
     dropdown.appendChild(fragment);
   };
 
@@ -51,8 +65,9 @@ export default () => {
     }
 
     const fragment = new DocumentFragment();
-    fragment.appendChild(mainNav);
+    fragment.appendChild(createActualNav());
     fragment.appendChild(contactsWrap);
+    dropdown.innerHTML = '';
     dropdown.appendChild(fragment);
   };
 

@@ -16,21 +16,65 @@ include ../menu-nav/menu-nav
         item: 'Услуги',
         anchor: '',
       },
+      //- {
+      //-   link: 'index.html',
+      //-   item: 'О нас',
+      //-   anchor: 'about',
+      //- },
+      //- {
+      //-   link: 'index.html',
+      //-   item: 'Преимущества',
+      //-   anchor: 'advantages',
+      //- },
       {
-        link: 'index.html',
-        item: 'О нас',
-        anchor: 'about',
+        link: 'cargo-transportation.html',
+        item: 'Грузоперевозки',
+        anchor: '',
       },
+      //- {
+      //-   link: '',
+      //-   item: 'Отзывы',
+      //-   anchor: '',
+      //- },
+      //- {
+      //-   link: '',
+      //-   item: 'Миссия',
+      //-   anchor: '',
+      //- },
+      //- {
+      //-   link: 'contacts.html',
+      //-   item: 'Контакты',
+      //-   anchor: '',
+      //- },
+    ]
+
+-
+  const mainNavSubList = [
+      //- {
+      //-   link: 'index.html',
+      //-   item: 'Главная',
+      //-   anchor: '',
+      //- },
+      //- {
+      //-   link: 'services.html',
+      //-   item: 'Услуги',
+      //-   anchor: '',
+      //- },
       {
         link: 'index.html',
         item: 'Преимущества',
         anchor: 'advantages',
       },
       {
-        link: 'cargo-transportation.html',
-        item: 'Грузоперевозки',
-        anchor: '',
+        link: 'index.html',
+        item: 'О нас',
+        anchor: 'about',
       },
+      //- {
+      //-   link: 'cargo-transportation.html',
+      //-   item: 'Грузоперевозки',
+      //-   anchor: '',
+      //- },
       //- {
       //-   link: '',
       //-   item: 'Отзывы',
@@ -56,7 +100,7 @@ mixin header(mod)
           a.header__logo-link(href="index.html")
             img.header__logo-img(src="img/logo/logo_165.png" width="165" height="35" alt="Логотип")
         div.header__main-nav-wrap
-          +menu-nav(mainNavList, 'Главное меню').header__main-nav
+          +menu-nav(mainNavList, 'Главное меню', mainNavSubList).header__main-nav
         div.header__contacts-wrap
           +contacts-phone('col').header__contacts-phone
           +link('Задать вопрос', '#footer-contact-form').link--red.header__contacts-button.js-contacts-open

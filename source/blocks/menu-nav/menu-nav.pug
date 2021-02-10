@@ -1,3 +1,5 @@
+include ../svg/svg
+
 //- -
 //-   const navList = [
 //-       {
@@ -30,9 +32,16 @@
 //-       },
 //-     ]
 
-mixin menu-nav(navList, label)
+mixin menu-nav(navList, label, navSubList)
   nav.menu-nav&attributes(attributes)(aria-label= label)
     ul.menu-nav__list
       each navItem in navList
         li.menu-nav__item
           a.menu-nav__link(href= navItem.anchor ? navItem.link + "#" + navItem.anchor : navItem.link) #{navItem.item}
+      li.menu-nav__item.menu-nav__item--more
+        span.visually-hidden Еще
+        +svg('more')(width="18" height="4")
+        ul.menu-nav__sublist
+          each navSubItem in navSubList
+            li.menu-nav__item
+              a.menu-nav__link.menu-nav__sublink(href= navSubItem.anchor ? navSubItem.link + "#" + navSubItem.anchor : navSubItem.link) #{navSubItem.item}
