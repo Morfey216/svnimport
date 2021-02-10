@@ -1215,8 +1215,8 @@
     var overlay = header.querySelector('.header__overlay');
     var mainNavContainer = header.querySelector('.header__main-nav-container');
     var mainNavWrap = header.querySelector('.header__main-nav-wrap');
-    var mainNav = header.querySelector('.header__main-nav');
-    var mainSubNav = mainNav.querySelector('.menu-nav__sublist');
+    var mainNav = header.querySelector('.header__main-nav'); // const mainSubNav = mainNav.querySelector('.menu-nav__sublist');
+
     var menuFragment = new DocumentFragment();
     var contactsWrap = header.querySelector('.header__contacts-wrap');
     var contactsButton = header.querySelector('.header__contacts-button'); // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');

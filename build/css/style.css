@@ -2180,8 +2180,7 @@ button.swiper-pagination-bullet {
   width: 55%;
   min-height: 600px;
   margin-left: auto;
-  padding: 40px;
-  padding-top: 70px;
+  padding: 70px 40px;
   padding-right: 2%;
   text-align: left; }
   .about-company__container p {

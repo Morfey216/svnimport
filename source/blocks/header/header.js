@@ -22,7 +22,7 @@ export default () => {
 
   const mainNavWrap = header.querySelector('.header__main-nav-wrap');
   const mainNav = header.querySelector('.header__main-nav');
-  const mainSubNav = mainNav.querySelector('.menu-nav__sublist');
+  // const mainSubNav = mainNav.querySelector('.menu-nav__sublist');
   const menuFragment = new DocumentFragment();
 
   const contactsWrap = header.querySelector('.header__contacts-wrap');
