@@ -10,7 +10,7 @@
   outline: none;
   border-radius: 2px;
 
-  @include opensans(14, 18, 500);
+  @include mainfont(14, 18, 500);
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;

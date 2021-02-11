@@ -4,15 +4,15 @@ include ../blocks/page-footer/page-footer
 
 doctype html
 html(lang='ru')
-  +head('Международные Грузоперевозки')
+  +head('Контакты')
   body
     +header('dark')
 
     main
       h1.visually-hidden Доставка товаров из Китая и других стран
-      include ../blocks/cargo-transportation-welcome/cargo-transportation-welcome
-      include ../blocks/cargo-transportation/cargo-transportation
+      include ../blocks/contacts-welcome/contacts-welcome
+      include ../blocks/user-contacts/user-contacts
 
-    +page-footer('services')
+    +page-footer('services', true)
 
     include ../blocks/_scripts-block/_scripts-block

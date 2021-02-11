@@ -22,7 +22,7 @@
 }
 
 .form-textarea textarea {
-  @include opensans(16, 24, 400);
+  @include mainfont(16, 24, 400);
   width: 100%;
   border: none;
   padding: 0;
@@ -45,10 +45,10 @@
 }
 
 .form-textarea__label {
-  @include opensans(16, 24, 400);
+  @include mainfont(16, 24, 400);
   position: absolute;
-  top: 50%;
-  left: 24px;
+  top: 24px;
+  left: 20px;
   width: calc(100% - 48px);
   transform: translateY(-50%);
   transition: transform 0.3s, opacity 0.3s;
