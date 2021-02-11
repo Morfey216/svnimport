@@ -24,7 +24,7 @@
 }
 
 .form-input input {
-  @include opensans(16, 24, 400);
+  @include mainfont(16, 24, 400);
   width: 100%;
   border: none;
   padding: 0;
@@ -52,14 +52,14 @@
 .form-input__label {
   position: absolute;
   top: 50%;
-  left: 24px;
+  left: 20px;
   width: calc(100% - 48px);
   transform: translateY(-50%);
   color: $icon-gray;
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 
-  @include opensans(16, 24, 400);
+  @include mainfont(16, 24, 400);
 
   @media (max-width: $screen-lg) {
     left: 14px;

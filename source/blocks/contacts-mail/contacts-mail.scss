@@ -1,0 +1,35 @@
+.contacts-mail {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-mail__icon {
+  margin-right: 15px;
+
+  &--messenger {
+    margin-right: 25px;
+  }
+
+  @include mobile-max {
+    margin-right: 10px;
+
+    &--messenger {
+      margin-right: 20px;
+    }
+  }
+}
+
+.contacts-mail__mail {
+  @include mainfont(16, 24, 400);
+  color: $dark-base-color;
+
+  &:hover,
+  :focus,
+  :active {
+    color: $light-base-color;
+  }
+
+  &--col {
+    @include mainfont(16, 24, 400);
+  }
+}

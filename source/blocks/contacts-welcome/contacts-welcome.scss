@@ -1,0 +1,71 @@
+.contacts-welcome {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  padding: 80px 0;
+  background-image: url("../img/bg/contacts-header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: $bg-blue-color;
+  overflow: hidden;
+
+  @include mobile-medium-max {
+    padding: 60px 0;
+    background-position: center center;
+  }
+}
+
+.contacts-welcome__wrapper {
+  padding: 30px 0;
+  text-align: left;
+
+  @include mobile-medium-max {
+    width: 100%;
+  }
+}
+
+.contacts-welcome__title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 64px;
+  text-align: left;
+  position: relative;
+
+  @include mobile-max {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 0;
+    width: 0.111em;
+    min-width: 1px;
+    max-width: 2px;
+    background: currentColor;
+  }
+}
+
+.contacts-welcome__title-description {
+  @include montserrat(16, 24, 500);
+  color: $white;
+
+  @include mobile-medium-max {
+    font-weight: 400;
+  }
+
+  img {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 50%;
+  }
+}

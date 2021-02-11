@@ -85,14 +85,14 @@ include ../menu-nav/menu-nav
       //-   item: 'Миссия',
       //-   anchor: '',
       //- },
-      //- {
-      //-   link: 'contacts.html',
-      //-   item: 'Контакты',
-      //-   anchor: '',
-      //- },
+      {
+        link: 'contacts.html',
+        item: 'Контакты',
+        anchor: '',
+      },
     ]
 
-mixin header(mod)
+mixin header(mod, anchor)
   header.header.header--primary-position(class= mod ? ' header--' + mod : '')
     div.container
       div.header__main-nav-container
@@ -103,7 +103,7 @@ mixin header(mod)
           +menu-nav(mainNavList, 'Главное меню', mainNavSubList).header__main-nav
         div.header__contacts-wrap
           +contacts-phone('col').header__contacts-phone
-          +link('Задать вопрос', '#footer-contact-form').link--red.header__contacts-button.js-contacts-open
+          +link('Задать вопрос', anchor ? anchor : '#footer-contact-form').link--red.header__contacts-button.js-contacts-open
 
     button(type="button").header__toggle
       span.visually-hidden Открыть/закрыть

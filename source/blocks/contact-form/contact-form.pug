@@ -3,14 +3,16 @@ include ../form-input/form-input
 include ../form-textarea/form-textarea
 include ../button/button
 
-section.contact-form#contact-form
-  +title('Форма быстрой связи').contact-form__title
-  p.contact-form__subtitle Задайте ваш вопрос или кратко опишите ситуацию и мы свяжемся с вами
-  div.container
-    form.contact-form__contact-form.js-ccf(method="post" enctype="multipart/form-data")
-      +form-input({label: 'Ваше имя', error: 'Введите имя',})(type="text" name="name" required).contact-form__form-input.js-ccf-name#ccf-name
-      +form-input({label: 'Ваша почта', error: 'Введите E-mail',})(type="email" name="email" required).contact-form__form-input.js-ccf-email#ccf-email
-      +form-input({label: 'Ваш телефон', error: 'Неверный номер',})(type="tel" name="phone" required).contact-form__form-input.js-ccf-phone#ccf-phone
-      +form-textarea({label: 'Опишите ситуацию', error: 'Кратко опишите ситуацию',})(name="description", rows="5" required).contact-form__form-textarea.js-ccf-description#ccf-description
-      +button('Отправить')(type="submit").contact-form__form-submit-button.js-ccf-submit
-      div.contact-form__upload-message
+mixin contact-form
+  form.contact-form#contact-form.js-ccf(method="post" enctype="multipart/form-data")&attributes(attributes)
+    +form-input({label: 'Имя', error: 'Введите имя',})(type="text" name="name" required).contact-form__form-input.js-ccf-name#ccf-name
+    +form-input({label: 'Фамилия', error: 'Введите фамилию',})(type="text" name="surname" required).contact-form__form-input.js-ccf-name#ccf-name
+    +form-input({label: 'Почта', error: 'Введите E-mail',})(type="email" name="email" required).contact-form__form-input.js-ccf-email#ccf-email
+    +form-input({label: 'Телефон', error: 'Неверный номер',})(type="tel" name="phone" required).contact-form__form-input.js-ccf-phone#ccf-phone
+    +form-input({label: 'Наименование компании', error: 'Введите наименование компании',})(type="text" name="company" required).contact-form__form-input.js-ccf-name#ccf-name
+    +form-input({label: 'Телефон', error: 'Неверный номер',})(type="tel" name="work-phone" required).contact-form__form-input.js-ccf-phone#ccf-phone
+    +form-input({label: 'Вебсайт', error: 'Введите сайт',})(type="text" name="site" required).contact-form__form-input.js-ccf-name#ccf-name
+    +form-input({label: 'Страна', error: 'Введите страну',})(type="text" name="country" required).contact-form__form-input.js-ccf-name#ccf-name
+    +form-textarea({label: 'Сообщение', error: 'Кратко опишите ситуацию',})(name="description", rows="5" required).contact-form__form-textarea.js-ccf-description#ccf-description
+    +button('Отправить','gray')(type="submit").contact-form__form-submit-button.js-ccf-submit
+    div.contact-form__upload-message

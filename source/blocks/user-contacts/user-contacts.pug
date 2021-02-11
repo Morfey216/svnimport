@@ -1,0 +1,21 @@
+include ../title/title
+include ../contact-form/contact-form
+-
+  const descList = [
+      'Статус Вашего текущего / следующего проекта,',
+      'Ваш опыт работы с китайскими фабриками,',
+      'Ваши ожидания относительно ваших закупок в Китае,',
+      'Ваши цели с точки зрения графика и экономии затрат, наши советы для ваших следующих шагов.',
+    ]
+
+section.user-contacts#user-contacts
+  div.container
+    div.user-contacts__phone-block
+      +title('Обсудим по телефону').user-contacts__phone-title
+      div.user-contacts__phone-description.content
+        p Мы поговорим о Вашем проекте и о том, как наши услуги могут помочь Вам снизить риски и затраты. Мы рассмотрим несколько тем:
+        ul
+          each it in descList
+            li!= it
+      a(href="tel:+375291932333").button.button--gray.user-contacts__phone-link Оставить заявку
+    +contact-form.user-contacts__contact-form

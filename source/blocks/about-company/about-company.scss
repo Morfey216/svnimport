@@ -18,13 +18,12 @@
   width: 55%;
   min-height: 600px;
   margin-left: auto;
-  padding: 40px;
-  padding-top: 70px;
+  padding: 70px 40px;
   padding-right: 2%;
   text-align: left;
 
   & p {
-    @include montserrat(16, 24, 400);
+    @include mainfont(16, 24, 400);
     color: $white;
   }
 
