@@ -1452,6 +1452,31 @@
     }, false);
   });
 
+  var aboutCompany = (function () {
+    var aboutCompany = document.querySelector('.about-company');
+    var wrapper = aboutCompany.querySelector('.about-company__img-wrapper');
+    if (!aboutCompany) return;
+
+    var parallax = function parallax() {
+      var coords = aboutCompany.getBoundingClientRect();
+      var windowHeight = document.documentElement.clientHeight; // верхний край элемента виден?
+
+      var topVisible = coords.top > 0 && coords.top < windowHeight; // нижний край элемента виден?
+
+      var bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+      var full = windowHeight - coords.top + coords.bottom;
+      var delta = full / 100;
+      var pos = coords.bottom / delta - 30;
+
+      if (topVisible || bottomVisible) {
+        wrapper.style.backgroundPositionY = "".concat(pos, "%");
+      }
+    };
+
+    parallax();
+    document.addEventListener('scroll', parallax);
+  });
+
   var footerContactForm = (function () {
     var form = document.querySelector('.js-fcf');
     if (!form) return;
@@ -1507,6 +1532,7 @@
 
   contactForm();
   footerContactForm();
+  aboutCompany();
 
 }());
 //# sourceMappingURL=main.js.map
