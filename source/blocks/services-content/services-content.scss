@@ -1,11 +1,6 @@
 .services-content {
   padding: 120px 0;
   padding-bottom: 60px;
-  // background-image: url("../img/bg/bg-holder-1920.jpg");
-  // background-repeat: no-repeat;
-  // background-position: bottom;
-  // background-size: cover;
-  // background-color: $decor-gray;
 
   @include tablet-medium-max {
     padding: 75px 0;
@@ -13,6 +8,7 @@
 
   @include mobile-max {
     padding-top: 60px;
+    padding-bottom: 30px;
   }
 }
 
