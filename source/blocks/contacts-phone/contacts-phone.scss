@@ -1,6 +1,7 @@
 .contacts-phone {
   display: flex;
   align-items: center;
+  color: $dark-base-color;
 }
 
 .contacts-phone__icon {
@@ -44,7 +45,6 @@
 
 .contacts-phone__phone {
   @include mainfont(16, 24, 400);
-  color: $dark-base-color;
   transition: opacity 0.3s ease;
 
   svg {
