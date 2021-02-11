@@ -1679,10 +1679,10 @@ button.swiper-pagination-bullet {
           align-items: center; }
   @media (max-width: 1023px) {
     .header__logo {
-      width: 260px; } }
+      width: 250px; } }
   @media (max-width: 767px) {
     .header__logo {
-      width: 120px;
+      width: 125px;
       margin-right: 0; } }
 
 .header__logo-link {
@@ -4352,15 +4352,6 @@ button.swiper-pagination-bullet {
           -ms-flex-align: center;
               align-items: center;
       padding: 25px 5px; } }
-
-.contacts__company-logo {
-  margin: 0 auto; }
-  @media (max-width: 1023px) {
-    .contacts__company-logo {
-      margin-left: 0; } }
-  @media (max-width: 767px) {
-    .contacts__company-logo {
-      margin: 0 auto; } }
 
 .contacts__company-header {
   border-bottom: 1px solid #d7d7d7; }

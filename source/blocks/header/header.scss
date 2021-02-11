@@ -109,11 +109,11 @@
   align-items: center;
 
   @include tablet-medium-max {
-    width: 260px;
+    width: 250px;
   }
 
   @include mobile-max {
-    width: 120px;
+    width: 125px;
     margin-right: 0;
   }
 }
