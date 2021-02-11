@@ -1,0 +1,39 @@
+include ../title/title
+
+-
+  const groupPhaseContent = [
+      {
+        img: 'gp-1.jpg',
+        title: 'Доставка груза от отправителя на консолидационный склад.',
+        desc: 'Ключевым звеном в перевозке сборных грузов становится сбор всех товаров на специальном складе. Консолидационный склад – это отправная точка для регулярной перевозки сборных грузов по определенному маршруту.',
+      },
+      {
+        img: 'gp-2.jpg',
+        title: 'Обработка груза для дальнейшей отправки.',
+        desc: 'Здесь происходит подготовка груза, которая включает в себя взвешивание, проверку на соответствие, дополнительную упаковку и переупаковку груза, применение тары и пр.',
+      },
+      {
+        img: 'gp-3.jpg',
+        title: 'Подготовка пакета необходимых документов.',
+        desc: 'Проходит подготовка к таможенному оформлению, сертификация, страховка и прочие документы для транспортировки.',
+      },
+      {
+        img: 'gp-4.jpg',
+        title: 'Отправка сборного груза в страну назначения.',
+        desc: 'Транспортная компания выбирает оптимальный способ доставки и определяется с его схемой: будут ли грузы идти до склада временного хранения, либо вывозиться на адрес конечного покупателя.',
+      },
+    ]
+
+
+section.group-phase
+  div.group-phase__container.container
+    +title('Этапы работы', 'section-decor').group-phase__title
+    p.group-phase__title-description Особенности перевозок сборных грузов
+    ul.group-phase__phase-list
+      each it in groupPhaseContent
+        li.group-phase__phase-item
+          div.group-phase__img-container
+            img(src="img/our-services/pages/group-phase/" + it.img width="450" height="320" alt= "").group-phase__img
+          div.group-phase__desc-container
+            h3.group-phase__item-title #{it.title}
+            p.group-phase__item-desc #{it.desc}

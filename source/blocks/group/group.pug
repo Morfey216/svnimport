@@ -2,23 +2,26 @@ include ../title/title
 
 -
   const groupContents = [
-      'Текст',
+      '',
     ]
 
-//- -
-//-   const exportLists = [
-//-       '',
-//-     ]
+-
+  const groupLists = [
+      'Возможность отправки товара с небольшим весом и невысокие тарифы на грузоперевозку.',
+      'Международные сборные перевозки железнодорожным, водным и авиационным путем.',
+      'Мультимодальные перевозки: это смешанный вид перевозки, с использованием нескольких видов транспорта. Такие перевозки оптимальны по соотношению цены и сроков. ',
+      'Консолидирование: товар складируют на специальных консолидационных складах, где груз дополнительно упаковывается, взвешивается и маркируется.',
+    ]
 
 section.group.services-content
   div.services-content__container.container
     div.services-content__content-wrapper.content
       +title('Сборные грузы', 'section-decor').services-content__title
       p.services-content__title-description Особенности перевозок сборных грузов
-      each itContent in groupContents
-        p!= itContent
-      //- ul
-      //-   each it in qualityLists
-      //-     li!= it
+      //- each itContent in groupContents
+      //-   p!= itContent
+      ul
+        each it in groupLists
+          li!= it
     div.services-content__img-container
-      img(src="img/our-services/pages/group.jpg" width="415" height="280" alt= "Сборные грузы").services-content__img
+      img(src="img/our-services/pages/group.jpg" width="550" height="415" alt= "Сборные грузы").services-content__img
