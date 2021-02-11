@@ -17,10 +17,11 @@ include ../title/title
     ]
 
 section.about-company#about
+  div.about-company__img-wrapper
   div.about-company__wrapper
-    //- div.container
-    div.about-company__container
-      +title('Об СВН импорт:', 'white').about-company__title
-      each desc in companyDescriptions
-        p!= desc
-      //- a(href="services.html").button.button--gray.about-company__all-link Читать далее
+    div.container
+      div.about-company__container
+        +title('Об СВН импорт:', 'white').about-company__title
+        each desc in companyDescriptions
+          p!= desc
+        //- a(href="services.html").button.button--gray.about-company__all-link Читать далее

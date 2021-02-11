@@ -1,13 +1,33 @@
 .about-company {
   min-height: 600px;
-  background-image: url("../img/bg/company-description-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $light-base-color;
+  position: relative;
+
+  overflow: hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
 
   @include mobile-max {
     background-image: none;
   }
+}
+
+.about-company__img-wrapper {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("../img/bg/company-description-bg.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 0%;
+  background-size: cover;
+  z-index: -2;
+
+  transform-origin: center;
+  transform: translateZ(-1px) scale(2.1);
+  transform-style: inherit;
 }
 
 .about-company__wrapper {
