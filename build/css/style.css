@@ -1417,7 +1417,7 @@ button.swiper-pagination-bullet {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
   .contacts-phone__phone svg {
-    margin-left: 10px;
+    margin-right: 10px;
     fill: currentColor; }
   .contacts-phone__phone:hover,
   .contacts-phone__phone :focus,
@@ -2955,8 +2955,8 @@ button.swiper-pagination-bullet {
   overflow: hidden; }
 
 .page-footer--services {
-  background-image: url("../img/bg/servises-footer-bg-70.jpg");
-  background-color: #5d4f6d; }
+  background-image: url("../img/bg/main-footer-1920-40.jpg");
+  background-color: #582a1a; }
 
 .page-footer__top {
   display: -webkit-box;
@@ -4386,6 +4386,10 @@ button.swiper-pagination-bullet {
     .contacts__company-mail,
     .contacts__company-point {
       margin-bottom: 15px; } }
+
+.contacts__company-phones svg {
+  margin-left: 5px;
+  margin-right: 15px; }
 
 .contacts__map {
   width: 100%;
