@@ -91,8 +91,9 @@
   color: $white;
 }
 
-.page-footer__contacts-info p {
-  @include opensans(16, 22, 700);
+.page-footer__contacts-info p,
+.page-footer__phones {
+  @include mainfont(16, 22, 700);
   color: $white;
   display: block;
   width: 550px;
@@ -109,9 +110,26 @@
   }
 
   @include mobile-max {
-    @include opensans(14, 21, 400);
+    @include mainfont(14, 21, 400);
     width: auto;
-    font-size: 14px;
+  }
+}
+
+.page-footer__phones {
+  display: flex;
+}
+
+.page-footer__phone {
+  margin-left: 20px;
+  color: $white;
+
+  .contacts-phone__phone {
+    font-weight: 700;
+
+    @include mobile-max {
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
 }
 
@@ -186,7 +204,7 @@
 
 .page-footer__nav {
   @include list-reset;
-  @include opensans(16, 21, 400);
+  @include mainfont(16, 21, 400);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -244,7 +262,7 @@
 
 .page-footer__details,
 .page-footer__copyright {
-  @include opensans(14, 21, 400);
+  @include mainfont(14, 21, 400);
   color: $white;
 
   @include tablet-medium-max {

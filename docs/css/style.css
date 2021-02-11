@@ -1363,7 +1363,8 @@ button.swiper-pagination-bullet {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  color: #1b1b1c; }
 
 .contacts-phone__icon {
   margin-right: 15px;
@@ -1413,7 +1414,6 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #1b1b1c;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
   .contacts-phone__phone svg {
@@ -3061,8 +3061,9 @@ button.swiper-pagination-bullet {
   margin-bottom: 20px;
   color: #ffffff; }
 
-.page-footer__contacts-info p {
-  font-family: "OpenSans", "Arial", sans-serif;
+.page-footer__contacts-info p,
+.page-footer__phones {
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
@@ -3073,19 +3074,36 @@ button.swiper-pagination-bullet {
   padding: 10px 0 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   @media (max-width: 1199px) {
-    .page-footer__contacts-info p {
+    .page-footer__contacts-info p,
+    .page-footer__phones {
       width: 470px; } }
   @media (max-width: 1023px) {
-    .page-footer__contacts-info p {
+    .page-footer__contacts-info p,
+    .page-footer__phones {
       width: 270px; } }
   @media (max-width: 767px) {
-    .page-footer__contacts-info p {
-      font-family: "OpenSans", "Arial", sans-serif;
+    .page-footer__contacts-info p,
+    .page-footer__phones {
+      font-family: "Montserrat", "Arial", sans-serif;
       font-size: 14px;
       line-height: 21px;
       font-weight: 400;
-      width: auto;
-      font-size: 14px; } }
+      width: auto; } }
+
+.page-footer__phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page-footer__phone {
+  margin-left: 20px;
+  color: #ffffff; }
+  .page-footer__phone .contacts-phone__phone {
+    font-weight: 700; }
+    @media (max-width: 767px) {
+      .page-footer__phone .contacts-phone__phone {
+        font-size: 14px;
+        font-weight: 400; } }
 
 .page-footer__social {
   display: -webkit-box;
@@ -3164,7 +3182,7 @@ button.swiper-pagination-bullet {
 .page-footer__nav {
   padding: 0;
   list-style: none;
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -3221,7 +3239,7 @@ button.swiper-pagination-bullet {
 
 .page-footer__details,
 .page-footer__copyright {
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;

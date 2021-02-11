@@ -1,5 +1,6 @@
 include ../svg/svg
 include ../title/title
+include ../contacts-phone/contacts-phone
 
 -
   const socialList = [
@@ -40,23 +41,27 @@ include ../title/title
 -
   const footerMenu = [
       {
-        link: '',
-        desc: 'О компании',
+        link: 'index.html',
+        desc: 'Главная',
       },
       {
         link: 'services.html',
         desc: 'Услуги',
       },
       {
-        link: '',
-        desc: 'Отзывы',
+        link: 'cargo-transportation.html',
+        desc: 'Грузоперевозки',
       },
       {
-        link: '',
-        desc: 'Каталог',
+        link: 'index.html#advantages',
+        desc: 'Преимущества',
       },
       {
-        link: '',
+        link: 'index.html#about',
+        desc: 'О нас',
+      },
+      {
+        link: 'contacts.html',
         desc: 'Контакты',
       },
     ]
@@ -72,11 +77,11 @@ mixin page-footer(mod, noTop)
             h3.page-footer__contacts-title Контакты
             div.page-footer__contacts-info
               p.page-footer__address Адрес: Минск/Чапаева/3-246
-              p
+              div.page-footer__phones
                 span Телефон:
                 |
                 |
-                a(href="tel:+375291932333" target="_blank").page-footer__phone +375 (29) 193 23 33
+                +contacts-phone('col', 'text').page-footer__phone
               p
                 span Email:
                 |
@@ -101,5 +106,5 @@ mixin page-footer(mod, noTop)
             a(href= menuItem.link).page-footer__nav-link #{menuItem.desc}
     div.page-footer__bottom
       div.page-footer__wrapper
-        p.page-footer__details ООО "СВН импорт", УНП 193430086
-        p.page-footer__copyright © 2021 Company Inc. Все права защищены
+        p.page-footer__details ООО "СВН импорт"; УНП 193430086
+        p.page-footer__copyright © 2020-2021 Company Inc. Все права защищены
