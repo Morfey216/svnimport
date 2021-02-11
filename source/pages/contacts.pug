@@ -6,12 +6,13 @@ doctype html
 html(lang='ru')
   +head('Контакты')
   body
-    +header('dark')
+    +header('dark', '#user-contacts')
 
     main
       h1.visually-hidden Доставка товаров из Китая и других стран
       include ../blocks/contacts-welcome/contacts-welcome
       include ../blocks/user-contacts/user-contacts
+      include ../blocks/contacts/contacts
 
     +page-footer('services', true)
 

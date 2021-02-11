@@ -1366,7 +1366,7 @@ button.swiper-pagination-bullet {
           align-items: center; }
 
 .contacts-phone__icon {
-  margin-right: 5px;
+  margin-right: 15px;
   fill: #1b1b1c; }
   @media (max-width: 1199px) {
     .contacts-phone__icon {
@@ -1384,12 +1384,19 @@ button.swiper-pagination-bullet {
         -ms-flex-direction: column;
             flex-direction: column; }
     .contacts-phone__phones--col .contacts-phone__phone {
-      font-family: "OpenSans", "Arial", sans-serif;
+      font-family: "Montserrat", "Arial", sans-serif;
       font-size: 16px;
       line-height: 24px;
-      font-weight: 500; }
+      font-weight: 400; }
+      @media (max-width: 767px) {
+        .contacts-phone__phones--col .contacts-phone__phone {
+          font-family: "Montserrat", "Arial", sans-serif;
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 400; } }
   @media (max-width: 1199px) {
     .contacts-phone__phones {
+      margin-right: 10px;
       margin-bottom: 10px; } }
   @media (max-width: 767px) {
     .contacts-phone__phones--messenger {
@@ -1402,13 +1409,16 @@ button.swiper-pagination-bullet {
               flex-direction: column; } }
 
 .contacts-phone__phone {
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #1b1b1c;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
+  .contacts-phone__phone svg {
+    margin-left: 10px;
+    fill: currentColor; }
   .contacts-phone__phone:hover,
   .contacts-phone__phone :focus,
   .contacts-phone__phone :active {
@@ -1416,17 +1426,78 @@ button.swiper-pagination-bullet {
   @media (max-width: 1199px) {
     .contacts-phone__phone {
       font-size: 14px;
-      font-weight: 500; } }
+      font-weight: 500; }
+      .contacts-phone__phone svg {
+        height: 14px; } }
 
 .contacts-phone__phone--first {
   margin-right: 10px; }
 
 .contacts-phone__messenger {
-  font-family: "OpenSans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: #666666; }
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1b1b1c; }
+
+.contacts-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.contacts-mail__icon {
+  margin-right: 15px; }
+  .contacts-mail__icon--messenger {
+    margin-right: 25px; }
+  @media (max-width: 767px) {
+    .contacts-mail__icon {
+      margin-right: 10px; }
+      .contacts-mail__icon--messenger {
+        margin-right: 20px; } }
+
+.contacts-mail__mail {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1b1b1c; }
+  .contacts-mail__mail:hover,
+  .contacts-mail__mail :focus,
+  .contacts-mail__mail :active {
+    color: #717171; }
+  .contacts-mail__mail--col {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400; }
+
+.contacts-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.contacts-point__icon {
+  margin-right: 15px; }
+  .contacts-point__icon--messenger {
+    margin-right: 25px; }
+  @media (max-width: 767px) {
+    .contacts-point__icon {
+      margin-right: 10px; }
+      .contacts-point__icon--messenger {
+        margin-right: 20px; } }
+
+.contacts-point__point {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1b1b1c; }
 
 .menu-nav {
   width: 100%; }
@@ -1576,7 +1647,6 @@ button.swiper-pagination-bullet {
     .header--primary-position .contacts-phone__icon {
       fill: #ffffff; }
     .header--primary-position .contacts-phone__phone {
-      font-weight: 500;
       color: #ffffff; }
     .header--primary-position.header--dark {
       background-color: #1b1b1c; } }
@@ -1645,11 +1715,12 @@ button.swiper-pagination-bullet {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       position: absolute;
-      bottom: 20px; } }
+      bottom: 20px;
+      right: 0; } }
 
 .header__dropdown {
   visibility: hidden;
@@ -1666,14 +1737,6 @@ button.swiper-pagination-bullet {
   @media (max-width: 1199px) {
     .header__dropdown {
       height: 100vh; } }
-  .header__dropdown .contacts-phone__phone {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
 
 .header__overlay {
   display: none;
@@ -4068,8 +4131,7 @@ button.swiper-pagination-bullet {
   display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #d7d7d7; }
+  background-color: #ffffff; }
   @media (max-width: 1199px) {
     .user-contacts {
       padding-top: 40px;
@@ -4140,3 +4202,125 @@ button.swiper-pagination-bullet {
   @media (max-width: 767px) {
     .user-contacts__contact-form {
       width: 300px; } }
+
+.contacts {
+  background-color: #ffffff; }
+  @media (max-width: 1023px) {
+    .contacts {
+      padding-top: 70px; } }
+  @media (max-width: 767px) {
+    .contacts {
+      padding-top: 50px; } }
+
+.contacts__title {
+  margin-bottom: 90px; }
+  @media (max-width: 1023px) {
+    .contacts__title {
+      margin-bottom: 50px; } }
+  @media (max-width: 767px) {
+    .contacts__title {
+      margin-bottom: 40px; } }
+
+.contacts__content {
+  position: relative; }
+  @media (max-width: 1023px) {
+    .contacts__content {
+      border-top: 1px solid #d7d7d7; } }
+
+.contacts__company {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 140px;
+  left: 15px;
+  width: 400px;
+  margin: 0;
+  padding: 35px 50px;
+  padding-bottom: 15px;
+  background-color: #ffffff; }
+  @media (max-width: 1023px) {
+    .contacts__company {
+      position: static;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
+  @media (max-width: 767px) {
+    .contacts__company {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 25px 5px; } }
+
+.contacts__company-logo {
+  margin: 0 auto; }
+  @media (max-width: 1023px) {
+    .contacts__company-logo {
+      margin-left: 0; } }
+  @media (max-width: 767px) {
+    .contacts__company-logo {
+      margin: 0 auto; } }
+
+.contacts__company-header {
+  border-bottom: 1px solid #d7d7d7; }
+  .contacts__company-header h3 {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #1b1b1c;
+    padding-top: 20px;
+    padding-bottom: 14px; }
+    @media (max-width: 767px) {
+      .contacts__company-header h3 {
+        font-size: 18px; } }
+
+.contacts__company-contacts {
+  padding: 20px 0; }
+  @media (max-width: 1023px) {
+    .contacts__company-contacts a,
+    .contacts__company-contacts p {
+      font-size: 16px; } }
+  .contacts__company-contacts .contacts-phone__phone {
+    font-size: 16px;
+    font-weight: 400; }
+
+.contacts__company-phones,
+.contacts__company-mail,
+.contacts__company-point {
+  margin-bottom: 25px; }
+  @media (max-width: 1023px) {
+    .contacts__company-phones,
+    .contacts__company-mail,
+    .contacts__company-point {
+      margin-bottom: 15px; } }
+
+.contacts__map {
+  width: 100%;
+  height: 720px;
+  border: 0;
+  background-image: url("../img/bg/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center, bottom; }
+  .contacts__map iframe {
+    width: 100%;
+    height: 720px; }
+  @media (max-width: 1023px) {
+    .contacts__map {
+      height: 500px; }
+      .contacts__map iframe {
+        height: 500px; } }
+  @media (max-width: 767px) {
+    .contacts__map {
+      height: 260px;
+      background-position: center, center;
+      background-size: 200%; }
+      .contacts__map iframe {
+        height: 260px; } }

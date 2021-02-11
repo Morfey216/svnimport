@@ -1,0 +1,143 @@
+.contacts {
+  background-color: $white;
+
+  @include tablet-medium-max {
+    padding-top: 70px;
+  }
+
+  @include mobile-max {
+    padding-top: 50px;
+  }
+}
+
+.contacts__title {
+  margin-bottom: 90px;
+
+  @include tablet-medium-max {
+    margin-bottom: 50px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 40px;
+  }
+}
+
+.contacts__content {
+  position: relative;
+
+  @include tablet-medium-max {
+    border-top: 1px solid $base-white-underline;
+  }
+}
+
+.contacts__company {
+  position: absolute;
+  box-sizing: border-box;
+  top: 140px;
+  left: 15px;
+  width: 400px;
+  margin: 0;
+  padding: 35px 50px;
+  padding-bottom: 15px;
+  background-color: #ffffff;
+
+  @include tablet-medium-max {
+    position: static;
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    // background-color: $base-white-underline;
+  }
+
+  @include mobile-max {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 5px;
+  }
+}
+
+.contacts__company-logo {
+  margin: 0 auto;
+
+  @include tablet-medium-max {
+    margin-left: 0;
+  }
+
+  @include mobile-max {
+    margin: 0 auto;
+  }
+}
+
+.contacts__company-header {
+  border-bottom: 1px solid $base-white-underline;
+
+  h3 {
+    @include mainfont(22, 30, 700);
+    color: $dark-base-color;
+    padding-top: 20px;
+    padding-bottom: 14px;
+
+    @include mobile-max {
+      font-size: 18px;
+    }
+  }
+}
+
+.contacts__company-contacts {
+  padding: 20px 0;
+
+  @include tablet-medium-max {
+    a,
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .contacts-phone__phone {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.contacts__company-phones,
+.contacts__company-mail,
+.contacts__company-point {
+  margin-bottom: 25px;
+
+  @include tablet-medium-max {
+    margin-bottom: 15px;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 720px;
+  border: 0;
+  background-image: url("../img/bg/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center, bottom;
+
+  iframe {
+    width: 100%;
+    height: 720px;
+  }
+
+  @include tablet-medium-max {
+    height: 500px;
+
+    iframe {
+      height: 500px;
+    }
+  }
+
+  @include mobile-max {
+    height: 260px;
+    background-position: center, center;
+    background-size: 200%;
+
+    iframe {
+      height: 260px;
+    }
+  }
+}

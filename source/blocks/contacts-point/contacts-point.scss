@@ -1,0 +1,25 @@
+.contacts-point {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-point__icon {
+  margin-right: 15px;
+
+  &--messenger {
+    margin-right: 25px;
+  }
+
+  @include mobile-max {
+    margin-right: 10px;
+
+    &--messenger {
+      margin-right: 20px;
+    }
+  }
+}
+
+.contacts-point__point {
+  @include mainfont(16, 24, 400);
+  color: $dark-base-color;
+}

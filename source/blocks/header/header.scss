@@ -76,7 +76,7 @@
     }
 
     & .contacts-phone__phone {
-      font-weight: 500;
+      // font-weight: 500;
       color: $white;
     }
 
@@ -143,10 +143,11 @@
 
   @include tablet-medium-max {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     position: absolute;
     bottom: 20px;
+    right: 0;
   }
 }
 
@@ -170,10 +171,10 @@
     height: 100vh;
   }
 
-  & .contacts-phone__phone {
-    display: flex;
-    flex-direction: column;
-  }
+  // & .contacts-phone__phone {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 }
 
 .header__overlay {

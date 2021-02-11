@@ -4,7 +4,7 @@
 }
 
 .contacts-phone__icon {
-  margin-right: 5px;
+  margin-right: 15px;
   fill: $dark-base-color;
 
   @include tablet-max {
@@ -21,11 +21,16 @@
     flex-direction: column;
 
     .contacts-phone__phone {
-      @include opensans(16, 24, 500);
+      @include mainfont(16, 24, 400);
+
+      @include mobile-max {
+        @include mainfont(14, 21, 400);
+      }
     }
   }
 
   @include tablet-max {
+    margin-right: 10px;
     margin-bottom: 10px;
   }
 
@@ -38,9 +43,14 @@
 }
 
 .contacts-phone__phone {
-  @include opensans(16, 24, 400);
+  @include mainfont(16, 24, 400);
   color: $dark-base-color;
   transition: opacity 0.3s ease;
+
+  svg {
+    margin-left: 10px;
+    fill: currentColor;
+  }
 
   &:hover,
   :focus,
@@ -51,6 +61,10 @@
   @include tablet-max {
     font-size: 14px;
     font-weight: 500;
+
+    svg {
+      height: 14px;
+    }
   }
 }
 
@@ -59,6 +73,6 @@
 }
 
 .contacts-phone__messenger {
-  @include opensans(18, 26, 700);
-  color: $gray;
+  @include mainfont(16, 24, 400);
+  color: $dark-base-color;
 }

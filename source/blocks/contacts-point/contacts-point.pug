@@ -1,0 +1,7 @@
+include ../svg/svg
+
+mixin contacts-point(point, mod)
+  div(class='contacts-point')&attributes(attributes)
+    +svg('house')(class = 'contacts-point__icon', width='26', height='26')
+    //- img(src = 'img/icons/point-icon.png', width='31', height='31', alt='', class= mod ? 'contacts-point__icon--' + mod : '').contacts-point__icon
+    p.contacts-point__point!= point
