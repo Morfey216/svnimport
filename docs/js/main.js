@@ -1216,7 +1216,6 @@
     var mainNavContainer = header.querySelector('.header__main-nav-container');
     var mainNavWrap = header.querySelector('.header__main-nav-wrap');
     var mainNav = header.querySelector('.header__main-nav');
-    var mainSubNav = mainNav.querySelector('.menu-nav__sublist');
     var menuFragment = new DocumentFragment();
     var contactsWrap = header.querySelector('.header__contacts-wrap');
     var contactsButton = header.querySelector('.header__contacts-button'); // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
@@ -1224,9 +1223,15 @@
 
     var createActualNav = function createActualNav() {
       var actualNav = mainNav.cloneNode(true);
-      menuFragment.appendChild(mainNav); // const sublist = actualNav.querySelector('.menu-nav__sublist');
-      // const moreLinc = actualNav.querySelector('.menu-nav__item--more');
-
+      menuFragment.appendChild(mainNav);
+      var mainNavItems = actualNav.querySelectorAll('.menu-nav__item');
+      var mainNavList = actualNav.querySelector('.menu-nav__list');
+      mainNavList.innerHTML = '';
+      mainNavItems.forEach(function (item) {
+        if (!item.classList.contains('menu-nav__item--more')) {
+          mainNavList.appendChild(item);
+        }
+      });
       return actualNav;
     };
 

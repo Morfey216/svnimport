@@ -22,7 +22,6 @@ export default () => {
 
   const mainNavWrap = header.querySelector('.header__main-nav-wrap');
   const mainNav = header.querySelector('.header__main-nav');
-  // const mainSubNav = mainNav.querySelector('.menu-nav__sublist');
   const menuFragment = new DocumentFragment();
 
   const contactsWrap = header.querySelector('.header__contacts-wrap');
@@ -34,8 +33,16 @@ export default () => {
     const actualNav = mainNav.cloneNode(true);
     menuFragment.appendChild(mainNav);
 
-    // const sublist = actualNav.querySelector('.menu-nav__sublist');
-    // const moreLinc = actualNav.querySelector('.menu-nav__item--more');
+    const mainNavItems = actualNav.querySelectorAll('.menu-nav__item');
+    const mainNavList = actualNav.querySelector('.menu-nav__list');
+
+    mainNavList.innerHTML = '';
+
+    mainNavItems.forEach((item) => {
+      if (!item.classList.contains('menu-nav__item--more')) {
+        mainNavList.appendChild(item);
+      }
+    });
 
     return actualNav;
   };

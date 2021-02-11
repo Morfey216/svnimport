@@ -23,7 +23,7 @@
   text-align: left;
 
   & p {
-    @include montserrat(16, 24, 400);
+    @include mainfont(16, 24, 400);
     color: $white;
   }
 
