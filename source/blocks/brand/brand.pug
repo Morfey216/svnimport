@@ -13,15 +13,15 @@ include ../title/title
 //-       '',
 //-     ]
 
-section.brand
-  div.brand__container.container
-    div.brand__content-wrapper.content
-      +title('Брендированние', 'section-decor').brand__title
-      p.brand__title-description Хочешь производить товар под своим брендом – пиши нам
+section.brand.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Брендированние', 'section-decor').services-content__title
+      p.services-content__title-description Хочешь производить товар под своим брендом – пиши нам
       each itContent in qualityContents
         p!= itContent
       //- ul
       //-   each it in qualityLists
       //-     li!= it
-    div.brand__img-container
-      img(src="img/our-services/pages/brand.jpg" width="440" height="550" alt= "Брендированние").brand__img
+    div.services-content__img-container
+      img(src="img/our-services/pages/brand.jpg" width="440" height="550" alt= "Брендированние").services-content__img

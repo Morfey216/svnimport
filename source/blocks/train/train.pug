@@ -1,0 +1,28 @@
+include ../title/title
+
+-
+  const shipContents = [
+      '',
+    ]
+
+-
+  const shipLists = [
+      '<strong>Доступная стоимость:</strong> доставка железнодорожным путем отличается экономической выгодой, если расстояния между точками значительны;',
+      '<strong>Независимость от погоды:</strong> уменьшает риски задержек в доставке в случае неблагоприятных погодных явлении;',
+      '<strong>Безопасность:</strong> транспортируемые товарно-материальные ценности крайне редко подвергаются действиям злоумышленников (взломам, кражам, порче);',
+      '<strong>Универсальность:</strong> возможность транспортирования любых грузов;',
+      '<strong>Грузоподъемность:</strong> Данный вид доставки позволяет перемещать масштабные и тяжелые предметы;',
+    ]
+
+section.ship.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Железнодорожные грузоперевозки', 'section-decor').services-content__title
+      p.services-content__title-description Преимущества перевозок железнодорожным транспортом:
+      //- each itContent in groupContents
+      //-   p!= itContent
+      ul
+        each it in shipLists
+          li!= it
+    div.services-content__img-container
+      img(src="img/transportation/pages/train.jpg" width="560" height="610" alt= "Железнодорожные грузоперевозки").services-content__img
