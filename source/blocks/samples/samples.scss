@@ -6,123 +6,123 @@
   }
 }
 
-.samples__details {
-  display: flex;
-  padding-top: 40px;
+// .samples__details {
+//   display: flex;
+//   padding-top: 40px;
 
-  @include mobile-max {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5px;
-  }
-}
+//   @include mobile-max {
+//     flex-direction: column;
+//     align-items: center;
+//     padding-top: 5px;
+//   }
+// }
 
-.samples__details div {
-  width: 33%;
+// .samples__details div {
+//   width: 33%;
 
-  @include mobile-max {
-    width: 100%;
-  }
-}
+//   @include mobile-max {
+//     width: 100%;
+//   }
+// }
 
-.samples__details-desc {
-  @include montserrat(48, 55, 400);
-  text-align: center;
-  position: relative;
-  padding-top: 25px;
-  padding-bottom: 25px;
+// .samples__details-desc {
+//   @include montserrat(48, 55, 400);
+//   text-align: center;
+//   position: relative;
+//   padding-top: 25px;
+//   padding-bottom: 25px;
 
-  @include tablet-medium-max {
-    font-size: 36px;
-    line-height: 42px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
+//   @include tablet-medium-max {
+//     font-size: 36px;
+//     line-height: 42px;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+//   }
 
-  @include mobile-max {
-    font-size: 24px;
-    line-height: 28px;
-    padding-bottom: 5px;
-  }
+//   @include mobile-max {
+//     font-size: 24px;
+//     line-height: 28px;
+//     padding-bottom: 5px;
+//   }
 
-  &::after {
-    content: "";
-    display: block;
-    width: 175px;
-    height: 1px;
-    background-color: $dark-base-color;
+//   &::after {
+//     content: "";
+//     display: block;
+//     width: 175px;
+//     height: 1px;
+//     background-color: $dark-base-color;
 
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// }
 
-.samples__details-title {
-  @include montserrat(16, 24, 400);
-  text-align: center;
-  padding-top: 25px;
+// .samples__details-title {
+//   @include montserrat(16, 24, 400);
+//   text-align: center;
+//   padding-top: 25px;
 
-  @include mobile-max {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
+//   @include mobile-max {
+//     padding-top: 5px;
+//     padding-bottom: 5px;
+//   }
+// }
 
-.samples__stages {
-  padding-top: 60px;
+// .samples__stages {
+//   padding-top: 60px;
 
-  @include mobile-max {
-    padding-top: 15px;
-  }
-}
+//   @include mobile-max {
+//     padding-top: 15px;
+//   }
+// }
 
-.samples__stages-list {
-  @include list-reset();
+// .samples__stages-list {
+//   @include list-reset();
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 60px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   margin-top: 60px;
 
-  @include tablet-max {
-    width: 730px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-around;
-  }
+//   @include tablet-max {
+//     width: 730px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     justify-content: space-around;
+//   }
 
-  @include mobile-max {
-    width: 100%;
-    margin-top: 25px;
-    flex-direction: column;
-    align-items: center;
-  }
-}
+//   @include mobile-max {
+//     width: 100%;
+//     margin-top: 25px;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
 
-.samples__stages-item {
-  width: 280px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+// .samples__stages-item {
+//   width: 280px;
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 30px;
 
-  @include mobile-max {
-    width: auto;
-  }
-}
+//   @include mobile-max {
+//     width: auto;
+//   }
+// }
 
-.samples__stages-icon {
-  width: 47px;
-  height: 47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .samples__stages-icon {
+//   width: 47px;
+//   height: 47px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-.samples__stages-phase {
-  @include montserrat(16, 24, 400);
-  text-align: left;
-  width: 185px;
-  margin-left: 20px;
-}
+// .samples__stages-phase {
+//   @include montserrat(16, 24, 400);
+//   text-align: left;
+//   width: 185px;
+//   margin-left: 20px;
+// }
