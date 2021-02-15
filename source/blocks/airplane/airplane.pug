@@ -1,0 +1,35 @@
+include ../title/title
+
+-
+  const airplaneContents1 = [
+      'Когда вам нужна скорость и эффективность, то авиаперевозки могут показаться Вам сложной задачей в документациях, правилах перевозок и поиске наиболее эффективного маршрута. Мы упрощаем этот процесс, управляя всем от вашего имени, чтобы вы могли сосредоточиться на более важных вещах.',
+      'Наша команда опытных профессионалов в области логистики знает, как взять под свой контроль ваш груз, избавляя вас от давления и стресса, поскольку мы предлагаем вам решение от А до Я.',
+    ]
+
+-
+  const airplaneContents2 = [
+      'СВН импорт предлагает услуги China Air Freight, от сверхбыстрой срочной доставки до более экономичных авиаперевозок, чтобы доставить ваш груз всего за 3 или до 14 дней.',
+      'При заполнении коммерческого предложения сообщите нам свой идеальный график, и мы постараемся предложить план доставки, который подходит именно вам.',
+    ]
+
+-
+  const airplaneLists = [
+      '',
+    ]
+
+section.airplane.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Авиаперевозки - Быстро и Эффективно', 'section-decor').services-content__title
+      //- p.services-content__title-description Преимущества перевозок авиа транспортом
+      each itContent1 in airplaneContents1
+        p!= itContent1
+      +title('Получайте товары вовремя', 'section-decor').services-content__title
+      //- p.services-content__title-description Преимущества перевозок авиа транспортом
+      each itContent2 in airplaneContents2
+        p!= itContent2
+      //- ul
+      //-   each it in airplaneLists
+      //-     li!= it
+    div.services-content__img-container
+      img(src="img/transportation/pages/airplane.jpg" width="510" height="600" alt= "Авиаперевозки").services-content__img

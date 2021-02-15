@@ -60,9 +60,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 
   @include mobile-max {
+    margin-top: 60px;
+    margin-bottom: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -102,7 +104,7 @@
 }
 
 .cargo-transportation__transportation-title {
-  @include montserrat(34, 46, 500);
+  @include montserrat(32, 46, 700);
   color: $dark-base-color;
   margin-bottom: 20px;
   padding-bottom: 20px;

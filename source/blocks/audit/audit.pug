@@ -17,15 +17,15 @@ include ../title/title
       'Посещение завода в реальном времени.',
     ]
 
-section.audit
-  div.audit__container.container
-    div.audit__content-wrapper.content
-      +title('Аудит', 'section-decor').audit__title
-      p.audit__title-description Наша команда – ваши глаза
+section.audit.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Аудит', 'section-decor').services-content__title
+      p.services-content__title-description Наша команда – ваши глаза
       each auditContent in auditContents
         p!= auditContent
       ul
         each it in auditLists
           li!= it
-    div.audit__img-container
-      img(src="img/our-services/pages/audit.jpg" width="765" height="930" alt= "Аудит").audit__img
+    div.services-content__img-container
+      img(src="img/our-services/pages/audit.jpg" width="765" height="930" alt= "Аудит").services-content__img

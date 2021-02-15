@@ -17,15 +17,15 @@ include ../title/title
       'Мы обеспечиваем защиту сделки на законодательном уровне. Подготовим все необходимые документы и будем сопровождать вашу сделку от начала до конца 24/7.',
     ]
 
-section.search
-  div.search__container.container
-    div.search__content-wrapper.content
-      +title('Поиск Товара и Поставщика', 'section-decor').search__title
-      p.search__title-description Наша цель – Ваша экономия и Безопасность
+section.search.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Поиск Товара и Поставщика', 'section-decor').services-content__title
+      p.services-content__title-description Наша цель – Ваша экономия и Безопасность
       each itContent in searchContents
         p!= itContent
       ul
         each it in searchLists
           li!= it
-    div.search__img-container
-      img(src="img/our-services/pages/search.jpg" width="515" height="780" alt= "Поиск Товара и Поставщика").search__img
+    div.services-content__img-container
+      img(src="img/our-services/pages/search.jpg" width="515" height="780" alt= "Поиск Товара и Поставщика").services-content__img

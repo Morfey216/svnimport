@@ -19,16 +19,16 @@ include ../title/title
       'отгрузка/погрузка товара, доставка груза в ваш город и таможенное оформление.',
     ]
 
-section.production
-  div.production__container.container
-    div.production__content-wrapper.content
-      +title('Производство', 'section-decor').production__title
-      p.production__title-description От Вас необходима идея - а мы воплотим ее в жизнь
+section.production.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Производство', 'section-decor').services-content__title
+      p.services-content__title-description От Вас необходима идея - а мы воплотим ее в жизнь
       each itContent in productionContents
         p!= itContent
       ul
         each it in productionLists
           li!= it
       p Запуск производства товаров по требуемым параметрам в Китае и брендирование под своей торговой маркой - это выгодное решение и отличный способ отстроиться от конкурентов и увеличить прибыль. Все организационные моменты мы берем на себя.
-    div.production__img-container
-      img(src="img/our-services/pages/production.jpg" width="540" height="720" alt= "Производство").production__img
+    div.services-content__img-container
+      img(src="img/our-services/pages/production.jpg" width="540" height="720" alt= "Производство").services-content__img

@@ -40,12 +40,14 @@
 
 .services-content__title {
   margin-bottom: 20px;
-  font-size: 34px;
-  line-height: 40px;
-  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
 
   @include mobile-max {
     font-size: 28px;
+    line-height: 32px;
+    font-weight: 500;
   }
 }
 

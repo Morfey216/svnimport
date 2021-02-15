@@ -15,15 +15,15 @@ include ../title/title
       'Экономит время при работе с Китаем',
     ]
 
-section.quality-control
-  div.quality-control__container.container
-    div.quality-control__content-wrapper.content
-      +title('Контроль качества', 'section-decor').quality-control__title
-      p.quality-control__title-description От Вас необходима идея - а мы воплотим ее в жизнь
+section.quality-control.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Контроль качества', 'section-decor').services-content__title
+      p.services-content__title-description От Вас необходима идея - а мы воплотим ее в жизнь
       each itContent in qualityContents
         p!= itContent
       ul
         each it in qualityLists
           li!= it
-    div.quality-control__img-container
-      img(src="img/our-services/pages/quality-1.jpg" width="465" height="530" alt= "Контроль качества").quality-control__img
+    div.services-content__img-container
+      img(src="img/our-services/pages/quality-1.jpg" width="465" height="530" alt= "Контроль качества").services-content__img
