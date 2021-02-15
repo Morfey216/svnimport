@@ -1454,8 +1454,8 @@
 
   var aboutCompany = (function () {
     var aboutCompany = document.querySelector('.about-company');
-    var wrapper = aboutCompany.querySelector('.about-company__img-wrapper');
     if (!aboutCompany) return;
+    var wrapper = aboutCompany.querySelector('.about-company__img-wrapper');
 
     var parallax = function parallax() {
       var coords = aboutCompany.getBoundingClientRect();

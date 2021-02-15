@@ -6,7 +6,7 @@ div.footer-contact-form#footer-contact-form
   form.footer-contact-form__contact-form.js-fcf(method="post" enctype="multipart/form-data")
     +form-input({label: 'Имя', error: 'Введите имя',}, 'label-top')(type="text" name="name").footer-contact-form__form-input.js-fcf-name#fcf-name
     +form-input({label: 'Email *', error: 'Введите E-mail',}, 'label-top')(type="email" name="email" required).footer-contact-form__form-input.js-fcf-email#fcf-email
-    //- +form-input({label: 'Ваш телефон', error: 'Неверный номер',})(type="tel" name="phone" required).footer-contact-form__form-input.js-fcf-phone#fcf-phone
+    +form-input({label: 'Телефон *', error: 'Неверный номер',}, 'label-top')(type="tel" name="phone" required).footer-contact-form__form-input.js-fcf-phone#fcf-phone
     +form-textarea({label: 'Сообщение', error: 'Кратко опишите ситуацию',}, 'label-top')(name="description", rows="3").footer-contact-form__form-textarea.js-fcf-description#fcf-description
     +button('Отправить', 'gray')(type="submit").footer-contact-form__form-submit-button.js-fcf-submit
     div.footer-contact-form__upload-message

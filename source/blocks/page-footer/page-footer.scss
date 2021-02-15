@@ -1,17 +1,15 @@
 .page-footer {
   width: 100%;
-  background-image: url("../img/bg/main-footer-1920-40.jpg");
+  background-image: url("../img/bg/footer-bg.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 35%;
   background-size: cover;
   background-color: $bg-brown-color;
   overflow: hidden;
 }
 
 .page-footer--services {
-  // background-image: url("../img/bg/servises-footer-bg-70.jpg");
-  // background-color: $bg-purple-color;
-  background-image: url("../img/bg/main-footer-1920-40.jpg");
+  background-image: url("../img/bg/footer-bg.jpg");
   background-color: $bg-brown-color;
 }
 
@@ -119,6 +117,10 @@
 
 .page-footer__phones {
   display: flex;
+
+  @include tablet-medium-max {
+    flex-wrap: wrap;
+  }
 }
 
 .page-footer__phone {

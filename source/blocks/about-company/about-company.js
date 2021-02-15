@@ -1,8 +1,8 @@
 export default () => {
   const aboutCompany = document.querySelector('.about-company');
-  const wrapper = aboutCompany.querySelector('.about-company__img-wrapper');
-
   if (!aboutCompany) return;
+
+  const wrapper = aboutCompany.querySelector('.about-company__img-wrapper');
 
   const parallax = () => {
     const coords = aboutCompany.getBoundingClientRect();
