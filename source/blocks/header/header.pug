@@ -15,16 +15,94 @@ include ../menu-nav/menu-nav
         link: 'services.html',
         item: 'Услуги',
         anchor: '',
+        modClass: 'header__main-nav--complex',
+        mod: 'complex',
+        innerList: [
+          {
+            item: "Поиск Товара/Производителя",
+            link: 'search.html',
+          },
+          {
+            item: "Аудит",
+            link: 'audit.html',
+          },
+          {
+            item: "Производство",
+            link: 'production.html',
+          },
+          {
+            item: "Контроль качества",
+            link: 'quality.html',
+          },
+          {
+            item: "Брендированние",
+            link: 'brand.html',
+          },
+          {
+            item: "Консолидация",
+            link: 'consolidation.html',
+          },
+          {
+            item: "Экспорт",
+            link: 'export.html',
+          },
+          {
+            item: "Международные грузоперевозки",
+            link: 'cargo-transportation.html',
+          },
+          {
+            item: "Сборные грузы",
+            link: 'group.html',
+          },
+          {
+            item: "Заказ образцов",
+            link: 'samples.html',
+          },
+          {
+            item: "Импорт",
+            link: 'import.html',
+          },
+          {
+            item: "Amazon",
+            link: 'amazon.html',
+          },
+        ],
       },
       {
         link: 'cargo-transportation.html',
         item: 'Грузоперевозки',
         anchor: '',
+        modClass: 'header__main-nav--complex',
+        mod: 'complex',
+        innerList: [
+          {
+            item: 'Авиаперевозки грузов',
+            link: 'airplane.html',
+          },
+          {
+            item: 'Железнодорожные перевозки',
+            link: 'train.html',
+          },
+          //- {
+          //-   item: 'Автомобильные грузоперевозки',
+          //-   link: '#',
+          //- },
+          {
+            item: 'Морские грузоперевозки',
+            link: 'ship.html',
+          },
+          {
+            item: 'Доставка сборных грузов',
+            link: 'group.html',
+          },
+        ]
       },
       {
         link: 'index.html',
         item: 'О нас',
         anchor: 'about',
+        modClass: '',
+        mod: '',
       },
     ]
 
@@ -48,7 +126,7 @@ mixin header(mod, anchor)
       div.header__main-nav-container
         div.header__logo
           a.header__logo-link(href="index.html")
-            img.header__logo-img(src="img/logo/logo_250.png" width="250" height="50" alt="Логотип")
+            img.header__logo-img(src="img/logo/logo-251.png" width="251" height="54" alt="Логотип")
         div.header__main-nav-wrap
           +menu-nav(mainNavList, 'Главное меню', mainNavSubList).header__main-nav
         div.header__contacts-wrap
