@@ -12,6 +12,7 @@
   @include tablet-medium-max {
     flex-direction: column;
     width: 100%;
+    overflow-y: auto;
   }
 }
 
@@ -29,11 +30,12 @@
   }
 
   @include tablet-medium-max {
-    font-size: 14px;
+    padding: 8px 10px 6px 0;
   }
 
   @include mobile-max {
     padding: 8px 0;
+    font-size: 14px;
   }
 }
 
@@ -80,34 +82,59 @@
   }
 }
 
-@media (min-width: $screen-l) {
-  // .menu-nav__link {
-  //   color: $white;
-  // }
+.menu-nav__item--complex {
+  display: flex;
+  align-items: center;
 
-  // .menu-nav__list:hover .menu-nav__link {
-  //   opacity: 0.5;
-  //   transition-delay: 0.1s;
+  position: relative;
+  cursor: pointer;
+  color: $base-color;
+  transition: opacity 0.3s ease;
 
-  //   &:hover {
-  //     color: $white;
-  //     opacity: 1;
-  //   }
-  // }
+  svg {
+    margin-top: 4px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  :focus,
+  :active {
+    svg {
+      opacity: 0.5;
+    }
+
+    @media (min-width: $screen-l + 1) {
+      .menu-nav__sublist {
+        display: block;
+      }
+    }
+  }
+
+  @include mobile-max {
+    .menu-nav__link {
+      padding-right: 5px;
+    }
+  }
+}
+
+.menu-nav__inner-item .menu-nav__link {
+  font-size: 14px;
+  line-height: 18px;
+
+  @include tablet-medium-max {
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  @include mobile-max {
+    font-size: 12px;
+  }
 }
 
 .menu-nav__item {
   position: relative;
-
-  // &--active,
-  // &:hover {
-  //   position: relative;
-  //   color: $blue;
-
-  //   .main-nav__link {
-  //     color: inherit;
-  //   }
-  // }
 
   @include tablet-max {
     margin-right: 5px;
@@ -116,13 +143,4 @@
   @include tablet-medium-max {
     margin-right: 14px;
   }
-
-  // @include tablet-medium-max {
-  //   border-top: 1px solid $border-gray;
-  //   border-bottom: none;
-  // }
-
-  // @include mobile-max {
-  //   border-top: none;
-  // }
 }

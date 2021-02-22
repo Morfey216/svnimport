@@ -36,8 +36,15 @@ mixin menu-nav(navList, label, navSubList)
   nav.menu-nav&attributes(attributes)(aria-label= label)
     ul.menu-nav__list
       each navItem in navList
-        li.menu-nav__item
+        li.menu-nav__item(class= navItem.mod ? navItem.modClass + ' menu-nav__item--' + navItem.mod : '')
           a.menu-nav__link(href= navItem.anchor ? navItem.link + "#" + navItem.anchor : navItem.link) #{navItem.item}
+          if (navItem.innerList)
+            +svg('arrow-short-down')(width="8" height="5")
+            ul.menu-nav__sublist.menu-nav__innerlist
+              each innerItem in navItem.innerList
+                li.menu-nav__item.menu-nav__inner-item
+                  a.menu-nav__link(href= innerItem.link) #{innerItem.item}
+
       li.menu-nav__item.menu-nav__item--more
         span.visually-hidden Еще
         +svg('more')(width="18" height="4")
