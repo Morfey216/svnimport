@@ -147,6 +147,12 @@
       margin-right: auto;
     }
   }
+
+  @include mobile-max {
+    .promotions-section__title {
+      color: $white;
+    }
+  }
 }
 
 .promotions-section__slider-container * {
