@@ -109,6 +109,7 @@
   align-items: center;
 
   @include tablet-medium-max {
+    box-sizing: border-box;
     width: 250px;
   }
 
@@ -119,7 +120,7 @@
 }
 
 .header__logo-link {
-  margin-right: 10px;
+  // margin-right: 10px;
 
   @include mobile-max {
     margin-top: 0;

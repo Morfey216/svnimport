@@ -1722,17 +1722,17 @@ button.swiper-pagination-bullet {
           align-items: center; }
   @media (max-width: 1023px) {
     .header__logo {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
       width: 250px; } }
   @media (max-width: 767px) {
     .header__logo {
       width: 125px;
       margin-right: 0; } }
 
-.header__logo-link {
-  margin-right: 10px; }
-  @media (max-width: 767px) {
-    .header__logo-link {
-      margin-top: 0; } }
+@media (max-width: 767px) {
+  .header__logo-link {
+    margin-top: 0; } }
 
 .header__call-request {
   font-size: 13px; }
@@ -1995,6 +1995,9 @@ button.swiper-pagination-bullet {
       text-align: left; }
     .promotions-section__item-content--slide-3 a {
       margin-right: auto; } }
+  @media (max-width: 767px) {
+    .promotions-section__item-content--slide-3 .promotions-section__title {
+      color: #ffffff; } }
 
 .promotions-section__slider-container * {
   -webkit-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
@@ -3345,9 +3348,6 @@ button.swiper-pagination-bullet {
   background-size: cover;
   background-color: #687289;
   overflow: hidden; }
-  @media (max-width: 579px) {
-    .cargo-transportation-welcome {
-      background-position: right 50%; } }
 
 .cargo-transportation-welcome__wrapper {
   display: -webkit-box;

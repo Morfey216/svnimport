@@ -10,9 +10,9 @@
   background-color: $bg-blue-color;
   overflow: hidden;
 
-  @include mobile-medium-max {
-    background-position: right 50%;
-  }
+  // @include mobile-medium-max {
+  //   background-position: right 50%;
+  // }
 }
 
 .cargo-transportation-welcome__wrapper {
