@@ -14,6 +14,7 @@ import promoSection from '../blocks/promotions-section/promotions-section';
 import contactForm from '../blocks/contact-form/contact-form';
 import aboutCompany from '../blocks/about-company/about-company';
 import footerContactForm from '../blocks/footer-contact-form/footer-contact-form';
+import scrollUp from '../blocks/scroll-up/scroll-up';
 
 // endregion
 
@@ -25,3 +26,4 @@ promoSection();
 contactForm();
 footerContactForm();
 aboutCompany();
+scrollUp();

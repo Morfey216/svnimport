@@ -5,6 +5,16 @@
   right: 25px;
 
   z-index: 9999;
+
+  @include tablet-max {
+    bottom: 90px;
+    right: 10px;
+  }
+
+  @include mobile-max {
+    bottom: 5px;
+    right: 10px;
+  }
 }
 
 .scroll-up--show {
@@ -12,16 +22,14 @@
 }
 
 .scroll-up__button {
-  // width: 45px;
-  // height: 45px;
   padding: 15px;
   transform: rotate(-90deg);
-  transition: 0.17s linear all;
   border: 1px solid $dark-green;
   border-radius: 50%;
 
   color: $white;
   background-color: $dark-green;
+  transition: 0.17s linear all;
 
   &:hover,
   &:focus,
@@ -29,8 +37,17 @@
     color: $dark-green;
     background-color: $icon-gray;
   }
+
+  @include mobile-max {
+    padding: 10px;
+  }
 }
 
 .scroll-up__icon {
   fill: currentColor;
+
+  @include mobile-max {
+    width: 14px;
+    height: 14px;
+  }
 }
