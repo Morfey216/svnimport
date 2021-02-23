@@ -1,0 +1,36 @@
+.scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 25px;
+
+  z-index: 9999;
+}
+
+.scroll-up--show {
+  display: block;
+}
+
+.scroll-up__button {
+  // width: 45px;
+  // height: 45px;
+  padding: 15px;
+  transform: rotate(-90deg);
+  transition: 0.17s linear all;
+  border: 1px solid $dark-green;
+  border-radius: 50%;
+
+  color: $white;
+  background-color: $dark-green;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-green;
+    background-color: $icon-gray;
+  }
+}
+
+.scroll-up__icon {
+  fill: currentColor;
+}

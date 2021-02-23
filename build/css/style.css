@@ -3805,3 +3805,30 @@ button.swiper-pagination-bullet {
       background-size: 200%; }
       .contacts__map iframe {
         height: 260px; } }
+
+.scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 25px;
+  z-index: 9999; }
+
+.scroll-up--show {
+  display: block; }
+
+.scroll-up__button {
+  padding: 15px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 0.17s linear all;
+  transition: 0.17s linear all;
+  border: 1px solid #006360;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #006360; }
+  .scroll-up__button:hover, .scroll-up__button:focus, .scroll-up__button:active {
+    color: #006360;
+    background-color: #c2c2c2; }
+
+.scroll-up__icon {
+  fill: currentColor; }
