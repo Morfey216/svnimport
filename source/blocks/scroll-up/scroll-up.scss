@@ -1,0 +1,53 @@
+.scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 25px;
+
+  z-index: 9999;
+
+  @include tablet-max {
+    bottom: 90px;
+    right: 10px;
+  }
+
+  @include mobile-max {
+    bottom: 5px;
+    right: 10px;
+  }
+}
+
+.scroll-up--show {
+  display: block;
+}
+
+.scroll-up__button {
+  padding: 15px;
+  transform: rotate(-90deg);
+  border: 1px solid $dark-green;
+  border-radius: 50%;
+
+  color: $white;
+  background-color: $dark-green;
+  transition: 0.17s linear all;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-green;
+    background-color: $icon-gray;
+  }
+
+  @include mobile-max {
+    padding: 10px;
+  }
+}
+
+.scroll-up__icon {
+  fill: currentColor;
+
+  @include mobile-max {
+    width: 14px;
+    height: 14px;
+  }
+}

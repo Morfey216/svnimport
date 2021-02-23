@@ -1523,6 +1523,30 @@
     }, false);
   });
 
+  var scrollUp = (function () {
+    document.addEventListener('DOMContentLoaded', function () {
+      var scrollUp = document.querySelector('.scroll-up');
+      var scrollUpBtn = scrollUp.querySelector('.js-scroll-up');
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 580) {
+          scrollUp.classList.add('scroll-up--show');
+        } else {
+          scrollUp.classList.remove('scroll-up--show');
+        }
+      }; // плавный скролл наверх
+
+
+      scrollUpBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        window.scrollBy({
+          top: -document.documentElement.scrollHeight,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+
   /* eslint-disable */
 
   formInput();
@@ -1533,6 +1557,7 @@
   contactForm();
   footerContactForm();
   aboutCompany();
+  scrollUp();
 
 }());
 //# sourceMappingURL=main.js.map
