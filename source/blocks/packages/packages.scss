@@ -1,15 +1,16 @@
-.scheme {
+.packages {
+  padding-top: 10px;
+  // padding-bottom: 10px;
   background: transparent;
 }
 
-.scheme__title {
+.packages__title {
   margin-top: 40px;
   margin-bottom: 0;
   padding-bottom: 20px;
 }
 
-.scheme__img-container {
-  // width: 80%;
+.packages__img-container {
   margin: 40px auto;
 
   @include mobile-max {
@@ -18,6 +19,6 @@
   }
 }
 
-.scheme__img {
+.packages__img {
   margin: 0 auto;
 }

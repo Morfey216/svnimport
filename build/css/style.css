@@ -2344,6 +2344,25 @@ button.swiper-pagination-bullet {
 .scheme__img {
   margin: 0 auto; }
 
+.packages {
+  padding-top: 10px;
+  background: transparent; }
+
+.packages__title {
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-bottom: 20px; }
+
+.packages__img-container {
+  margin: 40px auto; }
+  @media (max-width: 767px) {
+    .packages__img-container {
+      margin-top: 20px;
+      margin-bottom: 5px; } }
+
+.packages__img {
+  margin: 0 auto; }
+
 .contact-form {
   width: 955px;
   margin: 0 auto;
