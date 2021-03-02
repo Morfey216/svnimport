@@ -2346,6 +2346,7 @@ button.swiper-pagination-bullet {
 
 .packages {
   padding-top: 10px;
+  padding-bottom: 10px;
   background: transparent; }
 
 .packages__title {
