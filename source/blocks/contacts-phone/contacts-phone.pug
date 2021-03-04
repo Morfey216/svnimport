@@ -2,10 +2,6 @@ include ../svg/svg
 
 mixin contacts-phone(mod, icon)
   div(class='contacts-phone')&attributes(attributes)
-    //- if (!icon)
-    //-   +svg('phone')(width="26" height="26").contacts-phone__icon
-    //- if (icon && icon !== 'text')
-    //-   +svg('icon-phone')(width="26" height="26").contacts-phone__icon
     div(class= mod ? 'contacts-phone__phones--' + mod : '').contacts-phone__phones
       a(href="tel:+375291932333").contacts-phone__phone.contacts-phone__phone--first
         span

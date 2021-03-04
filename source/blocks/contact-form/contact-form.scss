@@ -17,15 +17,6 @@
 .contact-form__form-input {
   width: 50%;
   border: 1px solid $base-white-underline;
-  // margin-bottom: 45px;
-  // border: 1px solid $base-green;
-  // border-radius: 5px;
-
-  // @include tablet-medium-max {
-  //   &:first-child {
-  //     width: 100%;
-  //   }
-  // }
 
   @include mobile-max {
     width: 300px;
@@ -40,8 +31,6 @@
 .contact-form__form-textarea {
   margin-bottom: 45px;
   border: 1px solid $base-white-underline;
-  // border: 1px solid $base-green;
-  // border-radius: 5px;
 
   @include mobile-max {
     width: 300px;

@@ -47,7 +47,6 @@
 
     display: flex;
     align-items: flex-start;
-    // background-color: $base-white-underline;
   }
 
   @include mobile-max {
@@ -56,18 +55,6 @@
     padding: 25px 5px;
   }
 }
-
-// .contacts__company-logo {
-//   margin: 0 auto;
-
-//   @include tablet-medium-max {
-//     margin-left: 0;
-//   }
-
-//   @include mobile-max {
-//     margin: 0 auto;
-//   }
-// }
 
 .contacts__company-header {
   border-bottom: 1px solid $base-white-underline;
