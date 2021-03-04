@@ -26,8 +26,6 @@ export default () => {
 
   const contactsWrap = header.querySelector('.header__contacts-wrap');
   const contactsButton = header.querySelector('.header__contacts-button');
-  // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
-  // const contactButton = contactsWrap.querySelector('.header__contacts-button');
 
   const createActualNav = () => {
     const actualNav = mainNav.cloneNode(true);
@@ -49,7 +47,6 @@ export default () => {
 
   const adjustDesktop = () => {
     clearAllBodyScrollLocks(dropdown);
-    // mainNavWrap.prepend(mainNav);
     mainNavWrap.prepend(menuFragment);
     mainNavContainer.append(contactsWrap);
   };

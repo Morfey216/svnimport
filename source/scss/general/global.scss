@@ -1,5 +1,5 @@
 body {
-  background-image: url("../img/bg/pattern-93a.jpg");
+  background-image: url("../img/bg/bg-pattern.jpg");
   background-repeat: repeat;
   background-color: $border-gray;
 }
@@ -10,11 +10,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  // @include tablet-max {
-  //   padding-left: 34px;
-  //   padding-right: 34px;
-  // }
 
   @include mobile-max {
     padding-left: 18px;
