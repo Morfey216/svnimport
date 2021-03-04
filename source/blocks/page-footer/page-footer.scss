@@ -201,6 +201,11 @@
   background-color: $base-color;
 }
 
+.page-footer__logo {
+  display: flex;
+  justify-content: center;
+}
+
 .page-footer__logo-img {
   display: block;
   margin: 0 auto;
@@ -213,7 +218,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: max-content;
-  // width: 500px;
   margin: 0 auto;
   color: $white;
 

@@ -32,3 +32,6 @@ mixin head(title)
     //- meta(name="theme-color", content="#ffffff")
     each font in fontsPreload
       link(rel="preload" href="fonts/" + font as="font" crossorigin="anonymous")
+
+    //- Metrika counter
+    include ../../js/metrika.js

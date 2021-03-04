@@ -4,7 +4,7 @@ include ../form-textarea/form-textarea
 include ../button/button
 
 mixin contact-form
-  form.contact-form#contact-form.js-ccf(method="post" enctype="multipart/form-data")&attributes(attributes)
+  form.contact-form#contact-form.js-ccf(method="post" enctype="multipart/form-data" onsubmit="ym(65809255,'reachGoal','sendingForm'); gtag('event', 'submit', {'event_category': 'FeedbackForm', 'event_label': 'SENDING_FORM'}); return true;")&attributes(attributes)
     +form-input({label: 'Имя', error: 'Введите имя',})(type="text" name="name" required).contact-form__form-input.js-ccf-name#ccf-name
     +form-input({label: 'Фамилия', error: 'Введите фамилию',})(type="text" name="surname" required).contact-form__form-input.js-ccf-name#ccf-name
     +form-input({label: 'Почта', error: 'Введите E-mail',})(type="email" name="email" required).contact-form__form-input.js-ccf-email#ccf-email

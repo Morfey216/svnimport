@@ -3,7 +3,7 @@ include ../form-textarea/form-textarea
 include ../button/button
 
 div.footer-contact-form#footer-contact-form
-  form.footer-contact-form__contact-form.js-fcf(method="post" enctype="multipart/form-data")
+  form.footer-contact-form__contact-form.js-fcf(method="post" enctype="multipart/form-data" onsubmit="ym(65809255,'reachGoal','sendingForm'); gtag('event', 'submit', {'event_category': 'FeedbackForm', 'event_label': 'SENDING_FORM'}); return true;")
     +form-input({label: 'Имя', error: 'Введите имя',}, 'label-top')(type="text" name="name").footer-contact-form__form-input.js-fcf-name#fcf-name
     +form-input({label: 'Email *', error: 'Введите E-mail',}, 'label-top')(type="email" name="email" required).footer-contact-form__form-input.js-fcf-email#fcf-email
     +form-input({label: 'Телефон *', error: 'Неверный номер',}, 'label-top')(type="tel" name="phone" required).footer-contact-form__form-input.js-fcf-phone#fcf-phone

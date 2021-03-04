@@ -82,12 +82,12 @@ mixin page-footer(mod, noTop)
                 span Email:
                 |
                 |
-                a(href="mailto:info@svnimport.com" target="_blank").page-footer__mail info@svnimport.com
+                a(href="mailto:info@svnimport.com" target="_blank" onclick="ym(65809255,'reachGoal','EMAIL_CLICK'); gtag('event', 'click', {'event_category': 'Email', 'event_label': 'EMAIL_CLICK'}); return true;").page-footer__mail info@svnimport.com
             div.page-footer__social
               h2.visually-hidden Мы в соцсетях
               ul.page-footer__social-list
                 each social in socialList
-                  li.page-footer__social-item
+                  li.page-footer__social-item(onclick="ym(65809255,'reachGoal','socialClick'); gtag('event', 'click', {'event_category': 'Social', 'event_label': 'SOCIAL_CLICK'}); return true;")
                     a(href= social.link target="_blank").page-footer__social-link
                       +svg(social.icon)(width= social.w height= social.h).page-footer__icon
                       span.visually-hidden #{social.desc}

@@ -3,11 +3,11 @@ include ../svg/svg
 mixin contacts-phone(mod, icon)
   div(class='contacts-phone')&attributes(attributes)
     div(class= mod ? 'contacts-phone__phones--' + mod : '').contacts-phone__phones
-      a(href="tel:+375291932333").contacts-phone__phone.contacts-phone__phone--first
+      a(href="tel:+375291932333" onclick="ym(65809255,'reachGoal','RB_PHONE_CLICK'); gtag('event', 'click', {'event_category': 'Phones', 'event_label': 'RB_PHONE_CLICK'}); return true;").contacts-phone__phone.contacts-phone__phone--first
         span
           +svg('phone-black')(width="12" height="14")
         span +375 29 193 23 33
-      a(href="tg://resolve?domain=svnimport").contacts-phone__phone.contacts-phone__phone--second
+      a(href="tg://resolve?domain=svnimport" onclick="ym(65809255,'reachGoal',' messengerClick'); gtag('event', 'click', {'event_category': 'Messenger', 'event_label': 'MESSENGER_CLICK'}); return true;").contacts-phone__phone.contacts-phone__phone--second
         span
           +svg('icon-telegram')(width="15" height="12")
         span +7 963 924 95 90

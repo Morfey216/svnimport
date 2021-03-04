@@ -3,4 +3,4 @@ include ../svg/svg
 mixin contacts-mail(mail, mod)
   div(class='contacts-mail')&attributes(attributes)
     +svg('label')(class = 'contacts-mail__icon', width='26', height='26')
-    a(href = 'mailto:' + mail class= mod ? 'contacts-mail__mail--' + mod : '').contacts-mail__mail #{mail}
+    a(href = 'mailto:' + mail class= mod ? 'contacts-mail__mail--' + mod : '' onclick="ym(65809255,'reachGoal','EMAIL_CLICK'); gtag('event', 'click', {'event_category': 'Email', 'event_label': 'EMAIL_CLICK'}); return true;").contacts-mail__mail #{mail}
