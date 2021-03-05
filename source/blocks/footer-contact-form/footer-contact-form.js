@@ -28,7 +28,7 @@ export default () => {
   form.addEventListener('submit', (evt) => {
     const http = new XMLHttpRequest();
     evt.preventDefault();
-    http.open('POST', 'mail/mail.php', true);
+    http.open('POST', 'mail/short-mail.php', true);
     http.onreadystatechange = () => {
       if (http.readyState === 4 && http.status === 200) {
         clearData();

@@ -21,7 +21,10 @@
   height: 100vh;
 
   background-image: url("../img/bg/bg-pattern.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
   background-color: $light-base-color;
   overflow: hidden;
 }
