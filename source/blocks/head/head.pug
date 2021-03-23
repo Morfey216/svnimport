@@ -23,13 +23,17 @@ mixin head(title)
     title= title
     link(rel="preload" href="css/style.css" as="style")
     link(rel="stylesheet", href="css/style.css" media="screen")
-    //- link(rel="apple-touch-icon" sizes="180x180" href="/img/ico/apple-touch-icon.png")
-    //- link(rel="icon" type="image/png" sizes="32x32" href="/img/ico/favicon-32x32.png")
-    //- link(rel="icon" type="image/png" sizes="16x16" href="/img/ico/favicon-16x16.png")
-    //- link(rel="manifest" href="/img/ico/site.webmanifest")
-    //- link(rel="mask-icon" href="/img/ico/safari-pinned-tab.svg" color="#5bbad5")
-    //- meta(name="msapplication-TileColor", content="#da532c")
-    //- meta(name="theme-color", content="#ffffff")
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/ico/favicon-16x16.png">
+    <link rel="manifest" href="/img/ico/site.webmanifest">
+    <link rel="mask-icon" href="/img/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/img/ico/browserconfig.xml">
+    <meta name="theme-color" content="#6fea0a">
+
     each font in fontsPreload
       link(rel="preload" href="fonts/" + font as="font" crossorigin="anonymous")
 
