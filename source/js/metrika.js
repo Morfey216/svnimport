@@ -23,3 +23,12 @@
 
   gtag('config', 'UA-173471790-1');
 </script>
+
+<!-- Adnous counter-->
+<script type="text/javascript" >
+ (function(a,d,n,o,u,s,_){a[u]=a[u]||function(){(a[u]._=a[u]._||[]).push(arguments)};
+s=d.createElement(n),_=d.getElementsByTagName(n)[0],s.async=1,s.src=o,_.parentNode.insertBefore(s,_)})
+(window, document, "script", "//click.adnous.ru/tag.js", "ucio");
+ucio(611, "init");
+</script>
+<!-- / Adnous counter -->
