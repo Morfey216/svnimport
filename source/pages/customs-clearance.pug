@@ -1,0 +1,17 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/page-footer/page-footer
+
+doctype html
+html(lang='ru')
+  +head('Таможенное оформление в Республике Беларусь')
+  body
+    +header('dark')
+
+    main
+      h1.visually-hidden Доставка товаров из Китая и других стран - Таможенное оформление в Республике Беларусь
+      include ../blocks/customs-clearance/customs-clearance
+
+    +page-footer('services')
+
+    include ../blocks/_scripts-block/_scripts-block

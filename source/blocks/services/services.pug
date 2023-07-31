@@ -2,61 +2,75 @@ include ../title/title
 
 -
   const servicesList = [
-      {
-        image: 'search.jpg',
-        alt: "Поиск",
-        title: 'Поиск Товара/Производителя',
-        class: 'search',
-        link: 'search.html',
-      },
-      {
-        image: 'audit.jpg',
-        alt: "Аудит",
-        title: 'Аудит',
-        class: 'audit',
-        link: 'audit.html',
-      },
-      {
-        image: 'production.jpg',
-        alt: "Производство",
-        title: 'Производство',
-        class: 'production',
-        link: 'production.html',
-      },
-      {
-        image: 'quality.jpg',
-        alt: "Контроль качества",
-        title: 'Контроль качества',
-        class: 'audit',
-        link: 'quality.html',
-      },
-      {
-        image: 'brand.jpg',
-        alt: "Брендированние",
-        title: 'Брендированние',
-        class: 'brand',
-        link: 'brand.html',
-      },
+      //- {
+      //-   image: 'search.jpg',
+      //-   alt: "Поиск",
+      //-   title: 'Поиск Товара/Производителя',
+      //-   class: 'search',
+      //-   link: 'search.html',
+      //- },
+      //- {
+      //-   image: 'audit.jpg',
+      //-   alt: "Аудит",
+      //-   title: 'Аудит',
+      //-   class: 'audit',
+      //-   link: 'audit.html',
+      //- },
+      //- {
+      //-   image: 'production.jpg',
+      //-   alt: "Производство",
+      //-   title: 'Производство',
+      //-   class: 'production',
+      //-   link: 'production.html',
+      //- },
+      //- {
+      //-   image: 'quality.jpg',
+      //-   alt: "Контроль качества",
+      //-   title: 'Контроль качества',
+      //-   class: 'audit',
+      //-   link: 'quality.html',
+      //- },
+      //- {
+      //-   image: 'brand.jpg',
+      //-   alt: "Брендированние",
+      //-   title: 'Брендированние',
+      //-   class: 'brand',
+      //-   link: 'brand.html',
+      //- },
+      //- {
+      //-   image: 'export.jpg',
+      //-   alt: "Экспорт",
+      //-   title: 'Экспорт',
+      //-   class: 'export',
+      //-   link: 'export.html',
+      //- },
+      //- {
+      //-   image: 'samples.jpg',
+      //-   alt: "Образцы",
+      //-   title: 'Заказ образцов',
+      //-   class: 'samples',
+      //-   link: 'samples.html',
+      //- },
+      //- {
+      //-   image: 'import.jpg',
+      //-   alt: "Импорт",
+      //-   title: 'Импорт',
+      //-   class: 'import',
+      //-   link: 'import.html',
+      //- },
+      //- {
+      //-   image: 'amazon.jpg',
+      //-   alt: "Amazon",
+      //-   title: 'Amazon',
+      //-   class: 'amazon',
+      //-   link: 'amazon.html',
+      //- },
       {
         image: 'consolidation.jpg',
         alt: "Консолидация",
         title: 'Консолидация',
         class: 'consolidation',
         link: 'consolidation.html',
-      },
-      {
-        image: 'export.jpg',
-        alt: "Экспорт",
-        title: 'Экспорт',
-        class: 'export',
-        link: 'export.html',
-      },
-      {
-        image: 'international.jpg',
-        alt: "Международные грузоперевозки",
-        title: 'Международные грузоперевозки',
-        class: 'international',
-        link: 'cargo-transportation.html',
       },
       {
         image: 'group.jpg',
@@ -66,25 +80,18 @@ include ../title/title
         link: 'group.html',
       },
       {
-        image: 'samples.jpg',
-        alt: "Образцы",
-        title: 'Заказ образцов',
-        class: 'samples',
-        link: 'samples.html',
+        image: 'quality.jpg',
+        alt: "Таможенное оформление в Республике Беларусь",
+        title: 'Таможенное оформление в Республике Беларусь',
+        class: 'audit',
+        link: 'customs-clearance.html',
       },
       {
-        image: 'import.jpg',
-        alt: "Импорт",
-        title: 'Импорт',
-        class: 'import',
-        link: 'import.html',
-      },
-      {
-        image: 'amazon.jpg',
-        alt: "Amazon",
-        title: 'Amazon',
-        class: 'amazon',
-        link: 'amazon.html',
+        image: 'international.jpg',
+        alt: "Международные грузоперевозки",
+        title: 'Международные грузоперевозки',
+        class: 'international',
+        link: 'cargo-transportation.html',
       },
     ]
 
@@ -95,7 +102,7 @@ section.services
       img(src='img/our-services/chart.png' width="1170" height="635" alt='График работы').services__chart-img
   div.services__wrapper.container
     +title('Все Услуги', 'section-decor').services__title
-    p.services__title-description Полный комплект! Как вместе, так и  раздельно!
+    p.services__title-description Полный комплект! Как вместе, так и раздельно!
     ul.services__list
       each service in servicesList
         li.services__item

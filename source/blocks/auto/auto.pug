@@ -1,0 +1,21 @@
+include ../title/title
+
+-
+  const shipLists = [
+      '<strong>Универсальность.</strong> Автомобили позволяют перевозить любые грузы;',
+      '<strong>Мобильность.</strong> Это самый мобильный вид грузоперевозок.',
+      '<strong>Оперативность.</strong> Если груз нужно отправить срочно, организовать доставку можно даже в день обращения в компанию. Не нужно ждать, когда отправится воздушный или жд транспорт.',
+      '<strong>Надежность.</strong> Сотрудники компании будут постоянно следить за целостностью груза. К перевозке привлекаются только постоянные, проверенные транспортные компании.',
+      '<strong>Своевременность.</strong> Данный вид транспорта имеет минимальное отклонение от запланированных сроков доставки.',
+    ]
+
+section.ship.services-content
+  div.services-content__container.container
+    div.services-content__content-wrapper.content
+      +title('Автомобильные грузоперевозки', 'section-decor').services-content__title
+      p.services-content__title-description Преимущества перевозок автотранспортом:
+      ul
+        each it in shipLists
+          li!= it
+    div.services-content__img-container
+      img(src="img/transportation/auto.jpg" width="560" height="610" alt= "Железнодорожные грузоперевозки").services-content__img
