@@ -1218,8 +1218,7 @@
     var mainNav = header.querySelector('.header__main-nav');
     var menuFragment = new DocumentFragment();
     var contactsWrap = header.querySelector('.header__contacts-wrap');
-    var contactsButton = header.querySelector('.header__contacts-button'); // const contactPhone = contactsWrap.querySelector('.header__contacts-phone');
-    // const contactButton = contactsWrap.querySelector('.header__contacts-button');
+    var contactsButton = header.querySelector('.header__contacts-button');
 
     var createActualNav = function createActualNav() {
       var actualNav = mainNav.cloneNode(true);
@@ -1236,8 +1235,7 @@
     };
 
     var adjustDesktop = function adjustDesktop() {
-      clearAllBodyScrollLocks(); // mainNavWrap.prepend(mainNav);
-
+      clearAllBodyScrollLocks();
       mainNavWrap.prepend(menuFragment);
       mainNavContainer.append(contactsWrap);
     };
@@ -1503,7 +1501,7 @@
     form.addEventListener('submit', function (evt) {
       var http = new XMLHttpRequest();
       evt.preventDefault();
-      http.open('POST', 'mail/mail.php', true);
+      http.open('POST', 'mail/short-mail.php', true);
 
       http.onreadystatechange = function () {
         if (http.readyState === 4 && http.status === 200) {
