@@ -38,7 +38,7 @@
   width: 55%;
   min-height: 600px;
   margin-left: auto;
-  padding: 70px 40px;
+  padding: 140px 40px;
   padding-right: 2%;
   text-align: left;
 
@@ -50,7 +50,7 @@
   @include mobile-max {
     width: 100%;
     padding: 5px;
-    padding-top: 50px;
+    padding-top: 80px;
 
     & p {
       font-size: 14px;
@@ -72,7 +72,7 @@
 
   &::after {
     content: "";
-    width: 315px;
+    width: 385px;
     height: 3px;
     background-color: $btn-color;
 

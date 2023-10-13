@@ -66,13 +66,14 @@ mixin page-footer(mod, noTop)
   footer(class='page-footer' + (mod ? ' page-footer--' + mod : ''))&attributes(attributes)#footer-contact-form
     if (!noTop)
       div.page-footer__top
-        +title('Есть план? Пиши Нам!', 'white').page-footer__title
-        p.page-footer__title-description Бесплатно ответим на все Ваши вопросы и воплотим Ваш План в Реальность
+        //- +title('Контакты', 'white').page-footer__title
+        //- p.page-footer__title-description Бесплатно ответим на все Ваши вопросы и воплотим Ваш План в Реальность
         div.page-footer__wrapper
           div.page-footer__contacts
             h3.page-footer__contacts-title Контакты
             div.page-footer__contacts-info
-              p.page-footer__address Адрес: Республика Беларусь, 220070, <br>г. Минск, ул. Ваупшасова, д.10, помещение №131
+              p.page-footer__address Адрес: Российская Федерация, <br>г. Брянск, ул. Бежицкая, дом 286, корпус 1, офис 315
+              p.page-footer__address Park Antrepo ve Lojistik <br>Osmangazi Mh. Avrupa Otoyolu Hadımköy bağlantısı. <br>3140 Sk. No1/2 Kıraç-Esenyurt <br>Istanbul – Turkiye
               div.page-footer__phones
                 span Телефон:
                 |
@@ -82,16 +83,16 @@ mixin page-footer(mod, noTop)
                 span Email:
                 |
                 |
-                a(href="mailto:info@svnimport.com" target="_blank" onclick="ym(65809255,'reachGoal','EMAIL_CLICK'); gtag('event', 'click', {'event_category': 'Email', 'event_label': 'EMAIL_CLICK'}); return true;").page-footer__mail info@svnimport.com
-            div.page-footer__social
-              h2.visually-hidden Мы в соцсетях
-              ul.page-footer__social-list
-                each social in socialList
-                  li.page-footer__social-item(onclick="ym(65809255,'reachGoal','socialClick'); gtag('event', 'click', {'event_category': 'Social', 'event_label': 'SOCIAL_CLICK'}); return true;")
-                    a(href= social.link target="_blank").page-footer__social-link
-                      +svg(social.icon)(width= social.w height= social.h).page-footer__icon
-                      span.visually-hidden #{social.desc}
-          include ../footer-contact-form/footer-contact-form
+                a(href="mailto:brokergroup05@gmail.com" target="_blank" onclick="ym(65809255,'reachGoal','EMAIL_CLICK'); gtag('event', 'click', {'event_category': 'Email', 'event_label': 'EMAIL_CLICK'}); return true;").page-footer__mail brokergroup05@gmail.com
+            //- div.page-footer__social
+            //-   h2.visually-hidden Мы в соцсетях
+            //-   ul.page-footer__social-list
+            //-     each social in socialList
+            //-       li.page-footer__social-item(onclick="ym(65809255,'reachGoal','socialClick'); gtag('event', 'click', {'event_category': 'Social', 'event_label': 'SOCIAL_CLICK'}); return true;")
+            //-         a(href= social.link target="_blank").page-footer__social-link
+            //-           +svg(social.icon)(width= social.w height= social.h).page-footer__icon
+            //-           span.visually-hidden #{social.desc}
+          //- include ../footer-contact-form/footer-contact-form
     div(class='page-footer__middle' + (mod ? ' page-footer__middle--' + mod : ''))
       div.page-footer__logo
         a.page-footer__logo-link(href="index.html")
@@ -102,7 +103,7 @@ mixin page-footer(mod, noTop)
             a(href= menuItem.link).page-footer__nav-link #{menuItem.desc}
     div.page-footer__bottom
       div.page-footer__wrapper
-        p.page-footer__details ООО "СВН импорт"; УНП 193430086
-        p.page-footer__copyright © 2020-2022 Company Inc. Все права защищены
+        p.page-footer__details ООО «Брокер групп»
+        p.page-footer__copyright © 2020-2023 Company Inc. Все права защищены
 
   include ../scroll-up/scroll-up

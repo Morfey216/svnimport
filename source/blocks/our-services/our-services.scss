@@ -11,7 +11,8 @@
   @include list-reset;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0 auto;
   margin-bottom: 40px;
   text-align: center;
