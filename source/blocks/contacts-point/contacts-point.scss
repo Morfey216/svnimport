@@ -5,6 +5,7 @@
 
 .contacts-point__icon {
   margin-right: 15px;
+  flex-shrink: 0;
 
   &--messenger {
     margin-right: 25px;
