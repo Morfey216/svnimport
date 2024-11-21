@@ -22,7 +22,7 @@
     flex-direction: column;
 
     .contacts-phone__phone {
-      @include mainfont(16, 24, 400);
+      @include mainfont(14, 21, 400);
 
       @include mobile-max {
         @include mainfont(14, 21, 400);

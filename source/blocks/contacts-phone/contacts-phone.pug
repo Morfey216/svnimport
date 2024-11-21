@@ -7,9 +7,13 @@ mixin contacts-phone(mod, icon)
         span
           +svg('tr')(width="16" height="12")
         span +90 53 806 35 343
-      a(href="tel:+375293020517" onclick="ym(65809255,'reachGoal',' messengerClick'); gtag('event', 'click', {'event_category': 'Messenger', 'event_label': 'MESSENGER_CLICK'}); return true;").contacts-phone__phone.contacts-phone__phone--second
+      a(href="https://api.whatsapp.com/send?phone=375296095056" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer" onclick="ym(65809255,'reachGoal',' messengerClick'); gtag('event', 'click', {'event_category': 'Messenger', 'event_label': 'MESSENGER_CLICK'}); return true;").contacts-phone__phone.contacts-phone__phone--second
         span
-          +svg('by')(width="16" height="12")
-        span +375 29 302 05 17
+          +svg('whatsapp')(width="16" height="16")
+        span +375 29 609 50 56
+      a(href="https://telegram.me/broker_grupp" target="_blank" onclick="ym(65809255,'reachGoal',' messengerClick'); gtag('event', 'click', {'event_category': 'Messenger', 'event_label': 'MESSENGER_CLICK'}); return true;").contacts-phone__phone.contacts-phone__phone--second
+        span
+          +svg('telegram')(width="16" height="12")
+        span +375 29 797 82 41
       if (mod === 'messenger')
         p.contacts-phone__messenger (whatsapp, telegram, viber)
